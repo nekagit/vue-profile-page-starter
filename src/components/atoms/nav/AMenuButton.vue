@@ -13,12 +13,6 @@
         <li><RouterLink to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
-    <div class="slideshow-container">
-      <!-- Your slideshow content here -->
-    </div>
-    <section>
-      <!-- Your section content here -->
-    </section>
   </div>
 </template>
 
@@ -99,24 +93,6 @@ font-size: 0.875rem;
 line-height: 1.75;
 }
 
-html {
-font-family: 'Source Sans Pro', sans-serif;
-font-size: 16px;
-font-smooth: auto;
-font-weight: 300;
-line-height: 1.5;
-color: #444;
-}
-
-body {
-position: relative;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-//height: 100vh;
-}
 
 section {
 position: relative;
@@ -133,8 +109,8 @@ margin: 0 auto;
 
 .menu-button {
 position: absolute;
-top: 1.25rem;
-right: 1.25rem;
+bottom: 10px;
+right: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -255,124 +231,6 @@ li {
   }
 }
 }
-}
-
-.slideshow-container {
-position: relative;
-width: 100%;
-height: 40vh;
-margin: auto;
-//background-color: rgba($accent,0.3);
-overflow: hidden;
-
-@media (min-width: $med) {
-height: 50vh;
-}
-
-@media (min-width: $lg) {
-height: 60vh;
-}
-
-.slide {
-display: none;
-
-.index {
-  position: absolute;
-  top: 12.5%;
-  left: 2rem;
-  padding: 0.5rem 0 0.5rem 0.625rem;
-  color: #f2f2f2;
-  font-size: 12px;
-  z-index: 9;
-
-  > span {
-    position: absolute;
-    top: 30.2%;
-    left: 0;
-    font-weight: bold;
-    animation: slideDown 1s ease;
-  }
-
-  @media (min-width: $med) {
-    top: 30.2%;
-  }
-
-  @media (min-width: $lg) {
-    top: 41.5%;
-
-    > span {
-      top: 29%;
-    }
-  }
-
-  @keyframes slideDown {
-    0%   { top: -1000%; }
-    100% { top: 54%; }
-  }
-}
-
-.caption {
-  position: absolute;
-  bottom: 7.25rem;
-  left: 1.25rem;
-  width: 17.25rem;
-  color: #f2f2f2;
-  font-size: 1.25rem;
-  font-weight: bold;
-  padding: 1rem 1rem;
-  background-color: rgba($black,0.7);
-  border-left: 0.625rem solid $accent;
-  transform: translateX(0%);
-  animation: slideIn 1s ease;
-
-  @keyframes slideIn {
-    0%   { transform: translateX(-100%); }
-    100% { transform: translateX(0%); }
-  }
-
-  small {
-    font-size: 0.75rem;
-    font-weight: 300;
-  }
-}
-
-.cta {
-  position: absolute;
-  bottom: 5rem;
-  left: 1.25rem;
-  margin: 0 0 0 0.625rem;
-  padding: 0.625rem 1.25rem;
-  background-color: rgba($black,0.6);
-  border: 0;
-  //border-radius: 9.375rem;
-  color: $white;
-  font-size: 0.625rem;
-  text-transform: uppercase;
-  transform: translateY(0%);
-  transition: 0.25s;
-  animation: slideUp 0.75s ease;
-  z-index: 9;
-
-  &:hover {
-    background-color: $accent;
-  }
-
-  @keyframes slideUp {
-    0%   { transform: translateY(400%); }
-    100% { transform: translateY(0%); }
-  }
-}
-
-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 200%;
-  //object-fit: cover;
-}
-}
-
 
 .dots {
 position: absolute;

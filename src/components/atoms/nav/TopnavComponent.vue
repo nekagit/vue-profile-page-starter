@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <nav id="topnav-component" class="top-0 h-24 z-20 hidden lg:flex ">
+  <nav id="topnav-component" class="top-0 h-24 z-20 hidden lg:flex  bg-transparent">
     <div class="container flex justify-between items-center">
       <div>
         <img class="w-auto sm:h-24" src="@/assets/logo/logo.jpg" alt="Logo" />

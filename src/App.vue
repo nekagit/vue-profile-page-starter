@@ -8,11 +8,12 @@ import NavBar3D from "./components/NavBar3D.vue"
 </script>
 
 <template>
- <RouterView class="font-libre h-screen" /> -->
- <!--  <div class="lg:hidden font-libre">
+  <!-- <TopnavComponent /> -->
+
+ <RouterView class="font-libre h-screen" /> 
+   <div class="lg:hidden font-libre">
     <MenuButton />
-  </div>-->
-  <NavBar3D />
+  </div>
   <ABaseFooterSection class="font-libre"  /> 
 </template>
 

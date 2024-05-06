@@ -35,11 +35,6 @@
     </li>
   </ul>
 </nav>
-
-<section>
-  <h1>3d rotating navigation</h1>
-  <h2>+ CSS Icons</h2>
-</section>
 </template>
 
 <script setup lang="ts">
@@ -57,7 +52,7 @@
 
 section {
   position: relative;
-  left: 100px;
+  right: 100px;
 }
 
 h1 { 
@@ -87,7 +82,7 @@ body {
 }
 
 nav {
-  float: left;
+  float: right;
 	position: relative;
 	top: 0;
   left: 0;
