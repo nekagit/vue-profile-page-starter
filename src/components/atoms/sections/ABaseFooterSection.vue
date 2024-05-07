@@ -1,7 +1,7 @@
 <template>
   
 
-  <footer class="bg-gray-800 text-white font-medium py-8 footer">
+  <footer class="bg-gray-800 text-white font-medium footer">
     <AMenuButton class="h-[30vh]" />
      <div class="background-image"></div>
     <hr />
@@ -56,7 +56,7 @@
       </div>
     </div>
   </footer>
-  <img src="../../../assets/SOP/img/logo.png" alt="pic" style="float: right;" />
+  <!-- <img src="../../../assets/SOP/img/logo.png" alt="pic" style="float: right;" /> -->
 </template>
 
 <script setup lang="ts">

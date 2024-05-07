@@ -8,13 +8,13 @@
         <li><RouterLink @click="closeMenu" to="/">Home</RouterLink></li>
         <li><RouterLink @click="closeMenu" to="/about">About Us</RouterLink></li>
         <li><RouterLink @click="closeMenu" to="/services">Services</RouterLink></li>
-        <li><RouterLink @click="closeMenu" to="/pricing">Pricing</RouterLink></li>
-        <li><RouterLink @click="closeMenu" to="/profile">Profile</RouterLink></li>
+        <!-- <li><RouterLink @click="closeMenu" to="/pricing">Pricing</RouterLink></li> -->
+        <!-- <li><RouterLink @click="closeMenu" to="/profile">Profile</RouterLink></li> -->
         <li><RouterLink @click="closeMenu" to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
-    <div class="grid place-content-center text-white h-full">
-      <!-- Your content here -->
+    <div class="grid place-content-center text-white h-full text-center text-2xl">
+      <!-- Your content here -->Welcome to Stichting SOP  Rotterdam <br> Profile Page
     </div>
   </div>
 </template>
@@ -172,7 +172,7 @@ bottom: 1px;
 right: -100%;
 width: 90%;
 height: 100%;
-padding: 6.25rem 0.625rem 1.25rem;
+padding: 3.25rem 0.625rem 1.25rem;
 background-color: rgba($black,0.8);
 transition: 0.25s ease;
 z-index: 9999;
