@@ -5,54 +5,33 @@
     </button>
     <nav class="menu" :class="{ open: isMenuOpen }">
       <ul>
-        <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/about">About Us</RouterLink></li>
-        <li><RouterLink to="/services">Services</RouterLink></li>
-        <li><RouterLink to="/pricing">Pricing</RouterLink></li>
-        <li><RouterLink to="/profile">Profile</RouterLink></li>
-        <li><RouterLink to="/contact">Contact</RouterLink></li>
+        <li><RouterLink @click="closeMenu" to="/">Home</RouterLink></li>
+        <li><RouterLink @click="closeMenu" to="/about">About Us</RouterLink></li>
+        <li><RouterLink @click="closeMenu" to="/services">Services</RouterLink></li>
+        <li><RouterLink @click="closeMenu" to="/pricing">Pricing</RouterLink></li>
+        <li><RouterLink @click="closeMenu" to="/profile">Profile</RouterLink></li>
+        <li><RouterLink @click="closeMenu" to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
+    <div class="grid place-content-center text-white h-full">
+      <!-- Your content here -->
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-const slideIndex = ref(1)
+const router = useRouter()
 const isMenuOpen = ref(false)
-
-function changeSlide(n: number) {
-  showSlides((slideIndex.value += n))
-}
-
-function currentSlide(n: number) {
-  showSlides((slideIndex.value = n))
-}
-
-function showSlides(n: number) {
-  const slides = document.querySelectorAll('.slide')
-  const dots = document.querySelectorAll('.dot')
-  let i: number
-
-  if (n > slides.length) {
-    slideIndex.value = 1
-  }
-  if (n < 1) {
-    slideIndex.value = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none'
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(' active', '')
-  }
-  slides[slideIndex.value - 1].style.display = 'block'
-  dots[slideIndex.value - 1].className += ' active'
-}
 
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value
+}
+
+function closeMenu() {
+  isMenuOpen.value = false
 }
 </script>
 
@@ -108,7 +87,7 @@ margin: 0 auto;
 }
 
 .menu-button {
-position: absolute;
+position: fixed;
 bottom: 10px;
 right: 10px;
 display: flex;
@@ -189,7 +168,7 @@ transform-origin: center center;
 
 nav.menu {
 position: fixed;
-top: 0;
+bottom: 1px;
 right: -100%;
 width: 90%;
 height: 100%;
@@ -207,7 +186,8 @@ right: 0%;
 }
 
 ul {
-position: relative;
+position: absolute;
+bottom: 100px;
 display: flex;
 flex-direction: column;
 align-items: center;
