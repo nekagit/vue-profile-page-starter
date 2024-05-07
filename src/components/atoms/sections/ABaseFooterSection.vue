@@ -1,4 +1,6 @@
 <template>
+  
+
   <footer class="bg-gray-800 text-white font-medium py-8 footer">
     <AMenuButton class="h-[30vh]" />
      <div class="background-image"></div>
@@ -12,28 +14,49 @@
           </ul>
         </div>
         <div class="footer-section">
-          <h3 class="text-lg header mb-4">Other Information</h3>
-          <ul>
-            <li><a href="#" class="text-white opacity-60  hover:opacity-100">Privacy Policy</a></li>
-            <li><a href="#" class="text-white opacity-60  hover:opacity-100">Terms of Service</a></li>
-            <!-- Add more links or information as needed -->
-          </ul>
+          <h3 class="text-lg header mb-4">Policies</h3>
+               <div class="text-sm text-blueGray-500 font-semibold py-1">
+            <a
+              href="https://www.stichtingsoprotterdam.nl/assets/sop-huishoudelijk-reglement.pdf"
+              class="text-blueGray-500 hover:text-gray-800"
+              target="_blank"
+            >
+              Reglement</a
+            >
+            <br />
+            <a href="https://docuverse.netlify.app" class="text-blueGray-500 hover:text-gray-800"
+              >DocuVerse</a
+            >.
+          </div>
         </div>
         <div class="footer-section">
-          <h3 class="text-lg header mb-4">Follow Us</h3>
-          <ul class="social-icons">
-            <li><a href="#" class="text-white opacity-60 hover:opacity-100">Facebook</a></li>
-            <li><a href="#" class="text-white opacity-60 hover:opacity-100">Twitter</a></li>
-            <li><a href="#" class="text-white opacity-60 hover:opacity-100">Instagram</a></li>
-            <!-- Add more social media links -->
-          </ul>
+            <div class="lg:mb-0 mb-6">
+            <button
+              class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fab fa-facebook"></i></button
+            ><button
+              class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fab fa-instagram"></i></button
+            ><button
+              class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
         </div>
       </div>
+      
       <div class="footer-bottom mt-8 text-center">
-        <p class="text-white opacity-60">&copy; 2023 Your Company. All rights reserved.</p>
+        <p class="text-white opacity-60">&copy; 2024 Nenad Kalicanin.</p>
       </div>
     </div>
   </footer>
+  <img src="../../../assets/SOP/img/logo.png" alt="pic" style="float: right;" />
 </template>
 
 <script setup lang="ts">
