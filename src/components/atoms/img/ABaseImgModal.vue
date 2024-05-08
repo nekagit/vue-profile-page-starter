@@ -2,7 +2,6 @@
   <div class="shadow-xl my-5">
     <img id="myImg" src="@/assets/SOP/img/logoo.png" alt="Trolltunga, Norway" />
 
-    <!-- The Modal -->
     <div id="myModal" class="modal p-6">
       <img class="modal-content" id="img01" />
     </div>

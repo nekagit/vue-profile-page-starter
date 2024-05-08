@@ -2,13 +2,6 @@
 </script>
 
 <template>
-<!-- <div class='accordion accordion--row'>
-  <div class='accordion__item'>1</div>
-  <div class='accordion__item'>2</div>
-  <div class='accordion__item'>3</div>
-  <div class='accordion__item'>4</div>
-  <div class='accordion__item'>5</div>
-</div> -->
 <div class='accordion'>
     <div class='accordion__item'>
         <img class=" bg-red-300" src="@/assets/logo/logo.jpg" />

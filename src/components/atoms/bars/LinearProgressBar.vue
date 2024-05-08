@@ -24,17 +24,6 @@ const interval = setInterval(() => {
 </script>
 
 <style scoped>
-.container {
-    min-width:200px;
-    max-width:300px;
-  background-color: rgb(214, 207, 207);
-  height: 10px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  padding: 2px;
-  margin:auto;
-}
 .text {
   color: rgb(0, 0, 0);
 }

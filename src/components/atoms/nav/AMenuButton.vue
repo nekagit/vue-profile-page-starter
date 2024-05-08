@@ -8,15 +8,12 @@
         <li><RouterLink @click="closeMenu" to="/">Home</RouterLink></li>
         <li><RouterLink @click="closeMenu" to="/about">About Us</RouterLink></li>
         <li><RouterLink @click="closeMenu" to="/services">Services</RouterLink></li>
-        <!-- <li><RouterLink @click="closeMenu" to="/pricing">Pricing</RouterLink></li> -->
-        <!-- <li><RouterLink @click="closeMenu" to="/profile">Profile</RouterLink></li> -->
         <li><RouterLink @click="closeMenu" to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
     <div class="flex justify-around text-white h-full text-center text-2xl">
       
       <img class="background-image2" src="../../../assets/SOP/img/logoo.png" />
-      <!-- Welcome to Stichting SOP  Rotterdam <br> Profile Page -->
       <img class="background-image" src="../../../assets/SOP/img/wg-removebg.png" />
     </div>
   </div>
@@ -24,9 +21,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
 const isMenuOpen = ref(false)
 
 function toggleMenu() {
@@ -242,7 +236,6 @@ left: 1rem;
 display: flex;
 align-items: center;
 justify-content: center;
-//width: 25%;
 height: 15px;
 margin: 0;
 cursor: pointer;
@@ -298,11 +291,6 @@ z-index: 10;
 }
 }
 }
-
-
-
-
-/* Number text (1/3 etc) */
 
 
 

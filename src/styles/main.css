@@ -8,9 +8,13 @@
   --secondary-color: #000000;
 }
 
-/* Global styles */
+* {
+  z-index: 1;
+}
+
 body {
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
   height: 100%;
   background-color: rgb(31,41,55);
@@ -21,18 +25,21 @@ body {
   margin: 0 auto;
 }
 
-* {
-  z-index: 1;
-
-  /* padding: 20px;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-
-}
-
 hr {
   margin: 2rem;
   border-radius: 22px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* CSS reset */
 *,
