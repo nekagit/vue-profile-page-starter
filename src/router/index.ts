@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from '../views/SOP/HomeView.vue'
-import AboutView from '../views/SOP/SchoolView.vue'
 import SchoolView from '@/views/SOP/SchoolView.vue'
 import GalleryView from '@/views/SOP/GalleryView.vue'
 import SportView from '@/views/SOP/SportView.vue'
 import ContactView from '@/views/SOP/ContactView.vue'
+import ANBIView from '@/views/SOP/ANBIView.vue'
   
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,9 +31,9 @@ const router = createRouter({
       component: GalleryView
     },
     {
-      path: '/portfolio',
-      name: 'portfolio',
-      component: SportView
+      path: '/anbi',
+      name: 'anbi',
+      component: ANBIView
     },
     {
       path: '/pricing',
