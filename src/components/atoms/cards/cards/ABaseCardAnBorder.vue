@@ -1,54 +1,82 @@
 <template>
   <div>
     <template v-if="variant === 1">
-      <div class="card example-1">
+      <div class="mx-5 text-white text-2xl">
+
+        {{ title }}
+      </div>
+      <div class="card example-1 shadow-xl">
+          <div class="text-2xl">
+          </div>
         <div class="inner">
-          {{ title }}
           {{ content }}
         </div>
       </div>
     </template>
+    
 
     <template v-if="variant === 2">
-      <div class="card example-2">
+      <div class="mx-5 text-white text-2xl">
+
+        {{ title }}
+      </div>
+      <div class="card example-2 shadow-xl">
+          <div class="text-2xl">
+          </div>
         <div class="inner">
-          {{ title }}
           {{ content }}
         </div>
       </div>
     </template>
+    
 
     <template v-if="variant === 3">
-      <div class="card example-3">
+      <div class="mx-5 text-white text-2xl">
+
+        {{ title }}
+      </div>
+      <div class="card example-3 shadow-xl">
+          <div class="text-2xl">
+          </div>
         <div class="inner">
-          {{ title }}
           {{ content }}
         </div>
       </div>
     </template>
+    
 
     <template v-if="variant === 4">
-      <div class="card example-4">
+      <div class="mx-5 text-white text-2xl">
+
+        {{ title }}
+      </div>
+      <div class="card example-4 shadow-xl">
+          <div class="text-2xl">
+          </div>
         <div class="inner">
-          {{ title }}
           {{ content }}
         </div>
       </div>
     </template>
+    
 
     <template v-if="variant === 5">
       <div class="card example-5">
+          <div class="text-2xl">
+
+            {{ title }}
+          </div>
         <div class="inner">
-          {{ title }}
           {{ content }}
         </div>
       </div>
     </template>
+    
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps } from 'vue';
 
 interface ABaseCardAnBorder {
   variant: number
