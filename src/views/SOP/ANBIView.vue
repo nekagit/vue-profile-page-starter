@@ -39,11 +39,12 @@ const anbi = [
     <ABaseContactCard :full-name="'Sasa Peric'" :title="''" :img-src="Guest" />
   </div>
   <ABaseContactCard :full-name="'Predrag Joldic'" :title="''" :img-src="Guest" />
-<div v-for="(item,index) in anbi" :key="index">
+<div class="grid grid-cols-1 md:grid-cols-3">
     <ABaseCardAnBorder
+     v-for="(item,index) in anbi" :key="index"
     :content="item.content"
     :title="item.title"
-    :variant="index+1"
+    :variant="2"
     />
 </div>
   <ABaseIntroSection :content="'SOP | Contact'" />
