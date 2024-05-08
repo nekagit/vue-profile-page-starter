@@ -42,7 +42,7 @@ const slides = [
 </script>
 
 <template>
-  <div id="home-intro-component" class="w-full  mx-auto shadow-xl mx-11">
+  <div >
     <vueper-slides
       fixed-height="70vh"
       autoplay
