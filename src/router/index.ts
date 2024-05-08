@@ -6,8 +6,7 @@ import SchoolView from '@/views/SOP/SchoolView.vue'
 import GalleryView from '@/views/SOP/SchoolView.vue'
 import SportView from '@/views/SOP/SportView.vue'
 import ContactView from '@/views/SOP/ContactView.vue'
-import SportView from '@/views/SOP/SportView.vue'
-
+  
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

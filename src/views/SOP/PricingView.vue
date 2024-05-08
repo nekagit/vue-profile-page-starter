@@ -80,7 +80,9 @@
       </div>
     </section>
   </div>
+  <ABaseIntroSection :content="'SOP | Contact'" />
 </template>
 
 <script setup lang="ts">
+import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
 </script>

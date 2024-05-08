@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue';
-import { ref, onMounted } from 'vue';
-
-const activeTab = ref('one');
+import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue'
+import { ref, onMounted } from 'vue'
+import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
+const activeTab = ref('one')
 
 onMounted(() => {
-  const tabs = document.querySelectorAll(".tabs li a");
+  const tabs = document.querySelectorAll('.tabs li a')
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const terms = tab.hash.replace('/', '');
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      activeTab.value = terms.substring(1); // Remove the '#' from the term ID
-    });
-  });
-});
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const terms = tab.hash.replace('/', '')
+      tabs.forEach((t) => t.classList.remove('active'))
+      tab.classList.add('active')
+      activeTab.value = terms.substring(1) // Remove the '#' from the term ID
+    })
+  })
+})
 </script>
 
 <template>
@@ -24,7 +24,9 @@ onMounted(() => {
       <ul class="tabs group">
         <li><a :class="{ active: activeTab === 'one' }" href="#/one">Human capital</a></li>
         <li><a :class="{ active: activeTab === 'two' }" href="#/two">Transferable skills</a></li>
-        <li><a :class="{ active: activeTab === 'three' }" href="#/three">Continuing education</a></li>
+        <li>
+          <a :class="{ active: activeTab === 'three' }" href="#/three">Continuing education</a>
+        </li>
       </ul>
 
       <div id="terms">
@@ -34,6 +36,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
+  <ABaseIntroSection :content="'SOP | Contact'" />
 </template>
 
 <style scoped>
@@ -60,14 +63,14 @@ ul.tabs li a {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  background: #649DA0;
+  background: #649da0;
   border-radius: 8px;
   transition: all 0.3s;
 }
 
 ul.tabs li a.active {
   background: #545f60;
-  color: #D3FEF5;
+  color: #d3fef5;
 }
 
 #terms {
