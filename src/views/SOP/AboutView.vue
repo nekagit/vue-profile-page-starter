@@ -22,14 +22,10 @@ const chooseSection = {
 </script>
 
 <template>
-    <BaseSection class="w-[50%]" :button="true" :position="'center'"  :sectionItem="weAreSection" />
-    <hr />
-    <ABaseIntroSection  :content="'Home | About'" />
+  <BaseSection :button="false" :position="'right'"  :sectionItem="chooseSection" />
+  <BaseSection :button="true" :position="'center'" :sectionItem="weAreSection" />
     <div class="md:flex flex-row my-10 gap-10 p-10">
-      <div class=" w-[50%]">
-
-        <BaseSection :button="false" :position="'right'" :sectionItem="chooseSection" />
-      </div>
+      <ABaseIntroSection  :content="'Home | About'" />
       <div class="my-auto">
         <LinearProgressBar />
         <LinearProgressBar />

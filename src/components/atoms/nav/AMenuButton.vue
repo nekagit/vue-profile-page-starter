@@ -13,8 +13,11 @@
         <li><RouterLink @click="closeMenu" to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
-    <div class="grid place-content-center text-white h-full text-center text-2xl">
-      <!-- Your content here -->Welcome to Stichting SOP  Rotterdam <br> Profile Page
+    <div class="flex justify-around text-white h-full text-center text-2xl">
+      
+      <img class="background-image2" src="../../../assets/SOP/img/logoo.png" />
+      <!-- Welcome to Stichting SOP  Rotterdam <br> Profile Page -->
+      <img class="background-image" src="../../../assets/SOP/img/wg-removebg.png" />
     </div>
   </div>
 </template>
@@ -38,6 +41,26 @@ function closeMenu() {
 <style scoped lang="scss">
 
 
+.background-image {
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+.background-image2 {
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.footer:hover .background-image .background-image2 {
+  opacity: 0; /* Make the background image transparent on hover */
+}
 $base-duration: 250ms;
 
 // Colors
