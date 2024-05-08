@@ -1,12 +1,7 @@
 <template>
-  <div class="flex flex-col md:flex-row gap-7 justify-center">
-    <ABaseImageSection v-for="item in 3" :key="item" :button="false" :position="'left'" :sectionItem="weAreSection" />
-  </div>
-  <hr  />
+  asdf
   <ABaseIntroSection :content="'Home | Services'" />
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-    <ABaseIconSection v-for="item in 6" :key="item" :button="false" :position="'left'" :sectionItem="weAreSection" />
-  </div>
+  asdf
 </template>
 
 <script setup lang="ts">

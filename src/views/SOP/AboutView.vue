@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import LinearProgressBar from "@/components/atoms/bars/LinearProgressBar.vue"
 import BaseSection from '@/components/atoms/sections/ABaseSection.vue'
 import ABaseImgModal from "@/components/atoms/img/ABaseImgModal.vue"
-import ABaseIntroSection from "@/components/atoms/sections/ABaseIntroSection.vue"
 const weAreSection = {
   title: 'We are awesome TEAM',
   content: [
@@ -23,16 +21,7 @@ const chooseSection = {
 
 <template>
   <BaseSection :button="false" :position="'right'"  :sectionItem="chooseSection" />
-  <BaseSection :button="true" :position="'center'" :sectionItem="weAreSection" />
-    <div class="md:flex flex-row my-10 gap-10 p-10">
-      <ABaseIntroSection  :content="'Home | About'" />
-      <div class="my-auto">
-        <LinearProgressBar />
-        <LinearProgressBar />
-        <LinearProgressBar />
-      </div>
         <ABaseImgModal />
-    </div>
 
 </template>
 

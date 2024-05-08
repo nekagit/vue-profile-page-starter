@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ABaseIntroSection from "@/components/atoms/sections/ABaseIntroSection.vue";
+</script>
 
 <template>
   <div id="contact-view">
@@ -79,4 +81,6 @@
         </div>
     
   </div>
+  <ABaseIntroSection :content="'SOP | Contact'" />
+
 </template>

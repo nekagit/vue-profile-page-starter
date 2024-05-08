@@ -2,11 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from '../views/SOP/HomeView.vue'
 import AboutView from '../views/SOP/AboutView.vue'
-import ServicesView from '@/views/SOP/ServicesView.vue'
-import GalleryView from '@/views/SOP/PortfolioView.vue'
-import PricingView from '@/views/SOP/PricingView.vue'
+import SchoolView from '@/views/SOP/SchoolView.vue'
+import GalleryView from '@/views/SOP/SchoolView.vue'
+import SportView from '@/views/SOP/SportView.vue'
 import ContactView from '@/views/SOP/ContactView.vue'
-import PortfolioView from '@/views/SOP/PortfolioView.vue'
+import SportView from '@/views/SOP/SportView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,7 +24,7 @@ const router = createRouter({
     {
       path: '/services',
       name: 'services',
-      component: ServicesView
+      component: SchoolView
     },
     {
       path: '/gallery',
@@ -34,12 +34,12 @@ const router = createRouter({
     {
       path: '/portfolio',
       name: 'portfolio',
-      component: PortfolioView
+      component: SportView
     },
     {
       path: '/pricing',
       name: 'pricing',
-      component: PricingView
+      component: SportView
     },
     {
       path: '/contact',
