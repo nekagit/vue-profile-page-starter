@@ -4,8 +4,6 @@ import HomeIntroComponent from '@/components/home/HomeIntroComponent.vue';
 </script>
 
 <template>
-  <div id="home-view">
-    <HomeIntroComponent></HomeIntroComponent>
-    <ABaseHorizontalSection :content="'SOP | Contact'" />
-  </div>
+    <HomeIntroComponent />
+    <ABaseHorizontalSection :content="'SOP | Home'" />
 </template>

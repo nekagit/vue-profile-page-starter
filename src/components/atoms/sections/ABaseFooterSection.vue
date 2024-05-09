@@ -33,20 +33,20 @@
           <div class="footer-section">
             <div class="lg:mb-0 mb-6">
               <button
-              class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              class="text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none"
             type="button"
             >
-            <i class="fab fa-facebook"></i></button
+             <Facebook /></button
             ><button
-            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            class="text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none"
             type="button"
             >
-            <i class="fab fa-instagram"></i></button
+              <Instagram /></button
             ><button
-            class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            class="text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none"
             type="button"
             >
-            <i class="fab fa-github"></i>
+              <Github />
           </button>
         </div>
       </div>
@@ -64,6 +64,9 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 import AMenuButton from "@/components/atoms/nav/AMenuButton.vue"
+ import { Facebook } from 'lucide-vue-next';
+   import { Instagram } from 'lucide-vue-next';
+     import { Github } from 'lucide-vue-next';
 </script>
 
 <style scoped>
