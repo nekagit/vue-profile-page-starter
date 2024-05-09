@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue'
-import { ref, onMounted } from 'vue'
-import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
+import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue';
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
+import { onMounted, ref } from 'vue';
 const activeTab = ref('one')
 
 onMounted(() => {
@@ -36,7 +36,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <ABaseIntroSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection :content="'SOP | Contact'" />
 </template>
 
 <style scoped>

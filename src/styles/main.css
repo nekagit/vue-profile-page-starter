@@ -13,7 +13,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 2rem auto;
   padding: 0;
   scroll-behavior: smooth;
   height: 100%;

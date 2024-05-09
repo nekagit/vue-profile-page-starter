@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import BaseSection from '@/components/atoms/sections/ABaseSection.vue'
-import ABaseImgModal from '@/components/atoms/img/ABaseImgModal.vue'
-import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 
 const weAreSection = {
   title: 'We are awesome TEAM',
@@ -22,7 +20,7 @@ const chooseSection = {
 </script>
 
 <template>
-  <ABaseIntroSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection :content="'SOP | Contact'" />
 </template>
 
 <style scoped></style>

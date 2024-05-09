@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import HomeIntroComponent from '@/components/home/HomeIntroComponent.vue'
-import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
+import HomeIntroComponent from '@/components/home/HomeIntroComponent.vue';
 </script>
 
 <template>
   <div id="home-view">
     <HomeIntroComponent></HomeIntroComponent>
-    <ABaseIntroSection :content="'SOP | Contact'" />
+    <ABaseHorizontalSection :content="'SOP | Contact'" />
   </div>
 </template>

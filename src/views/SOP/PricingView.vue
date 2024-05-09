@@ -80,9 +80,9 @@
       </div>
     </section>
   </div>
-  <ABaseIntroSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection :content="'SOP | Contact'" />
 </template>
 
 <script setup lang="ts">
-import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 </script>

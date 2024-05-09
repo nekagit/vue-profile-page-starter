@@ -3,16 +3,16 @@
     <ABaseImageSection v-for="item in 3" :key="item" :button="false" :position="'left'" :sectionItem="weAreSection" />
   </div>
   <hr  />
-  <ABaseIntroSection :content="'Home | Services'" />
+  <ABaseHorizontalSection :content="'Home | Services'" />
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
     <ABaseIconSection v-for="item in 6" :key="item" :button="false" :position="'left'" :sectionItem="weAreSection" />
   </div>
 </template>
 
 <script setup lang="ts">
-import ABaseImageSection from "@/components/molekules/MBaseImageSection.vue";
-import ABaseIntroSection from "@/components/atoms/sections/ABaseIntroSection.vue";
+import ABaseHorizontalSection from "@/components/atoms/sections/ABaseHorizontalSection.vue";
 import ABaseIconSection from "@/components/atoms/sections/ABaseIconSection.vue";
+import ABaseImageSection from "@/components/molekules/MBaseImageSection.vue";
 
 const weAreSection = {
   title: 'We are awesome TEAM',

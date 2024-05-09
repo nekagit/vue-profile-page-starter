@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 </script>
 
 <template>
-  <div id="contact-view">
+  <div id="contact-view" class="shadow-xl">
     <div class="my-6">
       <div
         class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]"
@@ -11,8 +11,7 @@ import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue
         <div>
           <h1 class="text-3xl font-extrabold">Let's Talk</h1>
           <p class="text-sm text-gray-400 mt-3">
-            Have some big idea or brand to develop and need help? Then reach out we'd love to hear
-            about your project and provide help.
+            Wanna get in contact with us no problem just fill out the form or directly message through email or social media.
           </p>
           <div class="mt-12">
             <h2 class="text-lg font-extrabold">Email</h2>
@@ -36,7 +35,7 @@ import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue
                 </div>
                 <a target="blank" href="#" class="text-[#007bff] text-sm ml-3">
                   <small class="block">Mail</small>
-                  <strong>https://gmail.com</strong>
+                  <strong>infor@soprotterdam.nl</strong>
                 </a>
               </li>
             </ul>
@@ -132,5 +131,5 @@ import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue
       </div>
     </div>
   </div>
-  <ABaseIntroSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection :content="'SOP | Contact'" />
 </template>

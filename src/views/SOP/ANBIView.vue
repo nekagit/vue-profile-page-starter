@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
-import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
-import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
-import MilanVukas from '@/assets/SOP/milan_web.jpg'
 import AleksandarVasic from '@/assets/SOP/alex_raw.jpg'
 import Guest from '@/assets/SOP/guest.jpg'
+import MilanVukas from '@/assets/SOP/milan_web.jpg'
+import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
+import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
 const anbi = [
   {
     title: 'Goal',
@@ -47,7 +47,7 @@ const anbi = [
     :variant="2"
     />
 </div>
-  <ABaseIntroSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection :content="'SOP | Contact'" />
 </template>
 
 <style scoped></style>

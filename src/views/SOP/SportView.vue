@@ -1,11 +1,11 @@
 <template>
   asdf
-  <ABaseIntroSection :content="'Home | Services'" />
+  <ABaseHorizontalSection :content="'Home | Services'" />
   asdf
 </template>
 
 <script setup lang="ts">
-import ABaseIntroSection from '@/components/atoms/sections/ABaseIntroSection.vue'
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 
 const weAreSection = {
   title: 'We are awesome TEAM',
