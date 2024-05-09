@@ -1,15 +1,17 @@
 <template>
   <div class="row">
     <div class="card">
-      <h4>What is a Frontend Develoment?</h4>
+      <h4>  {{ title }}</h4>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam porro similique aliquid
-        debitis ipsam soluta dolorum ipsa! Voluptate, suscipit iure.
+          {{ content }}
       </p>
     </div>
   </div>
 </template>
+<script setup lang="ts">
 
+defineProps(['content', 'title'])
+</script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 

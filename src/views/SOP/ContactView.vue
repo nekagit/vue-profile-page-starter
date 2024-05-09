@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import AGlasmor from '@/components/atoms/cards/cards/ACardGlassMorphism.vue';
+import AGlasmor2 from '@/components/atoms/cards/cards/ACardGlassMorphism2.vue';
+import FirmDetails from '@/components/atoms/cards/cards/AnimationCard.vue';
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 </script>
 
@@ -131,5 +134,6 @@ import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalS
       </div>
     </div>
   </div>
+  <FirmDetails :title="'Firm'" :content="'SOP Rotterdam Foundation, Poseidonstraat 7, 3054 PZ Rotterdam,  8563.68.842,  66038138,  RABO Bank NL97 RABO,  0310 6518 67,  +31 6 41173071,  info@soprotterdam.com'" />
   <ABaseHorizontalSection :content="'SOP | Contact'" />
 </template>
