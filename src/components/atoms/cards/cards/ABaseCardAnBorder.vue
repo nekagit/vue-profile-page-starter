@@ -5,7 +5,7 @@
 
         {{ title }}
       </div>
-      <div class="card example-1 shadow-xl">
+      <div class="text-xl card example-1 shadow-xl">
           <div class="text-2xl">
           </div>
         <div class="inner">
@@ -20,7 +20,7 @@
 
         {{ title }}
       </div>
-      <div class="card example-2 shadow-xl">
+      <div class="text-xl card example-2 shadow-xl">
           <div class="text-2xl">
           </div>
         <div class="inner">
@@ -35,7 +35,7 @@
 
         {{ title }}
       </div>
-      <div class="card example-3 shadow-xl">
+      <div class="text-xl card example-3 shadow-xl">
           <div class="text-2xl">
           </div>
         <div class="inner">
@@ -50,7 +50,7 @@
 
         {{ title }}
       </div>
-      <div class="card example-4 shadow-xl">
+      <div class="text-xl card example-4 shadow-xl">
           <div class="text-2xl">
           </div>
         <div class="inner">
@@ -61,7 +61,7 @@
     
 
     <template v-if="variant === 5">
-      <div class="card example-5">
+      <div class="text-xl card example-5">
           <div class="text-2xl">
 
             {{ title }}
@@ -89,18 +89,14 @@ defineProps<ABaseCardAnBorder>()
 
 <style lang="scss" scoped>
 .card {
-  max-width: 80vw;
-  max-height: 50vw;
-  overflow: auto;
-  width: 100%;
   margin: 50px auto;
   border-radius: var(--border-radius);
 }
 
 .card .inner {
   padding: 25px;
-  background: #222;
-  color: #fff;
+  background: #272727f1;
+  color: #ffffff;
   border-radius: var(--border-radius);
 }
 
@@ -127,8 +123,8 @@ defineProps<ABaseCardAnBorder>()
   content: '';
   display: block;
   background: linear-gradient(90deg, hsla(197, 100%, 64%, 1) 0%, hsla(339, 100%, 55%, 1) 100%);
-  height: 500px;
-  width: 500px;
+  height: 600px;
+  width: 600px;
   position: absolute;
   animation: rotate 8s linear infinite;
   z-index: 0;

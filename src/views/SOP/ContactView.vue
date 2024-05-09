@@ -35,7 +35,7 @@ import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalS
                 </div>
                 <a target="blank" href="#" class="text-[#007bff] text-sm ml-3">
                   <small class="block">Mail</small>
-                  <strong>infor@soprotterdam.nl</strong>
+                  <strong>info@soprotterdam.nl</strong>
                 </a>
               </li>
             </ul>
