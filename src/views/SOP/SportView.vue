@@ -1,18 +1,13 @@
 <template>
-  <ScrollFullPageSideIndex />
+<ScrollFullPageSideIndex :side-list="sideList" :section-contents="sideList" />
   <ABaseHorizontalSection :content="'Home | Sport'" />
 </template>
 
 <script setup lang="ts">
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 import ScrollFullPageSideIndex from '@/components/ScrollFullPageSideIndex.vue';
-const weAreSection = {
-  title: 'We are awesome TEAM',
-  content: [
-    'Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, '
-  ],
-  button: 'Info'
-}
+const sideList = ["asdf", "asdf", "asdf", "asdf", "asdf", "asdf"]
+
 </script>
 
 <style scoped></style>

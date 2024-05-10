@@ -6,7 +6,7 @@ import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalS
 </script>
 
 <template>
-  <div id="contact-view" class="shadow-xl">
+  <div id="contact-view">
     <div class="my-6">
       <div
         class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]"
@@ -134,6 +134,6 @@ import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalS
       </div>
     </div>
   </div>
-  <FirmDetails :title="'Firm'" :content="'SOP Rotterdam Foundation, Poseidonstraat 7, 3054 PZ Rotterdam,  8563.68.842,  66038138,  RABO Bank NL97 RABO,  0310 6518 67,  +31 6 41173071,  info@soprotterdam.com'" />
+  <FirmDetails class="grid place-content-center" title="'Firm'" :content="'SOP Rotterdam Foundation, Poseidonstraat 7, 3054 PZ Rotterdam,  8563.68.842,  66038138,  RABO Bank NL97 RABO,  0310 6518 67,  +31 6 41173071,  info@soprotterdam.com'" />
   <ABaseHorizontalSection :content="'SOP | Contact'" />
 </template>

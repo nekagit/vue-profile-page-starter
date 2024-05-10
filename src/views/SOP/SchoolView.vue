@@ -1,25 +1,12 @@
 <script setup lang="ts">
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
+import ScrollFullPageSideIndex from '@/components/ScrollFullPageSideIndex.vue';
+const sideList = ["asdf", "asdf", "asdf", "asdf", "asdf", "asdf"]
 
-const weAreSection = {
-  title: 'We are awesome TEAM',
-  content: [
-    'Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas',
-    'Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas'
-  ],
-  button: 'Info'
-}
-const chooseSection = {
-  title: 'Why Choose Us?',
-  content: [
-    'Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur. ',
-    'Sed ut perspiciaatis iste natus error sit voluptatem probably havent heard of them accusamus.'
-  ],
-  button: ''
-}
 </script>
 
 <template>
+<ScrollFullPageSideIndex :side-list="sideList" :section-contents="sideList" />
   <ABaseHorizontalSection :content="'SOP | School'" />
 </template>
 
