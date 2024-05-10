@@ -1,113 +1,79 @@
 <template>
-<body data-spy="scroll" data-target="#navbar-example">
-  <div class="wrapper" >
-
     <nav class="nav__wrapper" id="navbar-example">
       <ul class="nav">
-
-        <li role="presentation" class="active">
-          <a href="#section1">
-            <span class="nav__counter">01</span>
-            <h3 class="nav__title">Intro</h3>
-            <p class="nav__body"><strong>Timeline-style navigation</strong>. Scroll down to see what happens, or click on a number in the nav.</p>
+        <li v-for="(sideListItem, index) in sideList" :key="index" :class="{ active: index === activeIndex }">
+          <a :href="'#section' + (index + 1)" @click="scrollToSection(index + 1)">
+            <span class="nav__counter">{{ formatIndex(index + 1) }}</span>
+            <h3 class="nav__title">{{ sectionTitles[index] }}</h3>
+            <p class="nav__body">{{ sectionBodies[index] }}</p>
           </a>
         </li>
-
-        <li role="presentation">
-          <a href="#section2">
-            <span class="nav__counter">02</span>
-            <h3 class="nav__title">Section 2 Title</h3>
-            <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-          </a>
-        </li>
-
-        <li role="presentation">
-          <a href="#section3">
-            <span class="nav__counter">03</span>
-            <h3 class="nav__title">Section 3 Title</h3>
-            <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-          </a>
-        </li>
-        
-        <li role="presentation">
-          <a href="#section4">
-            <span class="nav__counter">04</span>
-            <h3 class="nav__title">Section 4 Title</h3>
-            <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-          </a>
-        </li>
-        
-        <li role="presentation">
-          <a href="#section5">
-            <span class="nav__counter">05</span>
-            <h3 class="nav__title">Section 5 Title</h3>
-            <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-          </a>
-        </li>
-        
-        <li role="presentation">
-          <a href="#section6">
-            <span class="nav__counter">06</span>
-            <h3 class="nav__title">Section 6 Title</h3>
-            <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-          </a>
-        </li>
-
       </ul>
     </nav>
 
-    <section class="section section1" id="section1">
-      Scroll down or use the nav.
+    <section v-for="(sectionContent, index) in sectionContents" :key="index" class="section" :id="'section' + (index + 1)">
+      {{ sectionContent }}
     </section>
-
-    <section class="section section2" id="section2">
-      Section 2
-    </section>
-
-    <section class="section section3" id="section3">
-      Section 3
-    </section>
-
-    <section class="section section4" id="section4">
-      Section 4
-    </section>
-
-    <section class="section section5" id="section5">
-      Section 5
-    </section>
-
-    <section class="section section6" id="section6">
-      Section 6
-    </section>
-
-
-  </div>
-</body>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
+defineProps(["sideList", "sectionContents"])
+const activeIndex = ref(0);
+const sectionTitles = ref(["Intro", "Section 2 Title", "Section 3 Title", /* Add more titles as needed */]);
+const sectionBodies = ref(["Timeline-style navigation. Scroll down to see what happens, or click on a number in the nav.", "Body of section 2", "Body of section 3", /* Add more bodies as needed */]);
 
-const scrollToSection = (sectionId: string) => {
-  const section = document.querySelector(sectionId);
-  if (section) {
+const scrollToSection = (index: number) => {
+  const target = document.getElementById('section' + index);
+  if (target) {
     window.scrollTo({
-      top: section.getBoundingClientRect().top + window.pageYOffset,
+      top: target.offsetTop,
       behavior: 'smooth'
     });
+    activeIndex.value = index - 1;
+  }
+};
+
+const formatIndex = (index: number) => {
+  return index < 10 ? '0' + index : index.toString();
+};
+
+const handleScroll = () => {
+  const sections = document.querySelectorAll('.section');
+  let index = 0;
+  for (const section of sections) {
+    const rect = section.getBoundingClientRect();
+    if (rect.top >= 0 && rect.top +200 <= window.innerHeight) {
+      activeIndex.value = index;
+      break;
+    }
+    index++;
   }
 };
 
 onMounted(() => {
-  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      scrollToSection(this.getAttribute('href'));
-    });
-  });
+  window.addEventListener('scroll', handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
+
+watch(activeIndex, () => {
+  const title = document.querySelector('.nav__title.active');
+  const body = document.querySelector('.nav__body.active');
+  if (title && body) {
+    title.classList.remove('active');
+    body.classList.remove('active');
+  }
+  const newTitle = document.querySelector('.nav__title');
+  const newBody = document.querySelector('.nav__body');
+  if (newTitle && newBody) {
+    newTitle.classList.add('active');
+    newBody.classList.add('active');
+  }
 });
 </script>
-
 <style lang="scss" scoped>
 .wrapper {
   min-height: 100vh;

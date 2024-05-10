@@ -1,10 +1,11 @@
 <template>
+  <ScrollFullPageSideIndex />
   <ABaseHorizontalSection :content="'Home | Sport'" />
 </template>
 
 <script setup lang="ts">
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
-
+import ScrollFullPageSideIndex from '@/components/ScrollFullPageSideIndex.vue';
 const weAreSection = {
   title: 'We are awesome TEAM',
   content: [

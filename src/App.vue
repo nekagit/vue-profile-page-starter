@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
 import ABaseFooterSection from './components/atoms/sections/ABaseFooterSection.vue'
+import ScrollFullPageSideIndex from './components/ScrollFullPageSideIndex.vue';
+const sideList = ["asdf", "asdf", "asdf", "asdf", "asdf", "asdf"]
 </script>
 
 <template>
-  <RouterView class="font-libre h-screen" />
-  <ABaseFooterSection class="font-libre" />
+<ScrollFullPageSideIndex :side-list="sideList" :section-contents="sideList" />
+<ABaseFooterSection class="font-libre" />
 </template>
