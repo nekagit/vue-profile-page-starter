@@ -20,7 +20,7 @@ const chooseSection = {
 </script>
 
 <template>
-  <ABaseHorizontalSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection :content="'SOP | School'" />
 </template>
 
 <style scoped></style>

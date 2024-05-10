@@ -1,7 +1,5 @@
 <template>
-  asdf
-  <ABaseHorizontalSection :content="'Home | Services'" />
-  asdf
+  <ABaseHorizontalSection :content="'Home | Sport'" />
 </template>
 
 <script setup lang="ts">
