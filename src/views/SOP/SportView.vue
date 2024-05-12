@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 import ScrollFullPageSideIndex from '@/components/ScrollFullPageSideIndex.vue';
-const sideList = ["asdf", "asdf", "asdf", "asdf", "asdf", "asdf"]
+const sideList = ["SOP Sport", "Kros", "Fudbal", "Boks", "Atletika", "Plivanje"]
 
 </script>
 

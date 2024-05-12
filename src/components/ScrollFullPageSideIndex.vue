@@ -20,8 +20,8 @@
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
 defineProps(["sideList", "sectionContents"])
 const activeIndex = ref(0);
-const sectionTitles = ref(["Intro", "Section 2 Title", "Section 3 Title", /* Add more titles as needed */]);
-const sectionBodies = ref(["Timeline-style navigation. Scroll down to see what happens, or click on a number in the nav.", "Body of section 2", "Body of section 3", /* Add more bodies as needed */]);
+const sectionTitles = ref(["SOP Sport", "Kros trcanje", "Fudbal", "Boks", "Atletika", "Plivanje" /* Add more titles as needed */]);
+const sectionBodies = ref(["We provide different occasions to participate in different sports", "Kros is a run we organize many years here in Rotterdam", "We love soccer and so does the kids. There is no professional team but check out the play dates", /* Add more bodies as needed */]);
 
 const scrollToSection = (index: number) => {
   const target = document.getElementById('section' + index);
