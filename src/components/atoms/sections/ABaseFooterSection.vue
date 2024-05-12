@@ -1,9 +1,8 @@
 <template>
   <footer class="bg-gray-800 text-white font-medium relative">
     <AMenuButton class="h-[30vh]" />
-    <hr />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center text-center">
-      <div class="footer-section">
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center text-center">
+      <div class="">
         <h3 class="text-lg header mb-4">Contact</h3>
         <ul>
           <li>
@@ -52,3 +51,13 @@ import { Facebook } from 'lucide-vue-next'
 import { Instagram } from 'lucide-vue-next'
 import { Github } from 'lucide-vue-next'
 </script>
+
+<style scoped>
+button {
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+button:hover {
+  opacity:150%
+}
+</style>

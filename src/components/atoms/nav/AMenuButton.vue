@@ -40,19 +40,23 @@ function closeMenu() {
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
-  opacity: 1;
-  z-index: -1;
+  opacity: 0.5;
+  z-index: 0;
   transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+.background-image:hover {
+  opacity: 1;
 }
 .background-image2 {
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
-  opacity: 1;
   z-index: 1;
-  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  transition: scale 0.5s ease; /* Smooth transition for opacity */
 }
-
+.background-image2:hover {
+  scale: 150%;
+}
 .footer:hover .background-image .background-image2 {
   opacity: 0; /* Make the background image transparent on hover */
 }
