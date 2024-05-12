@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from '@/components/ui/accordion'
+
 const homeCard = {
     title: "Welcome to SOP Rotterdam",
     description: "We offer information about serbian schooling and Rotterdam Sport Days",
@@ -34,23 +29,6 @@ const homeCard = {
         <div class="dot animate slide-up delay-8"></div>
       </div>
     </div>  
-    <div class="text">
-      <!-- <img class="inset" :src="cardPic" alt="" /> -->
-      <div v-for="sectionHeader in homeCard.sectionHeaders" :key="sectionHeader.title">
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger class="hover:text-black no-underline">
-              <h5 class="hover:text-black">
-                {{sectionHeader.title }}
-              </h5>
-            </AccordionTrigger>
-            <AccordionContent>
-              <!-- <img :src="sectionHeader.img" alt="sponsori" /> -->
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
-    </div>
   </div>
 </template>
 
