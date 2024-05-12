@@ -4,7 +4,7 @@ const homeCard = {
     title: "Welcome to SOP Rotterdam",
     description: "We offer information about serbian schooling and Rotterdam Sport Days",
     // cardPic: HomePic,
-    color: "rgba(58, 110, 241)",
+    color: "rgba(0, 0, 0)",
     sectionHeaders: [
         {title: "Sponsors", description: "asdfasdfsadfsa",
         childComponent: '<>asdf</>',
@@ -17,8 +17,8 @@ const homeCard = {
   <div class="wrap animate pop">
     <div class="overlay">
       <div class="overlay-content animate slide-left delay-2">
-        <h1 class="animate slide-left pop delay-4">{{ homeCard.title }}</h1>
-        <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem">
+        <h3 class="animate slide-left pop delay-4 text-md">{{ homeCard.title }}</h3>
+        <p class="animate text-sm" style="color: white;">
           {{ homeCard.description }}
         </p>
       </div>
@@ -37,7 +37,7 @@ const homeCard = {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 85vmin;
+  width: 95vmin;
   height: 65vmin;
   margin: 2rem auto;
   border: 8px solid;
@@ -70,7 +70,7 @@ const homeCard = {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 15vmin;
+  width: 25vmin;
   height: 100%;
   padding: 0.5rem 0 0 0.5rem;
   border: 3px solid;

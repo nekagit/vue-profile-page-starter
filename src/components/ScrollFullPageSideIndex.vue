@@ -1,78 +1,87 @@
 <template>
-    <nav class="nav__wrapper" id="navbar-example">
-      <ul class="nav">
-        <li v-for="(sideListItem, index) in sideList" :key="index" :class="{ active: index === activeIndex }">
-          <a :href="'#section' + (index + 1)" @click="scrollToSection(index + 1)">
-            <span class="nav__counter">{{ formatIndex(index + 1) }}</span>
-            <h3 class="nav__title">{{ sectionTitles[index] }}</h3>
-            <p class="nav__body">{{ sectionBodies[index] }}</p>
-          </a>
-        </li>
-      </ul>
-    </nav>
+  <nav class="nav__wrapper" id="navbar-example">
+    <ul class="nav">
+      <li
+        v-for="(sideListItem, index) in sideList"
+        :key="index"
+        :class="{ active: index === activeIndex }"
+      >
+        <a :href="'#section' + (index + 1)" @click="scrollToSection(index + 1)">
+          <span class="nav__counter">{{ formatIndex(index + 1) }}</span>
+          <h3 class="nav__title">{{ sectionTitles[index] }}</h3>
+          <p class="nav__body">{{ sectionSubtitle[index] }}</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-    <section v-for="(sectionContent, index) in sectionContents" :key="index" class="section" :id="'section' + (index + 1)">
-      {{ sectionContent }}
-    </section>
+  <section
+    v-for="(sectionContent, index) in sectionContents"
+    :key="index"
+    class="section"
+    :id="'section' + (index + 1)"
+  >
+  <ABaseImgModal />
+    <!-- {{sectionContent}} -->
+  </section>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
-defineProps(["sideList", "sectionContents"])
-const activeIndex = ref(0);
-const sectionTitles = ref(["SOP Sport", "Kros trcanje", "Fudbal", "Boks", "Atletika", "Plivanje" /* Add more titles as needed */]);
-const sectionBodies = ref(["We provide different occasions to participate in different sports", "Kros is a run we organize many years here in Rotterdam", "We love soccer and so does the kids. There is no professional team but check out the play dates", /* Add more bodies as needed */]);
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
+import ABaseImgModal from "@/components/atoms/img/ABaseImgModal.vue"
+defineProps(['sideList', 'sectionContents', 'sectionSubtitle', 'sectionTitles'])
+const activeIndex = ref(0)
 
 const scrollToSection = (index: number) => {
-  const target = document.getElementById('section' + index);
+  const target = document.getElementById('section' + index)
   if (target) {
     window.scrollTo({
       top: target.offsetTop,
       behavior: 'smooth'
-    });
-    activeIndex.value = index - 1;
+    })
+    activeIndex.value = index - 1
   }
-};
+}
 
 const formatIndex = (index: number) => {
-  return index < 10 ? '0' + index : index.toString();
-};
+  return index < 10 ? '0' + index : index.toString()
+}
 
 const handleScroll = () => {
-  const sections = document.querySelectorAll('.section');
-  let index = 0;
+  const sections = document.querySelectorAll('.section')
+  let index = 0
   for (const section of sections) {
-    const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.top +200 <= window.innerHeight) {
-      activeIndex.value = index;
-      break;
+    const rect = section.getBoundingClientRect()
+    if (rect.top >= 0 && rect.top + 200 <= window.innerHeight) {
+      activeIndex.value = index
+      break
     }
-    index++;
+    index++
   }
-};
+}
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
+  window.addEventListener('scroll', handleScroll)
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+})
 
 watch(activeIndex, () => {
-  const title = document.querySelector('.nav__title.active');
-  const body = document.querySelector('.nav__body.active');
+  const title = document.querySelector('.nav__title.active')
+  const body = document.querySelector('.nav__body.active')
   if (title && body) {
-    title.classList.remove('active');
-    body.classList.remove('active');
+    title.classList.remove('active')
+    body.classList.remove('active')
   }
-  const newTitle = document.querySelector('.nav__title');
-  const newBody = document.querySelector('.nav__body');
+  const newTitle = document.querySelector('.nav__title')
+  const newBody = document.querySelector('.nav__body')
   if (newTitle && newBody) {
-    newTitle.classList.add('active');
-    newBody.classList.add('active');
+    newTitle.classList.add('active')
+    newBody.classList.add('active')
   }
-});
+})
 </script>
 <style lang="scss" scoped>
 .wrapper {
@@ -80,23 +89,23 @@ watch(activeIndex, () => {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #fff;
-  position: relative; 
+  position: relative;
 }
 
 section {
   height: 100vh;
   font-size: 40px;
   font-weight: 100;
-  background-color: #22A7F0;
+  background-color: #22a7f0;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  $colors: white, #F64747, #22A7F0, #F9690E, #9B59B6, #03C9A9, #ffcc00;
+  $colors: white, #f64747, #22a7f0, #f9690e, #9b59b6, #03c9a9, #ffcc00;
   @for $i from 1 through length($colors) {
     &:nth-child(#{$i}) {
-      background: nth($colors, $i)
+      background: nth($colors, $i);
     }
   }
 }
@@ -113,7 +122,7 @@ section {
   }
 
   & {
-    margin: 0 0 100px 30px; 
+    margin: 0 0 100px 30px;
   }
   &__counter {
     font-size: 24px;
@@ -127,7 +136,9 @@ section {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    transition:
+      height 0.3s ease-out,
+      opacity 0.2s ease-out;
   }
   &__body {
     font-weight: 100;
@@ -137,7 +148,9 @@ section {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    transition:
+      height 0.3s ease-out,
+      opacity 0.2s ease-out;
   }
 
   li {
@@ -165,7 +178,7 @@ section {
 
       &:hover {
         background-color: transparent;
-        padding-left: 1em
+        padding-left: 1em;
       }
       &:focus {
         background-color: transparent;
@@ -196,8 +209,6 @@ section {
         overflow: visible;
       }
     }
-
   }
-
 }
 </style>

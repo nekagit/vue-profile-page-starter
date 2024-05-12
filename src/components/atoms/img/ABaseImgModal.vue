@@ -2,31 +2,41 @@
   <div class="shadow-xl my-5">
     <img id="myImg" src="@/assets/SOP/img/logoo.png" alt="Trolltunga, Norway" />
 
-    <div id="myModal" class="modal p-6">
-      <img class="modal-content" id="img01" />
+    <div id="myModal" class="modal p-6 bg-white">
+      <!-- <img class="modal-content" id="img01" alt="Modal"/> -->
+      <div class="modal-content bg-white w-full h-full">
+        <div>Title</div>
+        <div>This is Subtitle </div>
+        <div>This is Content alot of content so ther eshould be alot of text</div>
+        <div>maybe tis will be an image</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+
+const modal = ref()
+const img = ref()
+const modalImg = ref()
 
 onMounted(() => {
   // Get the modal
-  let modal = document.getElementById('myModal')
+  modal.value = document.getElementById('myModal')
   // Get the image and insert it inside the modal - use its "alt" text as a caption
-  let img = document.getElementById('myImg')
-  let modalImg = document.getElementById('img01')
+  img.value = document.getElementById('myImg')
+  modalImg.value = document.getElementById('img01')
 
-  img.onclick = function () {
-    modal.style.display = 'block'
-    modalImg.src = this.src
-    modalImg.alt = this.alt
+  img.value.onclick = function () {
+    modal.value.style.display = 'block'
+    modalImg.value.src = this.src
+    modalImg.value.alt = this.alt
   }
 
   // When the user clicks on <span> (x), close the modal
-  modal.onclick = function () {
-    modal.style.display = 'none'
+  modal.value.onclick = function () {
+    modal.value.style.display = 'none'
   }
 })
 </script>
