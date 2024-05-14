@@ -5,9 +5,9 @@
     <div id="myModal" class="modal p-6 bg-white">
       <!-- <img class="modal-content" id="img01" alt="Modal"/> -->
       <div class="modal-content bg-white w-full h-full">
-        <div>Title</div>
-        <div>This is Subtitle </div>
-        <div>This is Content alot of content so ther eshould be alot of text</div>
+        <div>{{ title}}</div>
+        <div>{{ subTitle }} </div>
+        <div>{{content}}</div>
         <div>maybe tis will be an image</div>
       </div>
     </div>
@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-
+defineProps(["title", "subTitle", "content", "imgSrc", "images"])
 const modal = ref()
 const img = ref()
 const modalImg = ref()

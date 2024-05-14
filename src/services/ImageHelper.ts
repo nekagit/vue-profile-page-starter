@@ -13,10 +13,10 @@ import SportPic1 from '@/assets/SOP/img/imgs/boks/2.jpeg'
 import SportPic2 from '@/assets/SOP/img/imgs/boks/3.jpeg'
 import SportPic3 from '@/assets/SOP/img/imgs/boks/4.jpeg'
 import SportPic4 from '@/assets/SOP/img/imgs/boks/5.jpeg'
-export default function ImageHelper (){
-    
-const sopGallery = [SOPPic, SOPPic1, SOPPic2, SOPPic3, SOPPic4]
-const sportGallery = [SportPic, SportPic1, SportPic2, SportPic3, SportPic4]
-const schoolGallery = [SchoolPic, SchoolPic1, SchoolPic2, SchoolPic3, SchoolPic4]
-    return {sopGallery, sportGallery, schoolGallery}
+
+export default function ImageHelper() {
+  const sopGallery = [SOPPic, SOPPic1, SOPPic2, SOPPic3, SOPPic4]
+  const sportGallery = [SportPic, SportPic1, SportPic2, SportPic3, SportPic4]
+  const schoolGallery = [SchoolPic, SchoolPic1, SchoolPic2, SchoolPic3, SchoolPic4]
+  return { sopGallery, sportGallery, schoolGallery }
 }
