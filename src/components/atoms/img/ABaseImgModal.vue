@@ -1,30 +1,26 @@
 <template>
   <div class="shadow-xl my-5">
-    <img id="myImg" src="@/assets/SOP/img/logoo.png" alt="Trolltunga, Norway" />
+    <img id="myImg" :src="imgSrc" alt="Trolltunga, Norway" />
 
     <div id="myModal" class="modal p-6 bg-white">
-      <!-- <img class="modal-content" id="img01" alt="Modal"/> -->
-         <ABaseCardAnBorder
-         class="modal-content"
-      :content="content"
-      :title="title"
-      :sub-title="subTitle"
-      :variant="2"
-    />
-      <!-- <div class="modal-content bg-white w-full h-full">
-        <div>{{ title}}</div>
-        <div>{{ subTitle }} </div>
-        <div>{{content}}</div>
-        <div>maybe tis will be an image</div>
-      </div> -->
+      <ABaseCardAnBorder
+        class="modal-content"
+        :content="content"
+        :title="title"
+        :sub-title="subTitle"
+        :variant="2"
+      />
+      
+    <img v-for="img in images" id="myImg" :src="imgSrc" alt="Trolltunga, Norway" :key="img"/>
+
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue';
-defineProps(["title", "subTitle", "content", "imgSrc", "images"])
+import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue'
+defineProps(['title', 'subTitle', 'content', 'imgSrc', 'images'])
 const modal = ref()
 const img = ref()
 const modalImg = ref()
@@ -50,7 +46,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
 #myImg {
   border-radius: 5px;
   cursor: pointer;

@@ -21,14 +21,24 @@
     class="section"
     :id="'section' + (index + 1)"
   >
-  <ABaseImgModal class="w-[75%] md:w-[50%]" :title="title " />
+    <ABaseImgModal
+      class="w-[75%] md:w-[50%]"
+      :title="sectionContent"
+      :content="'asdf'"
+      :sub-title="'asdf'"
+      :images="[tennis, run]"
+      :img-src="run"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
-import ABaseImgModal from "@/components/atoms/img/ABaseImgModal.vue"
+import ABaseImgModal from '@/components/atoms/img/ABaseImgModal.vue'
+import run from '@/assets/SOP/run.jpg'
+import tennis from '@/assets/SOP/tennis.jpg'
 defineProps(['sideList', 'sectionContents', 'sectionSubtitle', 'sectionTitles'])
+
 const activeIndex = ref(0)
 
 const scrollToSection = (index: number) => {
