@@ -1,8 +1,7 @@
 <template>
-  <img :id="'myImg' + uniqueId" class="z-0" :src="imgSrc" alt="imgSrc" @click="openModal" />
-  <div class="shadow-xl my-5">
+    <img :id="'myImg' + uniqueId" class="z-1" :src="imgSrc" alt="imgSrc" @click="openModal" />
 
-    <div :id="'myModal' + uniqueId" class="modal p-6 bg-white" @click="closeModal">
+    <div :id="'myModal' + uniqueId" class="modal p-6 bg-white z-10" @click="closeModal">
       <ABaseCardAnBorder
         class="modal-content z-10"
         :content="content"
@@ -10,9 +9,8 @@
         :sub-title="subTitle"
         :variant="2"
       />
-      <img v-for="(img, imgIndex) in images" class="z-0" :key="imgIndex" :src="img" alt="img" />
+      <img v-for="(img, imgIndex) in images" class="" :key="imgIndex" :src="img" alt="img" />
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -44,7 +42,6 @@ onMounted(() => {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  z-index:0!important;
 }
 
 #myImg:hover {
@@ -62,7 +59,6 @@ onMounted(() => {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-  z-index:999;
 }
 
 /* Modal Content (image) */

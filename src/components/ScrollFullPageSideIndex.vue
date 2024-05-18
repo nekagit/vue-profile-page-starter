@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav__wrapper" id="navbar-example">
+  <nav class="nav__wrapper z-2" id="navbar-example">
     <ul class="nav">
       <li
         v-for="(sideListItem, index) in sideList"
@@ -90,12 +90,12 @@ section {
   height: 100vh;
   font-size: 40px;
   font-weight: 100;
-  background-color: #22a7f0;
-  display: flex;
+  background-color: rgb(31,41,55);
+    display: flex;
   justify-content: center;
   align-items: center;
 
-  $colors: white, #f64747, #22a7f0, #f9690e, #9b59b6, #03c9a9, #ffcc00;
+  $colors: rgb(31,41,55), rgb(31,41,55) rgb(31,41,55), rgb(31,41,55), rgb(31,41,55), rgb(31,41,55) rgb(31,41,55);
   @for $i from 1 through length($colors) {
     &:nth-child(#{$i}) {
       background: nth($colors, $i);
