@@ -23,7 +23,7 @@
   >
     <ABaseImgModal
       :key="index"
-      class="w-[75%] md:w-[50%]"
+      class="w-[100%] md:w-[100%]"
       :title="sectionTitles[index]"
       :content="sectionContent"
       :sub-title="' '"
@@ -81,7 +81,6 @@ onBeforeUnmount(() => {
 <style lang="scss" scoped>
 .wrapper {
   min-height: 100vh;
-  font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #fff;
   position: relative;
@@ -92,7 +91,6 @@ section {
   font-size: 40px;
   font-weight: 100;
   background-color: #22a7f0;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +108,6 @@ section {
     position: fixed;
     height: 100%;
     padding: 30px;
-
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;

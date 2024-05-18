@@ -1,16 +1,16 @@
 <template>
+  <img :id="'myImg' + uniqueId" class="z-0" :src="imgSrc" alt="imgSrc" @click="openModal" />
   <div class="shadow-xl my-5">
-    <img :id="'myImg' + uniqueId" :src="imgSrc" alt="Trolltunga, Norway" @click="openModal" />
 
     <div :id="'myModal' + uniqueId" class="modal p-6 bg-white" @click="closeModal">
       <ABaseCardAnBorder
-        class="modal-content"
+        class="modal-content z-10"
         :content="content"
         :title="title"
         :sub-title="subTitle"
         :variant="2"
       />
-      <img v-for="(img, imgIndex) in images" :key="imgIndex" :src="img" alt="Image" />
+      <img v-for="(img, imgIndex) in images" class="z-0" :key="imgIndex" :src="img" alt="img" />
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@ import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue'
 defineProps(['title', 'subTitle', 'content', 'imgSrc', 'images'])
 
 const uniqueId = ref(Math.random().toString(36).substr(2, 9))
-const modal = ref(null)
+const modal = ref()
 
 const openModal = () => {
   modal.value.style.display = 'block'
@@ -44,18 +44,16 @@ onMounted(() => {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  z-index: 999;
+  z-index:0!important;
 }
 
 #myImg:hover {
   opacity: 0.7;
 }
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -64,6 +62,7 @@ onMounted(() => {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  z-index:999;
 }
 
 /* Modal Content (image) */
