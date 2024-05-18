@@ -21,7 +21,7 @@
     class="section"
     :id="'section' + (index + 1)"
   >
-  <ABaseImgModal class="w-[75%] md:w-[50%]" />
+  <ABaseImgModal class="w-[75%] md:w-[50%]" :title="title " />
   </section>
 </template>
 

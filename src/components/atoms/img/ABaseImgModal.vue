@@ -4,18 +4,26 @@
 
     <div id="myModal" class="modal p-6 bg-white">
       <!-- <img class="modal-content" id="img01" alt="Modal"/> -->
-      <div class="modal-content bg-white w-full h-full">
+         <ABaseCardAnBorder
+         class="modal-content"
+      :content="content"
+      :title="title"
+      :sub-title="subTitle"
+      :variant="2"
+    />
+      <!-- <div class="modal-content bg-white w-full h-full">
         <div>{{ title}}</div>
         <div>{{ subTitle }} </div>
         <div>{{content}}</div>
         <div>maybe tis will be an image</div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue';
 defineProps(["title", "subTitle", "content", "imgSrc", "images"])
 const modal = ref()
 const img = ref()
