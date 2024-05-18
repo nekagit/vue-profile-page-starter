@@ -1,8 +1,8 @@
 <template>
   <div class="shadow-xl my-5">
-    <img id="myImg" :src="imgSrc" alt="Trolltunga, Norway" />
+    <img :id="'myImg' + uniqueId" :src="imgSrc" alt="Trolltunga, Norway" @click="openModal" />
 
-    <div id="myModal" class="modal p-6 bg-white">
+    <div :id="'myModal' + uniqueId" class="modal p-6 bg-white" @click="closeModal">
       <ABaseCardAnBorder
         class="modal-content"
         :content="content"
@@ -10,38 +10,29 @@
         :sub-title="subTitle"
         :variant="2"
       />
-      
-    <img v-for="img in images" id="myImg" :src="imgSrc" alt="Trolltunga, Norway" :key="img"/>
-
+      <img v-for="(img, imgIndex) in images" :key="imgIndex" :src="img" alt="Image" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue'
 defineProps(['title', 'subTitle', 'content', 'imgSrc', 'images'])
-const modal = ref()
-const img = ref()
-const modalImg = ref()
+
+const uniqueId = ref(Math.random().toString(36).substr(2, 9))
+const modal = ref(null)
+
+const openModal = () => {
+  modal.value.style.display = 'block'
+}
+
+const closeModal = () => {
+  modal.value.style.display = 'none'
+}
 
 onMounted(() => {
-  // Get the modal
-  modal.value = document.getElementById('myModal')
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  img.value = document.getElementById('myImg')
-  modalImg.value = document.getElementById('img01')
-
-  img.value.onclick = function () {
-    modal.value.style.display = 'block'
-    modalImg.value.src = this.src
-    modalImg.value.alt = this.alt
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  modal.value.onclick = function () {
-    modal.value.style.display = 'none'
-  }
+  modal.value = document.getElementById('myModal' + uniqueId.value)
 })
 </script>
 

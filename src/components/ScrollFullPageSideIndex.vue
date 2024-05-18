@@ -22,22 +22,22 @@
     :id="'section' + (index + 1)"
   >
     <ABaseImgModal
+      :key="index"
       class="w-[75%] md:w-[50%]"
-      :title="sectionContent"
-      :content="'asdf'"
-      :sub-title="'asdf'"
-      :images="[tennis, run]"
-      :img-src="run"
+      :title="sectionTitles[index]"
+      :content="sectionContent"
+      :sub-title="' '"
+      :images="sectionImages[index]"
+      :img-src="coverImages[index]"
     />
   </section>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ABaseImgModal from '@/components/atoms/img/ABaseImgModal.vue'
-import run from '@/assets/SOP/run.jpg'
-import tennis from '@/assets/SOP/tennis.jpg'
-defineProps(['sideList', 'sectionContents', 'sectionSubtitle', 'sectionTitles'])
+
+defineProps(['sideList', 'sectionContents', 'sectionSubtitle', 'sectionTitles', 'coverImages', 'sectionImages'])
 
 const activeIndex = ref(0)
 
@@ -76,22 +76,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
-
-watch(activeIndex, () => {
-  const title = document.querySelector('.nav__title.active')
-  const body = document.querySelector('.nav__body.active')
-  if (title && body) {
-    title.classList.remove('active')
-    body.classList.remove('active')
-  }
-  const newTitle = document.querySelector('.nav__title')
-  const newBody = document.querySelector('.nav__body')
-  if (newTitle && newBody) {
-    newTitle.classList.add('active')
-    newBody.classList.add('active')
-  }
-})
 </script>
+
 <style lang="scss" scoped>
 .wrapper {
   min-height: 100vh;
