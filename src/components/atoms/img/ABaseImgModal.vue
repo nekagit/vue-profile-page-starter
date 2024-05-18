@@ -1,16 +1,16 @@
 <template>
-    <img :id="'myImg' + uniqueId" class="z-1" :src="imgSrc" alt="imgSrc" @click="openModal" />
+  <img :id="'myImg' + uniqueId" class="z-1" :src="imgSrc" alt="imgSrc" @click="openModal" />
 
-    <div :id="'myModal' + uniqueId" class="modal p-6 bg-white z-10" @click="closeModal">
-      <ABaseCardAnBorder
-        class="modal-content z-10"
-        :content="content"
-        :title="title"
-        :sub-title="subTitle"
-        :variant="2"
-      />
-      <img v-for="(img, imgIndex) in images" class="" :key="imgIndex" :src="img" alt="img" />
-    </div>
+  <div :id="'myModal' + uniqueId" class="modal p-6 bg-white z-20" @click="closeModal">
+    <ABaseCardAnBorder
+      class="modal-content z-10"
+      :content="content"
+      :title="title"
+      :sub-title="subTitle"
+      :variant="3"
+    />
+    <img v-for="(img, imgIndex) in images" class="" :key="imgIndex" :src="img" alt="img" />
+  </div>
 </template>
 
 <script setup lang="ts">

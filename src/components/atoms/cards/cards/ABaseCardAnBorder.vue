@@ -142,11 +142,9 @@ defineProps<ABaseCardAnBorder>()
   z-index: 1;
   width: 100%;
   margin: 2px;
+  background-color: black
 }
 
-.example-2 .inner {
-  margin: 2px;
-}
 
 .example-2::before {
   content: '';
@@ -162,7 +160,6 @@ defineProps<ABaseCardAnBorder>()
   transform: translate(0);
   position: absolute;
   animation: rotate 5s linear forwards infinite;
-  z-index: 0;
   top: 50%;
   transform-origin: top center;
 }

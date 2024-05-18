@@ -30,7 +30,7 @@ const anbi = [
       :key="index"
       :content="item.content"
       :title="item.title"
-      :variant="index + (1 % 2)"
+      :variant="3"
     />
   </div>
   <div class="flex flex-col lg:flex-row">

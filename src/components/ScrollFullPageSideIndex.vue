@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav__wrapper z-2" id="navbar-example">
+  <nav class="nav__wrapper z-1 md:z-10" id="navbar-example">
     <ul class="nav">
       <li
         v-for="(sideListItem, index) in sideList"
@@ -37,7 +37,14 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ABaseImgModal from '@/components/atoms/img/ABaseImgModal.vue'
 
-defineProps(['sideList', 'sectionContents', 'sectionSubtitle', 'sectionTitles', 'coverImages', 'sectionImages'])
+defineProps([
+  'sideList',
+  'sectionContents',
+  'sectionSubtitle',
+  'sectionTitles',
+  'coverImages',
+  'sectionImages'
+])
 
 const activeIndex = ref(0)
 
@@ -90,12 +97,17 @@ section {
   height: 100vh;
   font-size: 40px;
   font-weight: 100;
-  background-color: rgb(31,41,55);
-    display: flex;
+  background-color: rgb(31, 41, 55);
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  $colors: rgb(31,41,55), rgb(31,41,55) rgb(31,41,55), rgb(31,41,55), rgb(31,41,55), rgb(31,41,55) rgb(31,41,55);
+  $colors:
+    rgb(31, 41, 55),
+    rgb(31, 41, 55) rgb(31, 41, 55),
+    rgb(31, 41, 55),
+    rgb(31, 41, 55),
+    rgb(31, 41, 55) rgb(31, 41, 55);
   @for $i from 1 through length($colors) {
     &:nth-child(#{$i}) {
       background: nth($colors, $i);

@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
-import ScrollFullPageSideIndex from '@/components/ScrollFullPageSideIndex.vue';
-const sideList = ["asdf", "asdf", "asdf", "asdf", "asdf", "asdf"]
-
+import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
+import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
 </script>
 
 <template>
-<ScrollFullPageSideIndex :side-list="sideList" :section-contents="sideList" />
+  <ABaseCardAnBorder
+    class="w-[400px] mx-auto"
+    :content="'This page is under development'"
+    :title="''"
+    :sub-title="''"
+    :variant="2"
+  />
   <ABaseHorizontalSection :content="'SOP | School'" />
 </template>
 

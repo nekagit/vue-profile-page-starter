@@ -38,10 +38,10 @@
           </button>
         </div>
       </div>
-      <div class="text-center md:text-left">
-        <p class="text-white opacity-60">&copy; 2024 Nenad Kalicanin.</p>
-      </div>
     </div>
+    <div class="text-center mt-10">
+    <p class="text-white opacity-60">&copy; 2024 Nenad Kalicanin.</p>
+  </div>
   </footer>
 </template>
 
