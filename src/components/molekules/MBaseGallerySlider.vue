@@ -6,7 +6,7 @@
           <a
             :class="{ active: activeTab === title.toLowerCase() }"
             :href="'#/' + title.toLowerCase()"
-            @click="changeTab(title)"
+            @click.prevent="changeTab(title)"
           >
             {{ title }}
           </a>
@@ -16,7 +16,6 @@
       <div id="terms">
         <div v-for="(title) in filteredSliderTitles" :key="title">
           <template v-if="activeTab === title.toLowerCase()">
-            {{ activeTab }}
             <ABaseGallery :images="getImageGallery(title)" />
           </template>
         </div>
@@ -26,17 +25,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, ref } from 'vue'
+import { computed, defineProps, ref, onMounted } from 'vue'
 import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue'
 import ImageHelper from '@/services/ImageHelper'
 
-const props = defineProps(["sliderTitles"]);
+const props = defineProps(['sliderTitles'])
 
 const activeTab = ref('')
 
 const filteredSliderTitles = computed(() => {
-  const filtered = props.sliderTitles.filter((title: string) => title !== 'FilteredTitle')
-  return filtered
+  return props.sliderTitles.filter((title: string) => title !== 'FilteredTitle')
 })
 
 const getImageGallery = (title: string) => {
@@ -47,8 +45,13 @@ const getImageGallery = (title: string) => {
 const changeTab = (title: string) => {
   activeTab.value = title.toLowerCase()
 }
-</script>
 
+onMounted(() => {
+  if (filteredSliderTitles.value.length > 0) {
+    activeTab.value = filteredSliderTitles.value[0].toLowerCase()
+  }
+})
+</script>
 <style scoped>
 .wrap {
   margin-top: -10px;
@@ -98,10 +101,9 @@ ul.tabs li a.active {
   line-height: 26px;
   font-size: 18px;
   margin: 0;
-  display: none;
 }
 
-#terms > div:first-child {
+#terms > div[style*="display: block"] {
   display: block;
 }
 </style>
