@@ -4,7 +4,7 @@
     :section-contents="sectionContent"
     :section-subtitle="sectionSubtitle"
     :section-titles="sectionTitles"
-    :cover-images="[run, tennis, run, tennis, run, tennis]"
+    :cover-images="ImgHelper().sportPage"
     :section-images="[[run, tennis], [run, tennis], [run, tennis], [run, tennis], [run, tennis], [run, tennis]]"
   />
   <ABaseHorizontalSection :content="'Home | Sport'" />
@@ -12,8 +12,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import run from '@/assets/SOP/run.jpg'
-import tennis from '@/assets/SOP/tennis.jpg'
+import ImgHelper from '@/services/ImageHelper.ts'
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
 import ScrollFullPageSideIndex from '@/components/ScrollFullPageSideIndex.vue'
 

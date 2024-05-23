@@ -21,15 +21,17 @@
     class="section"
     :id="'section' + (index + 1)"
   >
+  <div class="coverImg" >
     <ABaseImgModal
-      :key="index"
-      class="w-[100%] md:w-[100%]"
-      :title="sectionTitles[index]"
-      :content="sectionContent"
-      :sub-title="' '"
-      :images="sectionImages[index]"
-      :img-src="coverImages[index]"
+    :key="index"
+    class="w-[100%] md:w-[100%]"
+    :title="sectionTitles[index]"
+    :content="sectionContent"
+    :sub-title="' '"
+    :images="sectionImages[index]"
+    :img-src="coverImages[index]"
     />
+  </div>
   </section>
 </template>
 
@@ -135,7 +137,8 @@ section {
   &__title {
     font-size: 32px;
     font-weight: 300;
-    margin: 0 0 0.25em;
+    margin: 0 0 0.25em;  color:black;
+
     width: 300px;
     height: 0;
     overflow: hidden;
@@ -146,7 +149,6 @@ section {
   }
   &__body {
     font-weight: 100;
-    font-size: 18px;
     font-size: 18px;
     width: 300px;
     height: 0;
@@ -165,8 +167,8 @@ section {
     &:after {
       content: '';
       display: block;
-      border-left: 2px solid white;
-      border-top: 2px solid white;
+      border-left: 2px solid rgb(0, 0, 0);
+      border-top: 2px solid rgb(0, 0, 0);
       height: 250px;
       width: 20px;
       position: absolute;
@@ -177,7 +179,7 @@ section {
     a {
       display: block;
       padding: 0;
-      color: #fff;
+      color: #00d0ff;
       transition: all 0.15s ease-out;
 
       &:hover {

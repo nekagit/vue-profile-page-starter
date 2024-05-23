@@ -14,9 +14,14 @@ import SportPic2 from '@/assets/SOP/img/imgs/boks/3.jpeg'
 import SportPic3 from '@/assets/SOP/img/imgs/boks/4.jpeg'
 import SportPic4 from '@/assets/SOP/img/imgs/boks/5.jpeg'
 
+import Sponsors from '@/assets/SOP/img/logoo.png'
+import run from '@/assets/SOP/run.jpg'
+import tennis from '@/assets/SOP/tennis.jpg'
+
 export default function ImageHelper() {
   const sopGallery = [SOPPic, SOPPic1, SOPPic2, SOPPic3, SOPPic4]
   const sportGallery = [SportPic, SportPic1, SportPic2, SportPic3, SportPic4]
   const schoolGallery = [SchoolPic, SchoolPic1, SchoolPic2, SchoolPic3, SchoolPic4]
-  return { sopGallery, sportGallery, schoolGallery }
+ const sportPage = [Sponsors, run, tennis,run ,tennis, run]
+  return { sopGallery, sportGallery, schoolGallery, sportPage }
 }
