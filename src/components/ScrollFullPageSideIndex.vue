@@ -18,10 +18,10 @@
   <section
     v-for="(sectionContent, index) in sectionContents"
     :key="index"
-    class="section"
+    class="section xl:p-40 xl:m-40"
     :id="'section' + (index + 1)"
   >
-  <div class="coverImg" >
+  <div class="mt-40" >
     <ABaseImgModal
     :key="index"
     class="w-[100%] md:w-[100%]"
@@ -125,6 +125,7 @@ section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
+    z-index: 999;
   }
 
   & {
