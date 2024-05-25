@@ -125,7 +125,6 @@ section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    z-index: 999;
   }
 
   & {
