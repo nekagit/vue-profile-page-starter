@@ -4,7 +4,7 @@ import MBaseGallerySlider from "@/components/molekules/MBaseGallerySlider.vue"
 </script>
 
 <template>
- <MBaseGallerySlider :slider-titles="['SOP', 'Sport', 'School']" />
+ <MBaseGallerySlider :slider-titles="['SOP', 'Sport', 'School']" class="mt-10" />
   <ABaseHorizontalSection :content="'SOP | Gallery'" />
 </template>
 
