@@ -124,7 +124,7 @@ section {
   &__wrapper {
     position: fixed;
     height: 100%;
-    padding: 30px;
+    padding: 0 50px 200px 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

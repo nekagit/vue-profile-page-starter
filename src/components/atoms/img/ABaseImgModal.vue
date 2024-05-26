@@ -88,6 +88,7 @@ onMounted(() => {
 .modal-content {
   margin: auto;
   display: block;
+  padding:1rem;
   width: 75%;
   animation-name: zoom;
   animation-duration: 0.6s;
