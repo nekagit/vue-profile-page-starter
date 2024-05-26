@@ -5,5 +5,5 @@ import ABaseFooterSection from './components/atoms/sections/ABaseFooterSection.v
 
 <template>
   <RouterView />
-  <ABaseFooterSection class="font-libre" />
+  <ABaseFooterSection />
 </template>

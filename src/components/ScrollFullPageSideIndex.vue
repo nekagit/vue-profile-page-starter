@@ -45,7 +45,7 @@ defineProps<{
   sectionSubtitle: string[];
   sectionTitles: string[];
   coverImages: string[];
-  sectionImages: string[];
+  sectionImages: string[][];
 }>();
 
 const activeIndex = ref(0);

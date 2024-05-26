@@ -16,7 +16,8 @@
       <div id="terms">
         <div v-for="(title) in filteredSliderTitles" :key="title">
           <template v-if="activeTab === title.toLowerCase()">
-            <ABaseGallery :images="getImageGallery(title)" />
+            <ABaseGallery v-if="images == null" :images="getImageGallery(title)" />
+            <ABaseGallery v-else :images="images" />
           </template>
         </div>
       </div>
@@ -28,8 +29,11 @@
 import { computed, defineProps, ref, onMounted } from 'vue'
 import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue'
 import ImageHelper from '@/services/ImageHelper'
-
-const props = defineProps(['sliderTitles'])
+interface Props {
+  sliderTitles:string[]
+  images?:string[]
+}
+const props = defineProps<Props>()
 
 const activeTab = ref('')
 

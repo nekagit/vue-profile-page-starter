@@ -14,15 +14,11 @@ import BoxPic2 from '@/assets/SOP/img/imgs/boks/3.jpeg'
 import BoxPic3 from '@/assets/SOP/img/imgs/boks/4.jpeg'
 import BoxPic4 from '@/assets/SOP/img/imgs/boks/5.jpeg'
 
-// import Kros from '@/assets/SOP/sportPage/logoo.png'
 import Sponsors from '@/assets/SOP/img/logoo.png'
 import Kros from '@/assets/SOP/sportPage/kros.png'
 import fudbal from '@/assets/SOP/sportPage/fudbalfirst.jpeg'
 import atletikfirst from '@/assets/SOP/sportPage/atletikfirst.jfif'
 import plivanjefirst from '@/assets/SOP/sportPage/plivanjefirst.jfif'
-
-import run from '@/assets/SOP/run.jpg'
-import tennis from '@/assets/SOP/tennis.jpg'
 
 export default function ImageHelper() {
   const sopGallery = [SOPPic, SOPPic1, SOPPic2, SOPPic3, SOPPic4]
@@ -30,12 +26,30 @@ export default function ImageHelper() {
   const schoolGallery = [SchoolPic, SchoolPic1, SchoolPic2, SchoolPic3, SchoolPic4]
   const sportPage = [Sponsors, Kros, fudbal, BoxPic, atletikfirst, plivanjefirst]
   const sportPageSectionImages = [
-    [Sponsors, Sponsors],
-    [Kros, Kros],
-    [fudbal, fudbal],
-    [BoxPic, BoxPic],
-    [atletikfirst, atletikfirst],
-    [plivanjefirst, plivanjefirst]
+    [Sponsors, Sponsors, Sponsors, Sponsors, Sponsors, Sponsors, Sponsors, Sponsors],
+    [Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros],
+    [fudbal, fudbal, fudbal, fudbal, fudbal, fudbal, fudbal, fudbal, fudbal, fudbal],
+    [BoxPic, BoxPic, BoxPic, BoxPic, BoxPic, BoxPic, BoxPic, BoxPic, BoxPic, BoxPic],
+    [
+      atletikfirst,
+      atletikfirst,
+      atletikfirst,
+      atletikfirst,
+      atletikfirst,
+      atletikfirst,
+      atletikfirst,
+      atletikfirst
+    ],
+    [
+      plivanjefirst,
+      plivanjefirst,
+      plivanjefirst,
+      plivanjefirst,
+      plivanjefirst,
+      plivanjefirst,
+      plivanjefirst,
+      plivanjefirst
+    ]
   ]
   return { sopGallery, sportGallery, schoolGallery, sportPage, sportPageSectionImages }
 }

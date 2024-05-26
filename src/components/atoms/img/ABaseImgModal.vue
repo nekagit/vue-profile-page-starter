@@ -1,6 +1,11 @@
 <template>
-  <img :id="'myImg' + uniqueId" class="max-h-[800px]" :src="imgSrc" alt="imgSrc" @click="openModal" />
-
+  <img
+    :id="'myImg' + uniqueId"
+    class="max-h-[800px]"
+    :src="imgSrc"
+    alt="imgSrc"
+    @click="openModal"
+  />
   <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
@@ -11,7 +16,7 @@
         :sub-title="subTitle"
         :variant="3"
       />
-      <img v-for="(img, imgIndex) in images" :key="imgIndex" class="modal-image" :src="img" alt="img" />
+      <MBaseGallerySlider :slider-titles="[title]" :images="images" />
     </div>
   </div>
 </template>
@@ -19,34 +24,35 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue'
+import MBaseGallerySlider from '@/components/molekules/MBaseGallerySlider.vue'
 
 defineProps<{
-  title: string;
-  subTitle: string;
-  content: string;
-  imgSrc: string;
-  images: string[];
-}>();
+  title: string
+  subTitle: string
+  content: string
+  imgSrc: string
+  images: string[]
+}>()
 
-const uniqueId = ref(Math.random().toString(36).substr(2, 9));
-const modal = ref<HTMLElement | null>(null);
+const uniqueId = ref(Math.random().toString(36).substr(2, 9))
+const modal = ref<HTMLElement | null>(null)
 
 const openModal = () => {
   if (modal.value) {
-    modal.value.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Disable main scrollbar
+    modal.value.style.display = 'block'
+    document.body.style.overflow = 'hidden' // Disable main scrollbar
   }
 }
 
 const closeModal = () => {
   if (modal.value) {
-    modal.value.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable main scrollbar
+    modal.value.style.display = 'none'
+    document.body.style.overflow = 'auto' // Enable main scrollbar
   }
 }
 
 onMounted(() => {
-  modal.value = document.getElementById('myModal' + uniqueId.value);
+  modal.value = document.getElementById('myModal' + uniqueId.value)
 })
 </script>
 
