@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import AleksandarVasic from '@/assets/SOP/alex_raw.jpg'
 import Guest from '@/assets/SOP/guest.jpg'
 import MilanVukas from '@/assets/SOP/milan_web.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
