@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav__wrapper z-1 md:z-10" id="navbar-example">
+  <nav class="nav__wrapper" id="navbar-example">
     <ul class="nav">
       <li
         v-for="(sideListItem, index) in sideList"
@@ -21,17 +21,17 @@
     class="section xl:p-40 xl:m-40"
     :id="'section' + (index + 1)"
   >
-  <div class="mt-40" >
-    <ABaseImgModal
-    :key="index"
-    class="w-[100%] md:w-[100%]"
-    :title="sectionTitles[index]"
-    :content="sectionContent"
-    :sub-title="' '"
-    :images="sectionImages[index]"
-    :img-src="coverImages[index]"
-    />
-  </div>
+    <div class="mt-40">
+      <ABaseImgModal
+        :key="index"
+        class="w-[100%] md:w-[100%]"
+        :title="sectionTitles[index]"
+        :content="sectionContent"
+        :sub-title="' '"
+        :images="sectionImages[index]"
+        :img-src="coverImages[index]"
+      />
+    </div>
   </section>
 </template>
 
@@ -39,52 +39,52 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ABaseImgModal from '@/components/atoms/img/ABaseImgModal.vue'
 
-defineProps([
-  'sideList',
-  'sectionContents',
-  'sectionSubtitle',
-  'sectionTitles',
-  'coverImages',
-  'sectionImages'
-])
+defineProps<{
+  sideList: string[];
+  sectionContents: string[];
+  sectionSubtitle: string[];
+  sectionTitles: string[];
+  coverImages: string[];
+  sectionImages: string[];
+}>();
 
-const activeIndex = ref(0)
+const activeIndex = ref(0);
 
 const scrollToSection = (index: number) => {
-  const target = document.getElementById('section' + index)
+  const target = document.getElementById('section' + index);
   if (target) {
     window.scrollTo({
       top: target.offsetTop,
-      behavior: 'smooth'
-    })
-    activeIndex.value = index - 1
+      behavior: 'smooth',
+    });
+    activeIndex.value = index - 1;
   }
-}
+};
 
 const formatIndex = (index: number) => {
-  return index < 10 ? '0' + index : index.toString()
-}
+  return index < 10 ? '0' + index : index.toString();
+};
 
 const handleScroll = () => {
-  const sections = document.querySelectorAll('.section')
-  let index = 0
+  const sections = document.querySelectorAll('.section');
+  let index = 0;
   for (const section of sections) {
-    const rect = section.getBoundingClientRect()
+    const rect = section.getBoundingClientRect();
     if (rect.top >= 0 && rect.top + 200 <= window.innerHeight) {
-      activeIndex.value = index
-      break
+      activeIndex.value = index;
+      break;
     }
-    index++
+    index++;
   }
-}
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+  window.addEventListener('scroll', handleScroll);
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -104,12 +104,15 @@ section {
   justify-content: center;
   align-items: center;
 
-  $colors:
-    rgb(31, 41, 55),
-    rgb(31, 41, 55) rgb(31, 41, 55),
+  $colors: (
     rgb(31, 41, 55),
     rgb(31, 41, 55),
-    rgb(31, 41, 55) rgb(31, 41, 55);
+    rgb(31, 41, 55),
+    rgb(31, 41, 55),
+    rgb(31, 41, 55),
+    rgb(31, 41, 55)
+  );
+
   @for $i from 1 through length($colors) {
     &:nth-child(#{$i}) {
       background: nth($colors, $i);
@@ -123,30 +126,31 @@ section {
     height: 100%;
     padding: 30px;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: flex-end;
   }
 
   & {
     margin: 0 0 100px 30px;
   }
+  
   &__counter {
     font-size: 24px;
     transition: all 0.15s ease-out;
   }
+  
   &__title {
     font-size: 32px;
     font-weight: 300;
-    margin: 0 0 0.25em;  color:black;
-
+    margin: 0 0 0.25em;
+    color: black;
     width: 300px;
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition:
-      height 0.3s ease-out,
-      opacity 0.2s ease-out;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
   }
+  
   &__body {
     font-weight: 100;
     font-size: 18px;
@@ -154,9 +158,7 @@ section {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition:
-      height 0.3s ease-out,
-      opacity 0.2s ease-out;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
   }
 
   li {

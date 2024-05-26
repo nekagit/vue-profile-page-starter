@@ -1,36 +1,52 @@
 <template>
-  <img :id="'myImg' + uniqueId" class="z-1" :src="imgSrc" alt="imgSrc" @click="openModal" />
+  <img :id="'myImg' + uniqueId" class="max-h-[800px]" :src="imgSrc" alt="imgSrc" @click="openModal" />
 
-  <div :id="'myModal' + uniqueId" class="modal p-6 bg-white z-20" @click="closeModal">
-    <ABaseCardAnBorder
-      class="modal-content z-10"
-      :content="content"
-      :title="title"
-      :sub-title="subTitle"
-      :variant="3"
-    />
-    <img v-for="(img, imgIndex) in images" class="" :key="imgIndex" :src="img" alt="img" />
+  <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
+    <div class="modal-content-wrapper" @click.stop>
+      <button class="close" @click="closeModal">&times;</button>
+      <ABaseCardAnBorder
+        class="modal-content"
+        :content="content"
+        :title="title"
+        :sub-title="subTitle"
+        :variant="3"
+      />
+      <img v-for="(img, imgIndex) in images" :key="imgIndex" class="modal-image" :src="img" alt="img" />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue'
-defineProps(['title', 'subTitle', 'content', 'imgSrc', 'images'])
 
-const uniqueId = ref(Math.random().toString(36).substr(2, 9))
-const modal = ref()
+defineProps<{
+  title: string;
+  subTitle: string;
+  content: string;
+  imgSrc: string;
+  images: string[];
+}>();
+
+const uniqueId = ref(Math.random().toString(36).substr(2, 9));
+const modal = ref<HTMLElement | null>(null);
 
 const openModal = () => {
-  modal.value.style.display = 'block'
+  if (modal.value) {
+    modal.value.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Disable main scrollbar
+  }
 }
 
 const closeModal = () => {
-  modal.value.style.display = 'none'
+  if (modal.value) {
+    modal.value.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable main scrollbar
+  }
 }
 
 onMounted(() => {
-  modal.value = document.getElementById('myModal' + uniqueId.value)
+  modal.value = document.getElementById('myModal' + uniqueId.value);
 })
 </script>
 
@@ -40,67 +56,39 @@ onMounted(() => {
   cursor: pointer;
   transition: 0.3s;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 #myImg:hover {
   opacity: 0.7;
 }
-/* The Modal (background) */
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Modal Content (image) */
+.modal-content-wrapper {
+  position: relative;
+}
+
 .modal-content {
   margin: auto;
   display: block;
   width: 75%;
-}
-
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation */
-.modal-content,
-#caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
-.out {
-  animation-name: zoom-out;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(2);
-  }
+.modal-image {
+  width: 100%;
 }
 
 @keyframes zoom {
@@ -112,16 +100,6 @@ onMounted(() => {
   }
 }
 
-@keyframes zoom-out {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-
-/* The Close Button */
 .close {
   position: absolute;
   top: 15px;
@@ -129,17 +107,19 @@ onMounted(() => {
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
-  transition: 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .close:hover,
 .close:focus {
   color: #bbb;
   text-decoration: none;
-  cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
+/* Style for smaller screens */
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
