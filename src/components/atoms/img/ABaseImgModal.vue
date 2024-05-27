@@ -58,17 +58,17 @@ onMounted(() => {
 
 <style scoped>
 .myImg {
+  opacity: 0.5;
   cursor: pointer;
   transition: 0.3s;
   display: block;
   margin: auto;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
-
   border-radius: 10px;
 }
 
 .myImg:hover {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .modal {
