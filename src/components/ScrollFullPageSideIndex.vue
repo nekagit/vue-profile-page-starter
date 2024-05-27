@@ -178,7 +178,7 @@ section {
       display: block;
       border-left: 2px solid rgb(0, 0, 0);
       border-top: 2px solid rgb(0, 0, 0);
-      height: 250px;
+      height: 350px;
       width: 20px;
       position: absolute;
       left: -30px;

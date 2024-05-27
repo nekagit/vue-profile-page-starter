@@ -1,7 +1,7 @@
 <template>
   <img
     :id="'myImg' + uniqueId"
-    class="max-h-[800px]"
+    class="max-h-[800px] myImg"
     :src="imgSrc"
     alt="imgSrc"
     @click="openModal"
@@ -57,15 +57,17 @@ onMounted(() => {
 </script>
 
 <style scoped>
-#myImg {
-  border-radius: 5px;
+.myImg {
   cursor: pointer;
   transition: 0.3s;
   display: block;
   margin: auto;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+  border-radius: 10px;
 }
 
-#myImg:hover {
+.myImg:hover {
   opacity: 0.7;
 }
 
@@ -88,7 +90,7 @@ onMounted(() => {
 .modal-content {
   margin: auto;
   display: block;
-  padding:1rem;
+  padding: 1rem;
   width: 75%;
   animation-name: zoom;
   animation-duration: 0.6s;
