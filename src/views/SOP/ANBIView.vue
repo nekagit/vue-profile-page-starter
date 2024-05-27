@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Guest from '@/assets/SOP/guest.jpg'
+import Guest from '@/assets/SOP/predragjol.jpg'
 import MilanVukas from '@/assets/SOP/milan_web.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
 import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
