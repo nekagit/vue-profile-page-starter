@@ -16,7 +16,7 @@
         :sub-title="subTitle"
         :variant="3"
       />
-      <MBaseGallerySlider :slider-titles="[title]" :images="images" />
+      <MBaseGallerySlider :slider-titles="['']" :images="images" />
     </div>
   </div>
 </template>

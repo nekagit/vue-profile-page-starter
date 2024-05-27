@@ -1,81 +1,79 @@
 <template>
-  <div>
+ <div>
     <template v-if="variant === 1">
-      <div class="mx-5 text-white text-2xl">
+      <div @click="toggleContent" class="button-89">
         {{ title }}
       </div>
-      <div>
-        {{ subTitle }}
-      </div>
-      <div class="text-xl card example-1 shadow-xl">
-        <div class="text-2xl"></div>
-        <div class="inner">
-          {{ content }}
+      <transition name="fade">
+        <div v-if="showContent" class="text-xl card example-1 shadow-xl">
+          <div class="text-2xl"></div>
+          <div class="inner">
+            {{ content }}
+          </div>
         </div>
-      </div>
+      </transition>
     </template>
 
     <template v-if="variant === 2">
-      <div class="mx-5 text-white text-2xl">
+      <div @click="toggleContent" class="button-89">
         {{ title }}
       </div>
-      <div>
-        {{ subTitle }}
-      </div>
-      <div class="text-xl card example-2 shadow-xl">
-        <div class="text-2xl"></div>
-        <div class="inner">
-          {{ content }}
+      <transition name="fade">
+        <div v-if="showContent" class="text-xl card example-2 shadow-xl">
+          <div class="text-2xl"></div>
+          <div class="inner">
+            {{ content }}
+          </div>
         </div>
-      </div>
+      </transition>
     </template>
 
     <template v-if="variant === 3">
-      <div class="mx-5 text-white text-2xl">
+      <div @click="toggleContent" class="button-89">
         {{ title }}
       </div>
-      <div>
-        {{ subTitle }}
-      </div>
-      <div class="text-xl card example-3 shadow-xl">
-        <div class="text-2xl"></div>
-        <div class="inner">
-          {{ content }}
+      <transition name="fade">
+        <div v-if="showContent" class="text-xl card example-3 shadow-xl">
+          <div class="text-2xl"></div>
+          <div class="inner">
+            {{ content }}
+          </div>
         </div>
-      </div>
+      </transition>
     </template>
 
     <template v-if="variant === 4">
-      <div class="mx-5 text-white text-2xl">
+      <div @click="toggleContent" class="button-89">
         {{ title }}
       </div>
-      <div>
-        {{ subTitle }}
-      </div>
-      <div class="text-xl card example-4 shadow-xl">
-        <div class="text-2xl"></div>
-        <div class="inner">
-          {{ content }}
+      <transition name="fade">
+        <div v-if="showContent" class="text-xl card example-4 shadow-xl">
+          <div class="text-2xl"></div>
+          <div class="inner">
+            {{ content }}
+          </div>
         </div>
-      </div>
+      </transition>
     </template>
 
     <template v-if="variant === 5">
-      <div class="text-xl card example-5">
-        <div class="text-2xl">
-          {{ title }}
-        </div>
-        <div class="inner">
-          {{ content }}
-        </div>
+      <div @click="toggleContent" class="button-89">
+        {{ title }}
       </div>
+      <transition name="fade">
+        <div v-if="showContent" class="text-xl card example-5 shadow-xl">
+          <div class="text-2xl"></div>
+          <div class="inner">
+            {{ content }}
+          </div>
+        </div>
+      </transition>
     </template>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
+import { ref } from 'vue'
 interface ABaseCardAnBorder {
   variant: number
   title: string
@@ -84,6 +82,12 @@ interface ABaseCardAnBorder {
 }
 
 defineProps<ABaseCardAnBorder>()
+
+const showContent = ref(false)
+
+const toggleContent = () => {
+  showContent.value = !showContent.value
+}
 </script>
 
 <style lang="scss" scoped>
@@ -97,6 +101,50 @@ defineProps<ABaseCardAnBorder>()
   background: #272727f1;
   color: #ffffff;
   border-radius: var(--border-radius);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #ffffff;
+  text-align: center;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 33px;
+  cursor: pointer;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
 }
 
 .card h3 {
