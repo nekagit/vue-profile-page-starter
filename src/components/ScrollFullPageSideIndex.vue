@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav__wrapper" id="navbar-example">
+  <nav class="nav__wrapper p-0 pr-12 pb-10 md:pb-96 pl-2.5" id="navbar-example">
     <ul class="nav">
       <li
         v-for="(sideListItem, index) in sideList"
@@ -21,7 +21,7 @@
     class="section xl:p-40 xl:m-40"
     :id="'section' + (index + 1)"
   >
-    <div class="mt-40">
+    <div class="mt-52">
       <ABaseImgModal
         :key="index"
         class="w-[100%] md:w-[100%]"
@@ -40,56 +40,55 @@ import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ABaseImgModal from '@/components/atoms/img/ABaseImgModal.vue'
 
 defineProps<{
-  sideList: string[];
-  sectionContents: string[];
-  sectionSubtitle: string[];
-  sectionTitles: string[];
-  coverImages: string[];
-  sectionImages: string[][];
-}>();
+  sideList: string[]
+  sectionContents: string[]
+  sectionSubtitle: string[]
+  sectionTitles: string[]
+  coverImages: string[]
+  sectionImages: string[][]
+}>()
 
-const activeIndex = ref(0);
+const activeIndex = ref(0)
 
 const scrollToSection = (index: number) => {
-  const target = document.getElementById('section' + index);
+  const target = document.getElementById('section' + index)
   if (target) {
     window.scrollTo({
       top: target.offsetTop,
-      behavior: 'smooth',
-    });
-    activeIndex.value = index - 1;
+      behavior: 'smooth'
+    })
+    activeIndex.value = index - 1
   }
-};
+}
 
 const formatIndex = (index: number) => {
-  return index < 10 ? '0' + index : index.toString();
-};
+  return index < 10 ? '0' + index : index.toString()
+}
 
 const handleScroll = () => {
-  const sections = document.querySelectorAll('.section');
-  let index = 0;
+  const sections = document.querySelectorAll('.section')
+  let index = 0
   for (const section of sections) {
-    const rect = section.getBoundingClientRect();
+    const rect = section.getBoundingClientRect()
     if (rect.top >= 0 && rect.top + 200 <= window.innerHeight) {
-      activeIndex.value = index;
-      break;
+      activeIndex.value = index
+      break
     }
-    index++;
+    index++
   }
-};
-
+}
 
 onMounted(() => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
-  });
-  window.addEventListener('scroll', handleScroll);
-});
+    behavior: 'smooth'
+  })
+  window.addEventListener('scroll', handleScroll)
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style lang="scss" scoped>
@@ -129,7 +128,6 @@ section {
   &__wrapper {
     position: fixed;
     height: 100%;
-    padding: 0 50px 200px 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -138,12 +136,12 @@ section {
   & {
     margin: 0 0 100px 30px;
   }
-  
+
   &__counter {
     font-size: 24px;
     transition: all 0.15s ease-out;
   }
-  
+
   &__title {
     font-size: 32px;
     font-weight: 300;
@@ -153,9 +151,11 @@ section {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    transition:
+      height 0.3s ease-out,
+      opacity 0.2s ease-out;
   }
-  
+
   &__body {
     font-weight: 100;
     font-size: 18px;
@@ -163,7 +163,9 @@ section {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    transition:
+      height 0.3s ease-out,
+      opacity 0.2s ease-out;
   }
 
   li {
