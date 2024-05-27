@@ -1,11 +1,12 @@
 <template>
-  <img
+  <ABaseImageCard
     :id="'myImg' + uniqueId"
     class="max-h-[800px] myImg"
-    :src="imgSrc"
-    alt="imgSrc"
+    :text="content"
+    :imgSrc="imgSrc"
     @click="openModal"
   />
+
   <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
@@ -25,6 +26,7 @@
 import { ref, onMounted } from 'vue'
 import ABaseCardAnBorder from '../cards/cards/ABaseCardAnBorder.vue'
 import MBaseGallerySlider from '@/components/molekules/MBaseGallerySlider.vue'
+import ABaseImageCard from '@/components/atoms/img/ABaseImgCard.vue'
 
 defineProps<{
   title: string
