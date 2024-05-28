@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import BaseSection from '@/components/atoms/sections/ABaseSection.vue'
-import ABaseImgModal from '../atoms/img/ABaseImgModal.vue';
+import BaseSection from '@/components/atoms/sections/ABaseSection.vue';
 import { defineProps } from 'vue';
+import ABaseImgModal from '../organisms/OBaseImgModal.vue';
 
 const props = defineProps(['button', 'position']);
 const weAreSection = {

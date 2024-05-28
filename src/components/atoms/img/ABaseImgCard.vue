@@ -11,7 +11,7 @@
 <script setup lang="ts">
 interface CardProps {
   heading?: string
-  text: string
+  text?: string
   imgSrc: string
 }
 

@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import ABaseImgModal from '../img/ABaseImgModal.vue'
+import ABaseImgModal from '../../organisms/OBaseImgModal.vue';
 
 interface Section {
   title: string

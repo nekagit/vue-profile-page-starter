@@ -36,8 +36,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
-import ABaseImgModal from '@/components/atoms/img/ABaseImgModal.vue'
+import ABaseImgModal from '@/components/organisms/OBaseImgModal.vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 
 defineProps<{
   sideList: string[]
