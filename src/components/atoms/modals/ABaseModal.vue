@@ -4,18 +4,16 @@
       <span class="text">Check</span>
     </span>
   </button>
-  <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
+  <div :id="'myModal' + uniqueId" class="modal w-full h-screen" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
-      <ABaseImageCard :id="'myImg'" class="max-h-[800px] myImg" :imgSrc="imgSrc" />
+      <ABaseImageCard :id="'myImg'" class="myImg" :imgSrc="imgSrc" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
-import MBaseGallerySlider from '@/components/molekules/MBaseGallerySlider.vue'
 import ABaseImageCard from '@/components/atoms/img/ABaseImgCard.vue'
 
 defineProps<{
@@ -27,7 +25,7 @@ const modal = ref<HTMLElement | null>(null)
 
 const openModal = () => {
   if (modal.value) {
-    modal.value.style.display = 'block'
+    modal.value.style.display = 'flex'
     document.body.style.overflow = 'hidden' // Disable main scrollbar
   }
 }
@@ -46,30 +44,22 @@ onMounted(() => {
 
 <style scoped>
 .myImg {
-  opacity: 0.5;
   cursor: pointer;
   transition: 0.3s;
-  display: block;
   margin: auto;
-  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  max-width: 100%;
+  height: auto;
 }
-
-.myImg:hover {
-  opacity: 0.9;
-}
-
 .modal {
   display: none;
   position: fixed;
-  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: auto;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.9);
@@ -77,6 +67,11 @@ onMounted(() => {
 
 .modal-content-wrapper {
   position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
@@ -86,10 +81,6 @@ onMounted(() => {
   width: 75%;
   animation-name: zoom;
   animation-duration: 0.6s;
-}
-
-.modal-image {
-  width: 100%;
 }
 
 @keyframes zoom {
