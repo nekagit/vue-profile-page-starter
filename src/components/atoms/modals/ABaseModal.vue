@@ -1,17 +1,13 @@
 <template>
-<button class="btn-31" @click="openModal">
-  <span class="text-container">
-    <span class="text">Check</span>
-  </span>
-</button>
+  <button class="btn-31" @click="openModal">
+    <span class="text-container">
+      <span class="text">Check</span>
+    </span>
+  </button>
   <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
-      <ABaseImageCard
-        :id="'myImg' + uniqueId"
-        class="max-h-[800px] myImg"
-        :imgSrc="imgSrc"
-      />
+      <ABaseImageCard :id="'myImg'" class="max-h-[800px] myImg" :imgSrc="imgSrc" />
     </div>
   </div>
 </template>
@@ -57,6 +53,9 @@ onMounted(() => {
   margin: auto;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .myImg:hover {
@@ -145,9 +144,21 @@ onMounted(() => {
   background-image: none;
   color: #fff;
   cursor: pointer;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
   font-size: 100%;
   font-weight: 900;
   line-height: 1.5;
@@ -183,24 +194,16 @@ onMounted(() => {
 .btn-31:before {
   --progress: 100%;
   background: #fff;
-  -webkit-clip-path: polygon(
-    100% 0,
-    var(--progress) var(--progress),
-    0 100%,
-    100% 100%
-  );
-  clip-path: polygon(
-    100% 0,
-    var(--progress) var(--progress),
-    0 100%,
-    100% 100%
-  );
-  content: "";
+  -webkit-clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
+  clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
+  content: '';
   inset: 0;
   position: absolute;
   transition: -webkit-clip-path 0.2s ease;
   transition: clip-path 0.2s ease;
-  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+  transition:
+    clip-path 0.2s ease,
+    -webkit-clip-path 0.2s ease;
 }
 
 .btn-31:hover:before {
@@ -260,5 +263,4 @@ onMounted(() => {
     transform: translateY(0);
   }
 }
-
 </style>
