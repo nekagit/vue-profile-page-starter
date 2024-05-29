@@ -6,7 +6,7 @@ import HorizontalScrollLoop from "@/components/HorizontalScrollLoop.vue"
 
 <template>
   <HorizontalScrollLoop />
-    <AMenuButton class="h-[30vh]" />
+    <AMenuButton class="h-[30vh] pt-10" />
 
 </template>
 
