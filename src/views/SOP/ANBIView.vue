@@ -43,7 +43,6 @@ const anbi = [
   </div>
   <ABaseHorizontalSection :content="'SOP | Contact'" />
   <ABaseFooterSection />
-
 </template>
 
 <style scoped></style>

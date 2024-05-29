@@ -128,6 +128,7 @@ const toggleContent = () => {
   font-size: 33px;
   cursor: pointer;
 
+  word-wrap: break-word; /* Add this line */
   border: 0;
 
   user-select: none;
