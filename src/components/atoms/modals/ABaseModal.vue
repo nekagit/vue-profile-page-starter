@@ -49,7 +49,8 @@ onMounted(() => {
   margin: auto;
   border-radius: 10px;
   max-width: 100%;
-  height: auto;
+  height: 50vh;
+  overflow:auto;
 }
 .modal {
   display: none;

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import Guest from '@/assets/SOP/predragjol.jpg'
 import MilanVukas from '@/assets/SOP/milan_web.jpg'
+import Guest from '@/assets/SOP/predragjol.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
 import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
+import ABaseFooterSection from '@/components/atoms/sections/ABaseFooterSection.vue'
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
 const anbi = [
   {
@@ -41,6 +42,8 @@ const anbi = [
     <ABaseContactCard :full-name="'Predrag Joldic'" :title="''" :img-src="Guest" />
   </div>
   <ABaseHorizontalSection :content="'SOP | Contact'" />
+  <ABaseFooterSection />
+
 </template>
 
 <style scoped></style>

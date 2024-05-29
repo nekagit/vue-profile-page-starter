@@ -7,11 +7,13 @@
     :cover-images="ImgHelper().sportPage"
     :section-images="ImgHelper().sportPageSectionImages"
   />
-  <ABaseHorizontalSection :content="'Home | Sport'" />
+    <AMenuButton class="h-[30vh]" />
+
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import AMenuButton from '@/components/atoms/nav/AMenuButton.vue'
 import ImgHelper from '@/services/ImageHelper.ts'
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
 import ScrollFullPageSideIndex from '@/components/ScrollFullPageSideIndex.vue'

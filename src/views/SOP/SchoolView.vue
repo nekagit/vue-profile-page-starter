@@ -1,17 +1,13 @@
 <script setup lang="ts">
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
-import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
+import AMenuButton from '@/components/atoms/nav/AMenuButton.vue'
+import HorizontalScrollLoop from "@/components/HorizontalScrollLoop.vue"
 </script>
 
 <template>
-  <ABaseCardAnBorder
-    class="w-[400px] mx-auto"
-    :content="'This page is under development'"
-    :title="''"
-    :sub-title="''"
-    :variant="2"
-  />
-  <ABaseHorizontalSection :content="'SOP | School'" />
+  <HorizontalScrollLoop />
+    <AMenuButton class="h-[30vh]" />
+
 </template>
 
 <style scoped></style>

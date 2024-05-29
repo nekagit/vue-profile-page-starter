@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import ABaseFooterSection from './components/atoms/sections/ABaseFooterSection.vue'
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
   <RouterView />
-  <ABaseFooterSection />
 </template>
