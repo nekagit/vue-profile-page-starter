@@ -65,7 +65,7 @@ import { Github } from 'lucide-vue-next'
 
 <style scoped>
 .background-image {
-  max-width: 60vw;
+  max-width: 70vw;
   height: 33vh;
   margin: auto;
   background-size: contain;
