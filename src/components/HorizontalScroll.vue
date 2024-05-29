@@ -1,57 +1,105 @@
 <template>
   <div id="page" ref="page">
-    <div class="pane"><div>Looping Horizontal Scroll</div></div>
-    <div class="pane"><div>2</div></div>
-    <div class="pane"><div>3</div></div>
-    <div class="pane"><div>4</div></div>
-    <div class="pane"><div>5</div></div>
-    <div class="pane"><div>Last</div></div>
+    <div class="pane">
+      <ABaseCardAnBorder
+        class=""
+        :content="'Српски језик , културу и историју за ученике основних школа. Под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије. Часови су бесплатни.'"
+        :title="'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО'"
+        :sub-title="'subTitle'"
+        :variant="1"
+      />
+    </div>
+    <div class="pane">
+      <ABaseCardAnBorder
+        class=""
+        :content="'content'"
+        :title="'title'"
+        :sub-title="'subTitle'"
+        :variant="2"
+      />
+    </div>
+    <div class="pane">
+      <ABaseCardAnBorder
+        class=""
+        :content="'content'"
+        :title="'title'"
+        :sub-title="'subTitle'"
+        :variant="3"
+      />
+    </div>
+    <div class="pane">
+      <ABaseCardAnBorder
+        class=""
+        :content="'content'"
+        :title="'title'"
+        :sub-title="'subTitle'"
+        :variant="4"
+      />
+    </div>
+    <div class="pane">
+      <ABaseCardAnBorder
+        class=""
+        :content="'content'"
+        :title="'title'"
+        :sub-title="'subTitle'"
+        :variant="5"
+      />
+    </div>
+    <div class="pane">
+      <ABaseCardAnBorder
+        class=""
+        :content="'content'"
+        :title="'title'"
+        :sub-title="'subTitle'"
+        :variant="3"
+      />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-
-const page = ref<HTMLElement | null>(null);
-const initialScroll = ref(false);
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
+const page = ref<HTMLElement | null>(null)
+const initialScroll = ref(false)
 
 const resize = () => {
-  if (!page.value) return;
+  if (!page.value) return
 
-  const w = page.value.scrollWidth - window.innerWidth + window.innerHeight;
-  document.body.style.height = `${w}px`;
-};
+  const w = page.value.scrollWidth - window.innerWidth + window.innerHeight
+  document.body.style.height = `${w}px`
+}
 
 const onScroll = () => {
-  if (!page.value) return;
+  if (!page.value) return
 
-  const y = document.body.getBoundingClientRect().top;
-  page.value.scrollLeft = -y;
+  const y = document.body.getBoundingClientRect().top
+  page.value.scrollLeft = -y
 
   if (!initialScroll.value) {
-    initialScroll.value = true;
-    window.scrollTo(0, 0);
+    initialScroll.value = true
+    window.scrollTo(0, 0)
   }
-};
+}
 
 onMounted(() => {
-  page.value = document.getElementById('page') as HTMLElement;
+  page.value = document.getElementById('page') as HTMLElement
 
-  window.addEventListener('scroll', onScroll);
-  window.addEventListener('resize', resize);
+  window.addEventListener('scroll', onScroll)
+  window.addEventListener('resize', resize)
 
-  resize();
+  resize()
 
   // Start at the first pane
   if (page.value) {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
   }
-});
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', onScroll);
-  window.removeEventListener('resize', resize);
-});
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('resize', resize)
+})
 </script>
 
 <style scoped>

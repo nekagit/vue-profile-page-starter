@@ -92,6 +92,7 @@ const toggleContent = () => {
 
 <style lang="scss" scoped>
 .card {
+  word-wrap: break-word; /* Add this line */
   margin: 50px auto;
   border-radius: var(--border-radius);
 }
@@ -114,7 +115,7 @@ const toggleContent = () => {
 .button-89 {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: #ffffff;
+  --color: #000000;
   text-align: center;
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
