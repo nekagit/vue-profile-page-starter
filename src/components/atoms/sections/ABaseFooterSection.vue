@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-around flex-col md:flex-row ">
+  <div class="flex justify-around flex-col md:flex-row">
     <img
       class="background-image2 hidden xl:flex"
       src="../../../assets/SOP/img/logoo.png"
@@ -7,7 +7,7 @@
     />
     <img class="background-image" src="../../../assets/SOP/img/wg-removebg.png" alt="logo" />
   </div>
-  <footer class="bg-gray-800 text-white font-medium relative">
+  <footer class="bg-gray-800 text-white font-medium relative p-3">
     <AMenuButton class="h-[30vh]" />
     <div
       class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center text-center"
@@ -40,20 +40,11 @@
       </div>
       <div>
         <div>
-          <button
-            class="text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none"
-            type="button"
-          >
+          <button class="text-blue-400 mx-auto h-10 w-10" type="button">
             <Facebook /></button
-          ><button
-            class="text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none"
-            type="button"
-          >
+          ><button class="text-green-600 h-10 w-10" type="button">
             <Instagram /></button
-          ><button
-            class="text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none"
-            type="button"
-          >
+          ><button class="text-pink-400 h-10 w-10" type="button">
             <Github />
           </button>
         </div>
@@ -76,7 +67,7 @@ import { Github } from 'lucide-vue-next'
 .background-image {
   max-width: 60vw;
   height: 33vh;
-  margin:auto;
+  margin: auto;
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -92,7 +83,7 @@ import { Github } from 'lucide-vue-next'
 .background-image2 {
   max-width: 42vw;
   height: 21vh;
-  margin:auto;
+  margin: auto;
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -112,5 +103,4 @@ button {
 button:hover {
   opacity: 150%;
 }
-
 </style>
