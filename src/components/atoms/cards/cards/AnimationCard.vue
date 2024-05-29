@@ -1,12 +1,10 @@
 <template>
-  <div class="row">
     <div class="card">
       <h4>  {{ title }}</h4>
       <p>
           {{ content }}
       </p>
     </div>
-  </div>
 </template>
 <script setup lang="ts">
 
@@ -15,21 +13,6 @@ defineProps(['content', 'title'])
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background-color: #343a40;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  user-select: none;
-}
 
 .card {
   border-radius: 10px;
@@ -42,6 +25,7 @@ body {
   z-index: 0;
   overflow: hidden;
   transition: 0.6s ease-in;
+  margin:10px;
 }
 
 .card::before {
