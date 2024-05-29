@@ -5,6 +5,7 @@
         <li v-for="(title, index) in filteredSliderTitles" :key="index">
           <a
             :class="{ active: activeTab === title.toLowerCase() }"
+            class="text-3xl"
             :href="'#/' + title.toLowerCase()"
             @click.prevent="changeTab(title)"
           >
@@ -14,7 +15,7 @@
       </ul>
 
       <div id="terms">
-        <div v-for="(title) in filteredSliderTitles" :key="title">
+        <div v-for="title in filteredSliderTitles" :key="title">
           <template v-if="activeTab === title.toLowerCase()">
             <ABaseGallery v-if="images == null" :images="getImageGallery(title)" />
             <ABaseGallery v-else :images="images" />
@@ -30,8 +31,8 @@ import { computed, defineProps, ref, onMounted } from 'vue'
 import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue'
 import ImageHelper from '@/services/ImageHelper'
 interface Props {
-  sliderTitles:string[]
-  images?:string[]
+  sliderTitles: string[]
+  images?: string[]
 }
 const props = defineProps<Props>()
 
@@ -107,7 +108,7 @@ ul.tabs li a.active {
   margin: 0;
 }
 
-#terms > div[style*="display: block"] {
+#terms > div[style*='display: block'] {
   display: block;
 }
 </style>

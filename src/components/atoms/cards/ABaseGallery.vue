@@ -1,15 +1,17 @@
 <template>
-<ul>
-  <li v-for="img in images" :key="img"> <img :src="img" alt="cut citrus fruits. " />Lorem Ipsum</li>
-</ul>
+  <ul>
+    <li v-for="img in images" :key="img">
+      <img :src="img" alt="cut citrus fruits. " />
+    </li>
+  </ul>
 </template>
 
 <script setup lang="ts">
-defineProps(["images"])
+defineProps(['images'])
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 *,
 *:before,
@@ -81,7 +83,7 @@ li {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #1e1f26;
   display: flex;
   flex-direction: column;
@@ -89,5 +91,4 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-
 </style>
