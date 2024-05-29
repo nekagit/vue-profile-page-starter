@@ -39,7 +39,7 @@ const anbi = [
       :title="'Chairman/Treasurer'"
       :img-src="MilanVukas"
     />
-    <ABaseContactCard :full-name="'Predrag Joldic'" :title="''" :img-src="Guest" />
+    <ABaseContactCard :full-name="'Predrag Joldic'" :title="'Board member'" :img-src="Guest" />
   </div>
   <ABaseHorizontalSection :content="'SOP | Contact'" />
   <ABaseFooterSection />

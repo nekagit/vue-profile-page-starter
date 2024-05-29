@@ -6,7 +6,7 @@ defineProps(['fullName', 'title', 'imgSrc'])
   <div class="container">
     <div class="card">
       <div class="imgBx">
-      <img :src="imgSrc" alt="contactPic" />
+        <img :src="imgSrc" alt="contactPic" class="card-img" />
       </div>
       <div class="content">
         <div class="contentBx">
@@ -70,6 +70,19 @@ defineProps(['fullName', 'title', 'imgSrc'])
 .container .card:hover .content {
   bottom: 0px;
   transition-delay: 0s;
+}
+
+.container .card .imgBx {
+  /* Add this block */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container .card .imgBx img {
+  /* Add this block */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .container .card .content .contentBx h3 {
   color: #fff;

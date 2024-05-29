@@ -22,6 +22,7 @@ defineProps<CardProps>()
 // Colors
 $color-primary-white: rgb(0, 0, 0);
 
+
 .card {
   max-width: 100%; /* Ensure the card does not exceed the container's width */
   height: auto; /* Allow the height to adjust based on content */
@@ -42,6 +43,9 @@ $color-primary-white: rgb(0, 0, 0);
 }
 
 .card-content {
+  opacity: 0;
+  background-color: black;
+  color: white;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -78,4 +82,11 @@ p {
   opacity: 1;
   transition: opacity 0.3s ease-in;
 }
+
+.card:hover .card-content {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+}
+
+
 </style>
