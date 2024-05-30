@@ -71,16 +71,6 @@ p {
   text-overflow: ellipsis;
 }
 
-.card:hover p {
-  opacity: 1;
-  transition: opacity 0.5s 0.1s ease-in;
-}
-
-.card:hover img {
-  opacity: 1;
-  transition: opacity 0.3s ease-in;
-}
-
 .card:hover .card-content {
   transition: opacity 0.3s ease-in;
   opacity: 1;

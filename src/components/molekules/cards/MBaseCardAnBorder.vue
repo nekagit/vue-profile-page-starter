@@ -1,9 +1,8 @@
 <template>
  <div>
     <template v-if="variant === 1">
-      <div @click="toggleContent" class="button-89">
-        {{ title }}
-      </div>
+      <AInternetButtonBordered @click="toggleContent" :title="title" />
+
       <transition name="fade">
         <div v-if="showContent" class="text-xl card example-1 shadow-xl">
           <div class="text-2xl"></div>
@@ -15,9 +14,7 @@
     </template>
 
     <template v-if="variant === 2">
-      <div @click="toggleContent" class="button-89">
-        {{ title }}
-      </div>
+      <AInternetButtonBordered @click="toggleContent" :title="title" />
       <transition name="fade">
         <div v-if="showContent" class="text-xl card example-2 shadow-xl">
           <div class="text-2xl"></div>
@@ -29,9 +26,7 @@
     </template>
 
     <template v-if="variant === 3">
-      <div @click="toggleContent" class="button-89">
-        {{ title }}
-      </div>
+      <AInternetButtonBordered @click="toggleContent" :title="title" />
       <transition name="fade">
         <div v-if="showContent" class="text-xl card example-3 shadow-xl">
           <div class="text-2xl"></div>
@@ -43,9 +38,7 @@
     </template>
 
     <template v-if="variant === 4">
-      <div @click="toggleContent" class="button-89">
-        {{ title }}
-      </div>
+      <AInternetButtonBordered @click="toggleContent" :title="title" />
       <transition name="fade">
         <div v-if="showContent" class="text-xl card example-4 shadow-xl">
           <div class="text-2xl"></div>
@@ -57,9 +50,7 @@
     </template>
 
     <template v-if="variant === 5">
-      <div @click="toggleContent" class="button-89">
-        {{ title }}
-      </div>
+      <AInternetButtonBordered @click="toggleContent" :title="title" />
       <transition name="fade">
         <div v-if="showContent" class="text-xl card example-5 shadow-xl">
           <div class="text-2xl"></div>
@@ -74,6 +65,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import AInternetButtonBordered from "@/components/atoms/buttons/AInternetButtonBordered.vue"
 interface ABaseCardAnBorder {
   variant: number
   title: string
@@ -109,45 +101,6 @@ const toggleContent = () => {
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
-}
-
-/* CSS */
-.button-89 {
-  --b: 3px;   /* border thickness */
-  --s: .45em; /* size of the corner */
-  --color: #ffffff;
-  text-align: center;
-  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: .6em;
-  font-size: 33px;
-  cursor: pointer;
-max-width: fit-content;
-margin:auto;
-  word-wrap: break-word; /* Add this line */
-  border: 0;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-89:hover,
-.button-89:focus-visible{
-  --_p: 0px;
-  outline-color: var(--color);
-  outline-offset: .05em;
-}
-
-.button-89:active {
-  background: var(--color);
-  color: #fff;
 }
 
 .card h3 {

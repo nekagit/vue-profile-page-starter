@@ -2,9 +2,9 @@
 import MilanVukas from '@/assets/SOP/milan_web.jpg'
 import Guest from '@/assets/SOP/predragjol.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
-import ABaseCardAnBorder from '@/components/atoms/cards/ABaseCardAnBorder.vue'
 import ABaseFooterSection from '@/components/atoms/sections/ABaseFooterSection.vue'
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
+import ABaseCardAnBorder from '@/components/molekules/cards/MBaseCardAnBorder.vue'
 const anbi = [
   {
     title: 'Goal',
