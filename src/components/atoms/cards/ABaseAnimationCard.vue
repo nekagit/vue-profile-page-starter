@@ -15,8 +15,8 @@ defineProps(['content', 'title'])
 .card {
   border-radius: 10px;
   filter: drop-shadow(0 5px 10px 0 #ffffff);
-  width: 400px;
-  height: 180px;
+  width: 80%;
+  height: auto;
   background-color: #ffffff;
   padding: 20px;
   position: relative;

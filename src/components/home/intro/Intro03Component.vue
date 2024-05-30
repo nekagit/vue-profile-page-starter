@@ -3,6 +3,6 @@
 
   </template>
   <script setup lang="ts">
-import ABaseModal from "@/components/atoms/modals/ABaseModal.vue"
-import intro03 from '@/assets/SOP/starifudbalposter.jpg'
+import intro03 from '@/assets/SOP/starifudbalposter.jpg';
+import ABaseModal from "@/components/atoms/modals/MBaseModal.vue";
 </script>
