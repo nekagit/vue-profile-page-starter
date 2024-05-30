@@ -129,7 +129,7 @@ import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalS
           </button>
         </form>
   </div>
-  <FirmDetails class="" title="'Firm'" :content="'SOP Rotterdam Foundation, Poseidonstraat 7, 3054 PZ Rotterdam,  8563.68.842,  66038138,  RABO Bank NL97 RABO,  0310 6518 67,  +31 6 41173071,  info@soprotterdam.com'" />
+  <FirmDetails title="'Firm'" :content="'SOP Rotterdam Foundation, Poseidonstraat 7, 3054 PZ Rotterdam,  8563.68.842,  66038138,  RABO Bank NL97 RABO,  0310 6518 67,  +31 6 41173071,  info@soprotterdam.com'" />
   <ABaseHorizontalSection :content="'SOP | Contact'" />
   <ABaseFooterSection />
 
