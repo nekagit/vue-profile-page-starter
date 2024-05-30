@@ -26,14 +26,12 @@ const modal = ref<HTMLElement | null>(null)
 const openModal = () => {
   if (modal.value) {
     modal.value.style.display = 'flex'
-    document.body.style.overflow = 'hidden' // Disable main scrollbar
   }
 }
 
 const closeModal = () => {
   if (modal.value) {
     modal.value.style.display = 'none'
-    document.body.style.overflow = 'auto' // Enable main scrollbar
   }
 }
 
@@ -132,7 +130,7 @@ onMounted(() => {
 .btn-31 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
-  background-color: #000;
+  background-color: #000000;
   background-image: none;
   color: #fff;
   cursor: pointer;

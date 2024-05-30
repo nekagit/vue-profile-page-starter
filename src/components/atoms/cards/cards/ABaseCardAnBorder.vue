@@ -115,7 +115,7 @@ const toggleContent = () => {
 .button-89 {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: #000000;
+  --color: #ffffff;
   text-align: center;
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
