@@ -1,59 +1,11 @@
 <template>
   <div id="page" ref="page">
-    <div class="pane">
-      <ABaseCardAnBorder
-        class=""
-        :content="'Српски језик , културу и историју за ученике основних школа. Под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије. Часови су бесплатни.'"
-        :title="'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО'"
-        :sub-title="'subTitle'"
-        :variant="1"
-      />
-    </div>
-    <div class="pane">
-      <ABaseCardAnBorder
-        class=""
-        :content="'content'"
-        :title="'title'"
-        :sub-title="'subTitle'"
-        :variant="2"
-      />
-    </div>
-    <div class="pane">
-      <ABaseCardAnBorder
-        class=""
-        :content="'content'"
-        :title="'title'"
-        :sub-title="'subTitle'"
-        :variant="3"
-      />
-    </div>
-    <div class="pane">
-      <ABaseCardAnBorder
-        class=""
-        :content="'content'"
-        :title="'title'"
-        :sub-title="'subTitle'"
-        :variant="4"
-      />
-    </div>
-    <div class="pane">
-      <ABaseCardAnBorder
-        class=""
-        :content="'content'"
-        :title="'title'"
-        :sub-title="'subTitle'"
-        :variant="5"
-      />
-    </div>
-    <div class="pane">
-      <ABaseCardAnBorder
-        class=""
-        :content="'content'"
-        :title="'title'"
-        :sub-title="'subTitle'"
-        :variant="3"
-      />
-    </div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
   </div>
 </template>
 
