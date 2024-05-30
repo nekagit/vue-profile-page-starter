@@ -1,7 +1,7 @@
 <template>
   <button class="btn-31" @click="openModal">
     <span class="text-container">
-      <span class="text">Check</span>
+      <span class="text">Full View</span>
     </span>
   </button>
   <div :id="'myModal' + uniqueId" class="modal w-full h-screen" @click="closeModal">
