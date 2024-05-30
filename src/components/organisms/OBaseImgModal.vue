@@ -1,7 +1,7 @@
 <template>
   <ABaseImageCard
     :id="'myImg' + uniqueId"
-    class="max-h-[800px] myImg"
+    class="max-h-[800px]"
     :text="content"
     :imgSrc="imgSrc"
     @click="openModal"
@@ -59,18 +59,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.myImg {
-  cursor: pointer;
-  transition: 0.3s;
-  display: block;
-  margin: auto;
-  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.myImg:hover {
-  opacity: 0.9;
-}
 
 .modal {
   display: none;

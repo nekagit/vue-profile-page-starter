@@ -31,7 +31,6 @@ $color-primary-white: rgb(0, 0, 0);
   cursor: pointer;
   position: relative;
   color: $color-primary-white;
-  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card-img {

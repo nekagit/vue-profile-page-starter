@@ -117,6 +117,7 @@ const toggleContent = () => {
 
 .example-1 .inner {
   position: relative;
+  z-index: 1;
   width: 100%;
   margin: 5px;
 }
@@ -129,6 +130,7 @@ const toggleContent = () => {
   width: 600px;
   position: absolute;
   animation: rotate 8s linear infinite;
+  z-index: 0;
 }
 
 .example-2 {
@@ -141,6 +143,7 @@ const toggleContent = () => {
 
 .example-2 .inner {
   position: relative;
+  z-index: 1;
   width: 100%;
   margin: 2px;
   background-color: black
@@ -185,6 +188,7 @@ const toggleContent = () => {
   right: 0;
   background: linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
   background-size: 400%;
+  z-index: -1;
   animation: glow 20s linear infinite;
   width: 100%;
   border-radius: var(--border-radius);
