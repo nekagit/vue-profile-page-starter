@@ -25,11 +25,12 @@ $color-primary-white: rgb(0, 0, 0);
 
 .card {
   max-width: 100%; /* Ensure the card does not exceed the container's width */
-  height: auto; /* Allow the height to adjust based on content */
+  height: 100vh; /* Allow the height to adjust based on content */
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  z-index: 9999;
   color: $color-primary-white;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 }

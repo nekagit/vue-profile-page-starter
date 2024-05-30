@@ -1,9 +1,9 @@
 <template>
   <AInternetButtonFlick @click="openModal" />
-  <div :id="'myModal' + uniqueId" class="modal w-full h-screen" @click="closeModal">
+  <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
-      <ABaseImageCard :id="'myImg'" class="myImg" :imgSrc="imgSrc" />
+      <ABaseImageCard :id="'myImg'" :imgSrc="imgSrc" />
     </div>
   </div>
 </template>
@@ -38,15 +38,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.myImg {
-  cursor: pointer;
-  transition: 0.3s;
-  margin: auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: 50vh;
-  overflow:auto;
-}
 .modal {
   display: none;
   position: fixed;
@@ -57,7 +48,6 @@ onMounted(() => {
   width: 100%;
   height: auto;
   overflow: auto;
-  z-index: 9999;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -99,7 +89,6 @@ onMounted(() => {
   border: none;
   cursor: pointer;
   transition: color 0.3s;
-  z-index:999;
 }
 
 .close:hover,

@@ -18,7 +18,7 @@ const anbi = [
   },
   {
     title: 'Контакт',
-    content: 'Удружење Српско Омладинско Пријатељство Ротердам admin@stichtingsoprotterdam.nl'
+    content: 'Serbian Youth Friendship Association Rotterdam. admin@stichtingsoprotterdam.nl'
   }
 ]
 </script>

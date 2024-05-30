@@ -59,7 +59,6 @@ defineProps(['fullName', 'title', 'imgSrc'])
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
   flex-direction: column;
   backdrop-filter: blur(15px);
   box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);

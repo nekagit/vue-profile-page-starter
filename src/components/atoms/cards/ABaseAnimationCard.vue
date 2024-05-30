@@ -20,7 +20,6 @@ defineProps(['content', 'title'])
   background-color: #ffffff;
   padding: 20px;
   position: relative;
-  z-index: 0;
   overflow: hidden;
   transition: 0.6s ease-in;
   margin: auto;
@@ -30,7 +29,6 @@ defineProps(['content', 'title'])
 .card::before {
   content: '';
   position: absolute;
-  z-index: -1;
   top: -15px;
   right: -15px;
   background: #7952b3;
