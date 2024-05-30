@@ -25,7 +25,8 @@ defineProps(['content', 'title'])
   z-index: 0;
   overflow: hidden;
   transition: 0.6s ease-in;
-  margin:10px;
+  margin:auto;
+  margin-top: 2rem;
 }
 
 .card::before {
