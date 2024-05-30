@@ -8,7 +8,6 @@ const allCards = useCardStore().cards
   <div>
     <div class="">
       <div class="grid h-screen w-fit mx-auto p-20">
-        <div class="ag-courses_item" v-for="(item, index) in allCards" :key="index">
           <div v-if="item.active == true">
             <div class="flip">
               <div class="front">
@@ -62,7 +61,6 @@ const allCards = useCardStore().cards
 
   <div class="trick">
     <div class="grid h-screen w-fit mx-auto p-20">
-      <div class="ag-courses_item" v-for="(item, index) in allCards" :key="index">
         <div v-if="item.active == true">
           <!-- <div class="flip">
             <div class="front">
@@ -176,7 +174,6 @@ const allCards = useCardStore().cards
   overflow: hidden;
   font-weight: bold;
   font-size: 30px;
-  z-index: 2;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -184,7 +181,6 @@ const allCards = useCardStore().cards
 .ag-courses-item_date-box {
   font-size: 18px;
 
-  z-index: 2;
   position: relative;
 }
 .ag-courses-item_date {
@@ -200,7 +196,6 @@ const allCards = useCardStore().cards
   width: 128px;
   background-color: #f9b234;
 
-  z-index: 1;
   position: absolute;
   top: -75px;
   right: -75px;

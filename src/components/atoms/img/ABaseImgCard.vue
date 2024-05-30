@@ -30,7 +30,6 @@ $color-primary-white: rgb(0, 0, 0);
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  z-index: 9999;
   color: $color-primary-white;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 }
@@ -39,7 +38,6 @@ $color-primary-white: rgb(0, 0, 0);
   width: 100%; /* Ensure the image fills the container */
   height: auto; /* Allow the height to adjust based on the image's aspect ratio */
   object-fit: cover;
-  z-index: 9999;
 }
 
 .card-content {

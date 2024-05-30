@@ -161,7 +161,6 @@ nav ul li div { position: relative; }
 
 .roof-edge {
 	position: absolute;
-	z-index: 20;
 	left: -17px;
 	top: 3px;
 	width: 0;
@@ -335,7 +334,6 @@ nav ul li div { position: relative; }
 
 .mail-top {
 	position: absolute;
-	z-index: 20;
 	left: 0;
 	top: 0;
 	width: 0;
@@ -348,7 +346,6 @@ nav ul li div { position: relative; }
 
 .mail-top:after {
 	position: absolute;
-	z-index: 20;
 	left: -16px;
 	top: 3px;
 	width: 0;

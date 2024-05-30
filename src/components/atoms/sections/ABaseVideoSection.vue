@@ -38,7 +38,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 1;
 }
 
 .content-overlay h1 {

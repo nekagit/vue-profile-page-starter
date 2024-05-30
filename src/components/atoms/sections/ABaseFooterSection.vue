@@ -72,7 +72,6 @@ import { Github } from 'lucide-vue-next'
   background-position: center bottom;
   background-repeat: no-repeat;
   opacity: 0.5;
-  z-index: 1;
   transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
 
@@ -87,7 +86,6 @@ import { Github } from 'lucide-vue-next'
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
-  z-index: 1;
   transition: scale 0.5s ease; /* Smooth transition for opacity */
 }
 

@@ -132,7 +132,6 @@ img:last-of-type {
 
 #title {
   background-image: url("https://picsum.photos/640/480");
-  z-index:2;
 }
 
 #title h1 {
@@ -148,7 +147,6 @@ img:last-of-type {
 
 #slide2 {
   background-image: url("https://picsum.photos/960/400");
-  z-index:2;
 }
 
 #slide3:before {

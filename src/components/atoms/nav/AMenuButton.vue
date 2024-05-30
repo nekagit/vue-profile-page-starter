@@ -66,7 +66,6 @@ button {
     0 10px 10px rgba(0, 0, 0, 0.22);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   z-index: 99999;
-
   &:hover {
     box-shadow:
       0 1px 3px rgba(0, 0, 0, 0.12),
@@ -82,7 +81,6 @@ button {
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 0;
     }
 
     > span {
@@ -146,7 +144,6 @@ nav.menu {
   padding: 3.25rem 0.625rem 1.25rem;
   background-color: rgba($black, 0.8);
   transition: 0.25s ease;
-  z-index: 9999;
 
   &.open {
     right: 0%;
@@ -178,7 +175,6 @@ nav.menu {
         margin: 0;
         padding: 0.625rem 1.5rem;
         color: $white;
-        z-index: 9;
       }
     }
   }
@@ -225,7 +221,6 @@ nav.menu {
     justify-content: flex-start;
     margin: 0;
     padding: 0;
-    z-index: 10;
 
     > button {
       position: relative;

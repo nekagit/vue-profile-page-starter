@@ -102,7 +102,6 @@ nav{
       position:relative;
       font-size:1.5em;
       color:$grey;
-      z-index:5;
       transition:all .6s cubic-bezier(0.23, 1, 0.32, 1);
     }
     
@@ -115,7 +114,6 @@ nav{
       left:10%;
       top:10%;
       border-radius:50%;
-      z-index:0;
       transform:scale(0);
       transition:all .6s cubic-bezier(0.23, 1, 0.32, 1);
     }
