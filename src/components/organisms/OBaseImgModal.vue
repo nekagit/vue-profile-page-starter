@@ -60,7 +60,6 @@ onMounted(() => {
 
 <style scoped>
 .myImg {
-  opacity: 0.5;
   cursor: pointer;
   transition: 0.3s;
   display: block;

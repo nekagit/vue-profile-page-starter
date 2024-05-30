@@ -22,7 +22,7 @@
     :id="'section' + (index + 1)"
   >
     <div class="mt-52">
-      <ABaseImgModal
+      <OBaseImgModal
         :key="index"
         class="w-[100%] md:w-[100%]"
         :title="sectionTitles[index]"
@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import ABaseImgModal from '@/components/organisms/OBaseImgModal.vue';
+import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 
 defineProps<{

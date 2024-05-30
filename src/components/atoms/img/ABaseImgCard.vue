@@ -38,8 +38,7 @@ $color-primary-white: rgb(0, 0, 0);
   width: 100%; /* Ensure the image fills the container */
   height: auto; /* Allow the height to adjust based on the image's aspect ratio */
   object-fit: cover;
-  opacity: 0.9;
-  transition: opacity 0.2s ease-out;
+  z-index: 9999;
 }
 
 .card-content {
