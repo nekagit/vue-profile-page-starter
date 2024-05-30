@@ -23,10 +23,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
-import MBaseGallerySlider from '@/components/molekules/MBaseGallerySlider.vue'
-import ABaseImageCard from '@/components/atoms/img/ABaseImgCard.vue'
+import ABaseCardAnBorder from '@/components/atoms/cards/ABaseCardAnBorder.vue';
+import ABaseImageCard from '@/components/atoms/img/ABaseImgCard.vue';
+import MBaseGallerySlider from '@/components/molekules/MBaseGallerySlider.vue';
+import { onMounted, ref } from 'vue';
 
 defineProps<{
   title: string

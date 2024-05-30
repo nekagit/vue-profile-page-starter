@@ -1,18 +1,16 @@
 <template>
-    <div class="card">
-      <h4>  {{ title }}</h4>
-      <p>
-          {{ content }}
-      </p>
-    </div>
+  <div class="card">
+    <h4>{{ title }}</h4>
+    <p>
+      {{ content }}
+    </p>
+  </div>
 </template>
 <script setup lang="ts">
-
 defineProps(['content', 'title'])
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
-
 
 .card {
   border-radius: 10px;
@@ -25,7 +23,7 @@ defineProps(['content', 'title'])
   z-index: 0;
   overflow: hidden;
   transition: 0.6s ease-in;
-  margin:auto;
+  margin: auto;
   margin-top: 2rem;
 }
 

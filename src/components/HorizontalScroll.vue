@@ -10,8 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import ABaseCardAnBorder from '@/components/atoms/cards/cards/ABaseCardAnBorder.vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 const page = ref<HTMLElement | null>(null)
 const initialScroll = ref(false)
 

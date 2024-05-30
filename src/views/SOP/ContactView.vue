@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FirmDetails from '@/components/atoms/cards/cards/AnimationCard.vue';
+import FirmDetails from '@/components/atoms/cards/ABaseAnimationCard.vue';
 import ABaseFooterSection from '@/components/atoms/sections/ABaseFooterSection.vue';
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
 </script>
