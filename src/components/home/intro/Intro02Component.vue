@@ -4,6 +4,6 @@
   </template>
 <script setup lang="ts">
 import intro02 from '@/assets/SOP/konopceposter.jpg';
-import ABaseModal from "@/components/atoms/modals/MBaseModal.vue";
+import ABaseModal from "@/components/molekules/modals/MBaseModal.vue";
 </script>
   

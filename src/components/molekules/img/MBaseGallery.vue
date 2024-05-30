@@ -1,12 +1,14 @@
 <template>
   <ul>
     <li v-for="img in images" :key="img">
-      <img :src="img" alt="Nicey Picsyy" />
+      <MBaseImgModal :img-src="img" />
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
+import MBaseImgModal from '@/components/molekules/modals/MBaseImgModal.vue';
+
 defineProps(['images'])
 </script>
 

@@ -27,9 +27,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, ref, onMounted } from 'vue'
-import ABaseGallery from '@/components/atoms/cards/ABaseGallery.vue'
-import ImageHelper from '@/services/ImageHelper'
+import ABaseGallery from '@/components/molekules/img/MBaseGallery.vue';
+import ImageHelper from '@/services/ImageHelper';
+import { computed, defineProps, onMounted, ref } from 'vue';
 interface Props {
   sliderTitles: string[]
   images?: string[]

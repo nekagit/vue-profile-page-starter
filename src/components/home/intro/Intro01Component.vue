@@ -3,5 +3,5 @@
 </template>
 <script setup lang="ts">
 import intro01 from '@/assets/SOP/fubalposter.jpg';
-import ABaseModal from "@/components/atoms/modals/MBaseModal.vue";
+import ABaseModal from "@/components/molekules/modals/MBaseModal.vue";
 </script>

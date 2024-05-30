@@ -44,8 +44,7 @@ $color-primary-white: rgb(0, 0, 0);
 
 .card-content {
   opacity: 0;
-  background-color: black;
-  color: white;
+  color: rgb(255, 0, 0);
   position: absolute;
   bottom: 0;
   left: 0;

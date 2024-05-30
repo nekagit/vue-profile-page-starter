@@ -25,7 +25,7 @@
 <script setup lang="ts">
 import ABaseCardAnBorder from '@/components/atoms/cards/ABaseCardAnBorder.vue';
 import ABaseImageCard from '@/components/atoms/img/ABaseImgCard.vue';
-import MBaseGallerySlider from '@/components/molekules/MBaseGallerySlider.vue';
+import MBaseGallerySlider from '@/components/molekules/img/MBaseGallerySlider.vue';
 import { onMounted, ref } from 'vue';
 
 defineProps<{

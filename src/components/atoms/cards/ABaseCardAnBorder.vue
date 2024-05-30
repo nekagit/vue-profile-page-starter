@@ -128,7 +128,8 @@ const toggleContent = () => {
   outline-offset: .6em;
   font-size: 33px;
   cursor: pointer;
-
+max-width: fit-content;
+margin:auto;
   word-wrap: break-word; /* Add this line */
   border: 0;
 
