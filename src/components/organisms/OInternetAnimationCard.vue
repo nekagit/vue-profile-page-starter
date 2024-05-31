@@ -13,8 +13,8 @@
       </div>
     </div>
     <div class="text">
-      <img class="inset" :src="insetImageUrl" alt="" />
-      <p v-for="(paragraph, index) in splitTextContent" :key="index">
+        <img class="inset" :src="insetImageUrl" alt="" />
+      <p class="text-wrap" v-for="(paragraph, index) in splitTextContent" :key="index">
         {{ paragraph }}
       </p>
     </div>
@@ -43,8 +43,8 @@ const splitTextContent = computed(() => {
   return props.textContent.flatMap(paragraph => {
     const words = paragraph.split(' ');
     const chunks = [];
-    for (let i = 0; i < words.length; i += 10) {
-      chunks.push(words.slice(i, i + 10).join(' '));
+    for (let i = 0; i < words.length; i += 8) {
+      chunks.push(words.slice(i, i + 8).join(' '));
     }
     return chunks;
   });
@@ -72,6 +72,7 @@ p {
   border-radius: 10px;
   color: #0e390e;
   text-align: center;
+  padding:0.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -118,7 +119,6 @@ p {
   max-width: 50%;
   margin: 0.25em 1em 1em 0;
   border-radius: 0.25em;
-  float: left;
 }
 
 .dots {

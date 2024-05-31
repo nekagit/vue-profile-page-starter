@@ -1,24 +1,31 @@
 <template>
   <div id="page" ref="page">
     <div class="pane">
-      <OInternetAnimationCard
-        title="School"
-        subtitle="Overview"
-        subtitleColor="black"
-        overlayBackgroundColor="#186218"
-        :mainImageUrl="SchoolHeader"
-        :insetImageUrl="SchoolLogo"
-        :textContent="[
-          'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО',
-          'Српски језик , културу и историју за ученике основних школа. Под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије. Часови су бесплатни.'
-        ]"
-        borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
-        dotColor="yellow"
-        dotBorderColor="indigo"
-        :dots="3"
-      />
+      <div class="flex flex-col p-12">
+        <h1 class="text-center">SOP Rotterdam School</h1>
+        <OInternetAnimationCard
+          title="Intro"
+          subtitle="Overview"
+          subtitleColor="black"
+          overlayBackgroundColor="#186218"
+          :mainImageUrl="SchoolHeader"
+          :insetImageUrl="SchoolLogo"
+          :textContent="[
+            'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО',
+            'Српски језик , културу и историју за ученике основних школа. Под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије. Часови су бесплатни.'
+          ]"
+          borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
+          dotColor="yellow"
+          dotBorderColor="indigo"
+          :dots="3"
+        />
+      </div>
     </div>
-    <div class="pane"></div>
+    <div class="pane">
+      <div class="flex flex-col p-12">
+        <AInternetUpFlipCard />
+      </div>
+    </div>
     <div class="pane"></div>
     <!-- <div class="pane"></div>
     <div class="pane"></div>
@@ -29,6 +36,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import OInternetAnimationCard from '@/components/organisms/OInternetAnimationCard.vue'
+import AInternetUpFlipCard from '@/components/atoms/cards/internet/AInternetUpFlipCard.vue'
 import SchoolHeader from '@/assets/SOP/schoolPage/schoolHeader.jpg'
 import SchoolLogo from '@/assets/SOP/schoolPage/schoolLogo.jpg'
 const page = ref<HTMLElement | null>(null)

@@ -13,9 +13,11 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+p {
+  word-wrap: break-word;
+}
 
 .truncate {
-  /* Add text-overflow and ellipsis for truncating text */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
