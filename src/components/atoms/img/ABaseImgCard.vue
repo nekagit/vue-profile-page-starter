@@ -62,13 +62,6 @@ p {
   transition: opacity 0.3s ease-out;
 }
 
-.truncate {
-  /* Add text-overflow and ellipsis for truncating text */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .card:hover .card-content {
   transition: opacity 0.3s ease-in;
   opacity: 1;

@@ -186,7 +186,7 @@ section {
       display: block;
       padding: 0;
       color: #00d0ff;
-      transition: all 0.15s ease-out;
+      transition: all 0.30s ease;
 
       &:hover {
         background-color: transparent;

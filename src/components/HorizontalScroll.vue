@@ -1,6 +1,6 @@
 <template>
   <div id="page" ref="page">
-    <div class="pane"></div>
+    <div class="pane"><OInternetAnimationCard /></div>
     <div class="pane"></div>
     <div class="pane"></div>
     <div class="pane"></div>
@@ -10,7 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import OInternetAnimationCard from "@/components/organisms/OInternetAnimationCard.vue"
 const page = ref<HTMLElement | null>(null)
 const initialScroll = ref(false)
 
