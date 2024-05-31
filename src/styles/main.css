@@ -13,9 +13,6 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-p {
-  word-wrap: break-word;
-}
 
 .truncate {
   white-space: nowrap;

@@ -1,11 +1,11 @@
 
 <template>
       <div
-        class="grid sm:grid-cols-2 items-center gap-16 p-8 m-4 max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]"
+        class="grid sm:grid-cols-2 items-center gap-16 p-8 m-4 max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif] overflow-x-auto"
       >
         <div>
           <h1 class="text-3xl font-extrabold">Let's Talk</h1>
-          <p class="text-sm text-gray-400 mt-3">
+          <p class="text-sm text-gray-400 mt-3 text-wrap">
             Wanna get in contact with us no problem just fill out the form or directly message through email or social media.
           </p>
           <div class="mt-12">
@@ -95,7 +95,7 @@
           </div>
         </div>
 
-        <form class="ml-auo space-y-4">
+        <form class="ml-auo space-y-4 flex flex-col">
           <input
             type="text"
             placeholder="Name"

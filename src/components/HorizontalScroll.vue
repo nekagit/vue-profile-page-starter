@@ -22,13 +22,26 @@
       </div>
     </div>
     <div class="pane">
-      <div class="flex flex-col p-12">
+      <div class="flex flex-col p-12 gap-16">
+        <AInternetUpFlipCard />
+        <AInternetUpFlipCard />
         <AInternetUpFlipCard />
       </div>
     </div>
-    <div class="pane"></div>
+    <div class="pane">
+      <div class="flex flex-col p-12 gap-16">
+        <ABaseContactCard :full-name="'Biljana Krum'" :title="'Teacher'" :img-src="Rihana" />
+
+        <ABaseAnimationCard
+          title="'School'"
+          :content="'Удружење Српско Омладинско Пријатељство Ротердам admin@stichtingsoprotterdam.nl Амбасада Републике Србије у Краљевини Холандији konzularno.hag@mfa.rs Биљана Крчум krcumb@gmail.com'"
+        />
+      </div>
+    </div>
+    <div class="pane">
+      <AInternetContactCard />
+    </div>
     <!-- <div class="pane"></div>
-    <div class="pane"></div>
     <div class="pane"></div> -->
   </div>
 </template>
@@ -39,6 +52,10 @@ import OInternetAnimationCard from '@/components/organisms/OInternetAnimationCar
 import AInternetUpFlipCard from '@/components/atoms/cards/internet/AInternetUpFlipCard.vue'
 import SchoolHeader from '@/assets/SOP/schoolPage/schoolHeader.jpg'
 import SchoolLogo from '@/assets/SOP/schoolPage/schoolLogo.jpg'
+import Rihana from '@/assets/SOP/schoolPage/rihana.jpg'
+import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
+import ABaseAnimationCard from '@/components/atoms/cards/ABaseAnimationCard.vue'
+import AInternetContactCard from '@/components/atoms/cards/AInternetContactCard.vue'
 const page = ref<HTMLElement | null>(null)
 const initialScroll = ref(false)
 
