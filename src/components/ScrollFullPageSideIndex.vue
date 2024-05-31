@@ -100,7 +100,6 @@ onBeforeUnmount(() => {
 .wrapper {
   min-height: 100vh;
   font-weight: 300;
-  color: #fff;
   position: relative;
 }
 
@@ -151,7 +150,7 @@ section {
     font-size: 32px;
     font-weight: 300;
     margin: 0 0 0.25em;
-    color: black;
+    color: #00d0ff;
     width: 300px;
     height: 0;
     overflow: hidden;

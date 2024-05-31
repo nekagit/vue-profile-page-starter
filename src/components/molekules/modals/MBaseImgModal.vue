@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-screen" @click="openModal" />
+  <img :src="imgSrc" @click="openModal" />
 
   <div :id="modalId" class="modal" ref="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>

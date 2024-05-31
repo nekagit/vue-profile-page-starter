@@ -1,8 +1,8 @@
 <template>
-      <MBaseImgModal :img-src="intro03" />
+      <MBaseModal :img-src="intro03" />
 
   </template>
   <script setup lang="ts">
 import intro03 from '@/assets/SOP/starifudbalposter.jpg';
-import MBaseImgModal from "@/components/molekules/modals/MBaseImgModal.vue";
+import MBaseModal from "@/components/molekules/modals/MBaseModal.vue";
 </script>

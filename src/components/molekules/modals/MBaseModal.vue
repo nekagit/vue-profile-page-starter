@@ -1,5 +1,5 @@
 <template>
-  <AInternetButtonFlick @click="openModal" />
+  <div class="h-screen w-full" @click="openModal" />
   <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
