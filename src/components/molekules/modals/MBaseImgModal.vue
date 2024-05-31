@@ -1,5 +1,5 @@
 <template>
-  <img :src="imgSrc" @click="openModal" />
+  <img :src="imgSrc" @click="openModal" alt="asdf"  />
 
   <div :id="modalId" class="modal" ref="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
