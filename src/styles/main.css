@@ -4,7 +4,7 @@
 
 /* Custom variables */
 :root {
-  --primary-color: #ffffff;
+  --primary-color: rgb(33, 42, 88);
   --secondary-color: #000000;
 }
 
@@ -24,7 +24,7 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   height: 100%;
-  background-color: rgb(31,41,55);
+  background-color: rgb(33, 42, 88);
 
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;

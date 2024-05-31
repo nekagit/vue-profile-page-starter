@@ -7,7 +7,7 @@
     />
     <img class="background-image" src="../../../assets/SOP/img/wg-removebg.png" alt="logo" />
   </div>
-  <footer class="bg-gray-800 text-white font-medium relative p-3">
+  <footer class="text-white font-medium relative p-3">
     <AMenuButton class="h-[30vh]" />
     <div
       class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center text-center"

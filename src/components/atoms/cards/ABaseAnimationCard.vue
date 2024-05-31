@@ -29,7 +29,7 @@ defineProps(['content', 'title'])
   position: absolute;
   top: -15px;
   right: -15px;
-  background: #7952b3;
+  background: rgb(33, 42, 88);
   height: 220px;
   width: 25px;
   border-radius: 32px;

@@ -113,12 +113,12 @@ section {
   align-items: center;
 
   $colors: (
-    rgb(31, 41, 55),
-    rgb(31, 41, 55),
-    rgb(31, 41, 55),
-    rgb(31, 41, 55),
-    rgb(31, 41, 55),
-    rgb(31, 41, 55)
+    rgb(33, 42, 88),
+    rgb(33, 42, 88),
+    rgb(33, 42, 88),
+    rgb(33, 42, 88),
+    rgb(33, 42, 88),
+    rgb(33, 42, 88)
   );
 
   @for $i from 1 through length($colors) {
