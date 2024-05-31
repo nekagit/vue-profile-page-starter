@@ -17,9 +17,10 @@ defineProps(['images'])
 
 ul {
   padding: 0;
-  margin: 0;
+  margin: auto;
   display: block;
   width: 100%;
+  max-width: 50vw;
   overflow-y: hidden;
   overflow-x: auto;
   white-space: nowrap;
