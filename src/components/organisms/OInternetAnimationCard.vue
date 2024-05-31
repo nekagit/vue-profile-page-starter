@@ -3,7 +3,9 @@
     <div class="overlay" :style="{ background: overlayBackgroundColor }">
       <div class="overlay-content animate slide-left delay-2">
         <h1 class="animate slide-left pop delay-4">{{ title }}</h1>
-        <p class="animate slide-left pop delay-5" :style="{ color: subtitleColor, marginBottom: '2.5rem' }">{{ subtitle }}</p>
+        <p class="animate slide-left pop delay-5" :style="{ color: subtitleColor, marginBottom: '2.5rem', wordBreak: 'break-word', whiteSpace: 'pre-wrap' }">
+          {{ subtitle }}
+        </p>
       </div>
       <div class="image-content animate slide delay-5" :style="{ backgroundImage: `url(${mainImageUrl})` }"></div>
       <div class="dots animate">
@@ -11,17 +13,17 @@
       </div>
     </div>
     <div class="text">
+      <img class="inset" :src="insetImageUrl" alt="" />
       <p v-for="(paragraph, index) in textContent" :key="index">
-        <img class="inset" :src="insetImageUrl" alt="" />{{ paragraph }}
+        {{ paragraph }}
       </p>
     </div>
   </div>
 </template>
 
 
-<script setup lang="ts">
-import { defineProps } from 'vue';
 
+<script setup lang="ts">
 defineProps({
   title: String,
   subtitle: String,
@@ -78,7 +80,6 @@ p {
   width: 15vmin;
   height: 100%;
   padding: 0.5rem 0 0 0.5rem;
-  border: 3px solid;
   transition: 0.3s ease-in-out 0.2s;
   z-index: 1;
 }
@@ -137,7 +138,6 @@ p {
   width: 30vmin;
 }
 .wrap:hover .overlay-content {
-  border: none;
   transition-delay: 0.2s;
   transform: translateX(60vmin);
 }
