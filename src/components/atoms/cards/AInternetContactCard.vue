@@ -1,7 +1,7 @@
 
 <template>
       <div
-        class="grid sm:grid-cols-2 items-center gap-16 p-8 m-4 max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif] overflow-x-auto"
+        class="h-screen overflow-auto grid sm:grid-cols-2 items-center gap-8 p-8 m-4 max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif] "
       >
         <div>
           <h1 class="text-3xl font-extrabold">Let's Talk</h1>
