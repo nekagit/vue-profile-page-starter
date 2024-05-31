@@ -1,4 +1,6 @@
 <template>
+  <div class="container">
+
   <div class="flex justify-around flex-col md:flex-row">
     <img
       class="background-image2 hidden xl:flex"
@@ -54,6 +56,7 @@
       <p class="text-white opacity-60">&copy; 2024 Nenad Kalicanin.</p>
     </div>
   </footer>
+  </div>
 </template>
 
 <script setup lang="ts">

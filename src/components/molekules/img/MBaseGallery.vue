@@ -15,3 +15,14 @@ import MBaseImgModal from '@/components/molekules/modals/MBaseImgModal.vue';
 
 defineProps(['images'])
 </script>
+<style scoped>
+ul {
+  position: relative;
+  z-index: 0; /* Ensure this is lower than the modal's z-index */
+}
+
+li {
+  position: relative;
+  z-index: 0; /* Ensure this is lower than the modal's z-index */
+}
+</style>

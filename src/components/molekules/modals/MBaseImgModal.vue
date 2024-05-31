@@ -1,5 +1,5 @@
 <template>
-  <img :src="imgSrc" @click="openModal" alt="asdf"  />
+  <img :src="imgSrc" @click="openModal" alt="Image"  />
 
   <div :id="modalId" class="modal" ref="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
@@ -41,17 +41,23 @@ onMounted(() => {
 </script>
 
 <style scoped>
+img {
+  /* Ensure the image is clickable but not above the modal */
+  z-index: 0;
+}
+
 .modal {
   display: none;
   position: fixed;
   justify-content: center;
   align-items: center;
   left: 0;
-  top: 10%;
+  top: 0; /* Cover the entire viewport */
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000; /* Ensure the modal is above all other content */
 }
 
 .modal-content-wrapper {
@@ -91,7 +97,7 @@ onMounted(() => {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 999;
+  z-index: 10001; /* Ensure the close button is above modal content */
   transition: color 0.3s;
 }
 
