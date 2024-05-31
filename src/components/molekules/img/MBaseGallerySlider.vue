@@ -17,8 +17,8 @@
       <div id="terms">
         <div v-for="title in filteredSliderTitles" :key="title">
           <template v-if="activeTab === title.toLowerCase()">
-            <ABaseGallery v-if="images == null" :images="getImageGallery(title)" />
-            <ABaseGallery v-else :images="images" />
+            <MBaseGallery v-if="images == null" :images="getImageGallery(title)" />
+            <MBaseGallery v-else :images="images" />
           </template>
         </div>
       </div>
@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import ABaseGallery from '@/components/molekules/img/MBaseGallery.vue';
+import MBaseGallery from '@/components/molekules/img/MBaseGallery.vue';
 import ImageHelper from '@/services/ImageHelper';
 import { computed, defineProps, onMounted, ref } from 'vue';
 interface Props {
