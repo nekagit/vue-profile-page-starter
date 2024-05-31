@@ -5,8 +5,13 @@
         v-for="(sideListItem, index) in sideList"
         :key="index"
         :class="{ active: index === activeIndex }"
+        class="relative mb-4 transition-all duration-300 ease-out"
       >
-        <a :href="'#section' + (index + 1)" @click="scrollToSection(index + 1)">
+        <a
+          :href="'#section' + (index + 1)"
+          @click="scrollToSection(index + 1)"
+          class="block p-0 text-[#00d0ff] transition-all duration-300 ease-out hover:pl-4"
+        >
           <span class="nav__counter">{{ formatIndex(index + 1) }}</span>
           <h3 class="nav__title">{{ sectionTitles[index] }}</h3>
           <p class="nav__body">{{ sectionSubtitle[index] }}</p>
@@ -18,17 +23,20 @@
   <section
     v-for="(sectionContent, index) in sectionContents"
     :key="index"
-    class="section xl:p-40 xl:m-40"
+    class="section xl:p-40 xl:m-40 h-screen flex justify-center items-center bg-gray-800 text-4xl font-light"
     :id="'section' + (index + 1)"
   >
-      <OBaseImgModal
-        :key="index"
-        :title="sectionTitles[index]"
-        :content="sectionContent"
-        :sub-title="' '"
-        :images="sectionImages[index]"
-        :img-src="coverImages[index]"
-      />
+  <div class="mt-96">
+
+    <OBaseImgModal
+    :key="index"
+    :title="sectionTitles[index]"
+    :content="sectionContent"
+    :sub-title="' '"
+    :images="sectionImages[index]"
+    :img-src="coverImages[index]"
+    />
+  </div>
   </section>
 </template>
 
