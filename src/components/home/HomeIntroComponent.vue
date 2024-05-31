@@ -50,7 +50,7 @@ const slides = [
       :arrows="!isMobile"
       lazy-load-on-drag
       :dragging-distance="70"
-      :pause-on-touch="false"
+      :pause-on-touch="true"
       :duration="10000"
       fade
       class="shadow-xl bg-black"

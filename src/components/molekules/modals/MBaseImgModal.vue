@@ -1,10 +1,10 @@
 <template>
-  <img :src="imgSrc" alt="Nicey Picsyy" @click="openModal" />
+  <div class="w-full h-screen" @click="openModal" />
 
-  <div :id="'myModal' + uniqueId" class="modal w-full h-screen" @click="closeModal">
+  <div :id="modalId" class="modal" ref="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
-      <ABaseImageCard :id="'myImg'" :imgSrc="imgSrc" />
+      <ABaseImageCard :id="imgId" :imgSrc="imgSrc" />
     </div>
   </div>
 </template>
@@ -20,6 +20,9 @@ defineProps<{
 const uniqueId = ref(Math.random().toString(36).substr(2, 9))
 const modal = ref<HTMLElement | null>(null)
 
+const modalId = `myModal-${uniqueId.value}`
+const imgId = `myImg-${uniqueId.value}`
+
 const openModal = () => {
   if (modal.value) {
     modal.value.style.display = 'flex'
@@ -33,7 +36,7 @@ const closeModal = () => {
 }
 
 onMounted(() => {
-  modal.value = document.getElementById('myModal' + uniqueId.value)
+  modal.value = document.getElementById(modalId)
 })
 </script>
 
@@ -104,5 +107,4 @@ onMounted(() => {
     width: 100%;
   }
 }
-
 </style>
