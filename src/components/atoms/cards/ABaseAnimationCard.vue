@@ -1,5 +1,5 @@
 <template>
-  <div class="card z-0 text-wrap p-4">
+  <div class="card relative z-0 text-wrap p-4 bg-white shadow-lg mx-auto mt-8 rounded-lg transition-all duration-600 ease-in hover:text-white">
     <h4>{{ title }}</h4>
     <p>{{ content }}</p>
   </div>
@@ -15,16 +15,12 @@ defineProps(['content', 'title'])
 .card {
   border-radius: 10px;
   filter: drop-shadow(0 5px 10px 0 #ffffff);
-  width: 80%;
+  width: 100%;
+  max-width: 350px;
   height: auto;
-  background-color: #ffffff;
   padding: 20px;
   position: relative;
   overflow: hidden;
-  transition: 0.6s ease-in;
-  margin: auto;
-  margin-top: 2rem;
-  color: #333;
   z-index: 1; /* Ensure the card is above the ::before element */
 }
 
@@ -46,10 +42,6 @@ defineProps(['content', 'title'])
 .card:hover::before {
   transition-delay: 0.2s;
   transform: scale(40);
-}
-
-.card:hover {
-  color: #ffffff;
 }
 
 .card p {
