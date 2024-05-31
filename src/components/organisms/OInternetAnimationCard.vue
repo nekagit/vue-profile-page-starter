@@ -14,7 +14,7 @@
     </div>
     <div class="text">
       <img class="inset" :src="insetImageUrl" alt="" />
-      <p v-for="(paragraph, index) in textContent" :key="index">
+      <p v-for="(paragraph, index) in splitTextContent" :key="index">
         {{ paragraph }}
       </p>
     </div>
@@ -22,9 +22,10 @@
 </template>
 
 
-
 <script setup lang="ts">
-defineProps({
+import { defineProps, computed } from 'vue';
+
+const props = defineProps({
   title: String,
   subtitle: String,
   subtitleColor: String,
@@ -36,6 +37,17 @@ defineProps({
   dotColor: String,
   dotBorderColor: String,
   dots: Number
+});
+
+const splitTextContent = computed(() => {
+  return props.textContent.flatMap(paragraph => {
+    const words = paragraph.split(' ');
+    const chunks = [];
+    for (let i = 0; i < words.length; i += 10) {
+      chunks.push(words.slice(i, i + 10).join(' '));
+    }
+    return chunks;
+  });
 });
 </script>
 
@@ -128,7 +140,7 @@ p {
   padding: 3vmin 4vmin;
   background: #fff;
   box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.4);
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 .wrap:hover .overlay {
