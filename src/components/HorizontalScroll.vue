@@ -33,6 +33,7 @@
         <ABaseContactCard :full-name="'Biljana Krum'" :title="'Teacher'" :img-src="Rihana" />
 
         <ABaseAnimationCard
+        class="max-w-[400px]"
           title="'School'"
           :content="'Удружење Српско Омладинско Пријатељство Ротердам admin@stichtingsoprotterdam.nl Амбасада Републике Србије у Краљевини Холандији konzularno.hag@mfa.rs Биљана Крчум krcumb@gmail.com'"
         />

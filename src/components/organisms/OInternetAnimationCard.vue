@@ -81,7 +81,7 @@ p {
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 95vmin;
-  height: 95vmin;
+  height: 65vmin;
   margin: 2rem auto;
   border: 8px solid;
   transition: 0.3s ease-in-out;
