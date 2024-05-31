@@ -1,7 +1,11 @@
 <template>
-  <ul>
-    <li v-for="img in images" :key="img">
-      <img :src="img" alt="asdf">
+  <ul class="p-0 m-auto block w-full max-w-[80vw] overflow-y-hidden overflow-x-auto whitespace-nowrap text-center scroll-smooth">
+    <li
+      v-for="img in images"
+      :key="img"
+      class="sticky left-0 w-[min(50vw,350px)] inline-block text-center bg-[#16171f] text-[#9b9dad] pb-6 shadow-[0_-10px_30px_0_rgba(0,0,0,0.25)] ml-[-4px]"
+    >
+      <img :src="img" alt="Image">
       <!-- <MBaseImgModal :img-src="img" /> -->
     </li>
   </ul>
@@ -12,35 +16,3 @@ import MBaseImgModal from '@/components/molekules/modals/MBaseImgModal.vue';
 
 defineProps(['images'])
 </script>
-
-<style lang="scss" scoped>
-
-ul {
-  padding: 0;
-  margin: auto;
-  display: block;
-  width: 100%;
-  max-width: 50vw;
-  overflow-y: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
-  text-align: center;
-  scroll-behavior: smooth;
-}
-
-li {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  width: min(50vw, 350px);
-  display: inline-block;
-  text-align: center;
-  background-color: #16171f;
-  color: #9b9dad;
-  padding-bottom: 1.5rem;
-  font-size: clamp(18px, 2.5vw, 22px);
-  box-shadow: -10px 0 30px 0 rgba(#000, 0.25);
-  margin-left: -4px;
-}
-
-</style>
