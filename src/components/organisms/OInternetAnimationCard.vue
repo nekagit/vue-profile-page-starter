@@ -3,7 +3,7 @@
     <div class="overlay" :style="{ background: overlayBackgroundColor }">
       <div class="overlay-content animate slide-left delay-2">
         <h1 class="animate slide-left pop delay-4">{{ title }}</h1>
-        <p class="animate slide-left pop delay-5" :style="{  color: subtitleColor, marginBottom: '2.5rem', wordBreak: 'break-word', whiteSpace: 'pre-wrap' }">
+        <p class="animate slide-left pop delay-5 subTitle" :style="{  color: subtitleColor, marginBottom: '2.5rem', wordBreak: 'break-word', whiteSpace: 'pre-wrap' }">
           {{ subtitle }}
         </p>
       </div>
@@ -65,13 +65,22 @@ p {
   color: #0e390e;
   margin-bottom: 1.5rem;
 }
+.subTitle {
+  font-size: max(10pt, 2.5vmin);
+  line-height: 1.4;
+  background-color: rgb(195, 255, 0);
+  border-radius: 10px;
+  color: #0e390e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
 .wrap {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 95vmin;
-  height: 65vmin;
+  height: 95vmin;
   margin: 2rem auto;
   border: 8px solid;
   transition: 0.3s ease-in-out;
@@ -140,7 +149,7 @@ p {
   padding: 3vmin 4vmin;
   background: #fff;
   box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.4);
-  overflow-y: scroll;
+//   overflow-y: scroll;
   overflow-x: scroll;
 }
  ::-webkit-scrollbar-corner {background-color: #0e390e;}
