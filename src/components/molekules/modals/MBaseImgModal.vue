@@ -88,6 +88,7 @@ onMounted(() => {
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 999;
   transition: color 0.3s;
 }
 

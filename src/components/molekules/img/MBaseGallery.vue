@@ -14,12 +14,6 @@ defineProps(['images'])
 
 <style lang="scss" scoped>
 
-img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-
 ul {
   padding: 0;
   margin: 0;
