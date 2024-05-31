@@ -1,7 +1,8 @@
 <template>
   <ul>
     <li v-for="img in images" :key="img">
-      <MBaseImgModal :img-src="img" />
+      <img :src="img" alt="asdf">
+      <!-- <MBaseImgModal :img-src="img" /> -->
     </li>
   </ul>
 </template>
