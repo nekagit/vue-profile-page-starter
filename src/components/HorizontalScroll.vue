@@ -1,8 +1,8 @@
 <template>
   <div id="page" ref="page">
     <div class="pane">
-      <div class="flex flex-col p-12">
-        <h1 class="text-center">SOP Rotterdam School</h1>
+      <div class="flex flex-col p-4 md:p-12">
+        <h1 class="text-center text-xl md:text-2xl lg:text-4xl">SOP Rotterdam School</h1>
         <OInternetAnimationCard
           title="Intro"
           subtitle="Overview"
@@ -22,18 +22,17 @@
       </div>
     </div>
     <div class="pane">
-      <div class="flex flex-col p-12 gap-16">
+      <div class="flex flex-col p-4 md:p-12 gap-4 md:gap-8 h-screen ">
         <AInternetUpFlipCard />
         <AInternetUpFlipCard />
         <AInternetUpFlipCard />
       </div>
     </div>
     <div class="pane">
-      <div class="flex flex-col p-12 gap-16">
+      <div class="flex flex-col md:p-12 md:gap-16">
         <ABaseContactCard :full-name="'Biljana Krum'" :title="'Teacher'" :img-src="Rihana" />
-
         <ABaseAnimationCard
-          class="max-w-[400px]"
+          class="max-w-full md:max-w-[400px]"
           title="'School'"
           :content="'Удружење Српско Омладинско Пријатељство Ротердам admin@stichtingsoprotterdam.nl Амбасада Републике Србије у Краљевини Холандији konzularno.hag@mfa.rs Биљана Крчум krcumb@gmail.com'"
         />
