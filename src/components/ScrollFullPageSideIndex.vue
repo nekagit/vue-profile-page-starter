@@ -21,17 +21,14 @@
     class="section xl:p-40 xl:m-40"
     :id="'section' + (index + 1)"
   >
-    <div class="mt-52">
       <OBaseImgModal
         :key="index"
-        class="w-[100%] md:w-[100%]"
         :title="sectionTitles[index]"
         :content="sectionContent"
         :sub-title="' '"
         :images="sectionImages[index]"
         :img-src="coverImages[index]"
       />
-    </div>
   </section>
 </template>
 

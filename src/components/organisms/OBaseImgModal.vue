@@ -1,7 +1,7 @@
 <template>
   <ABaseImageCard
     :id="'myImg' + uniqueId"
-    class="max-h-[800px]"
+    class="image-card"
     :text="content"
     :imgSrc="imgSrc"
     @click="openModal"
@@ -59,6 +59,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.image-card {
+  z-index: 0; /* Ensure the image is at a lower z-index */
+  position: relative;
+}
 
 .modal {
   display: none;
@@ -70,6 +74,7 @@ onMounted(() => {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000; /* Ensure the modal is on top */
 }
 
 .modal-content-wrapper {
