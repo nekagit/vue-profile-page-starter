@@ -3,7 +3,7 @@
     <div class="overlay" :style="{ background: overlayBackgroundColor }">
       <div class="overlay-content animate slide-left delay-2">
         <h1 class="animate slide-left pop delay-4">{{ title }}</h1>
-        <p class="animate slide-left pop delay-5" :style="{ color: subtitleColor, marginBottom: '2.5rem', wordBreak: 'break-word', whiteSpace: 'pre-wrap' }">
+        <p class="animate slide-left pop delay-5" :style="{  color: subtitleColor, marginBottom: '2.5rem', wordBreak: 'break-word', whiteSpace: 'pre-wrap' }">
           {{ subtitle }}
         </p>
       </div>
@@ -55,7 +55,9 @@ const splitTextContent = computed(() => {
 h1 {
   font-size: 5.25vmin;
   text-align: center;
-  color: white;
+  background-color: rgb(195, 255, 0);
+  padding: 0.3rem;
+  border-radius: 10px;
 }
 p {
   font-size: max(10pt, 2.5vmin);
@@ -68,7 +70,7 @@ p {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 85vmin;
+  width: 95vmin;
   height: 65vmin;
   margin: 2rem auto;
   border: 8px solid;
@@ -89,9 +91,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 15vmin;
   height: 100%;
-  padding: 0.5rem 0 0 0.5rem;
   transition: 0.3s ease-in-out 0.2s;
   z-index: 1;
 }
@@ -141,8 +141,9 @@ p {
   background: #fff;
   box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.4);
   overflow-y: scroll;
+  overflow-x: scroll;
 }
-
+ ::-webkit-scrollbar-corner {background-color: #0e390e;}
 .wrap:hover .overlay {
   transform: translateX(-60vmin);
 }

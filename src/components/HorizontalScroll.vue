@@ -2,6 +2,25 @@
   <div id="page" ref="page">
     <div class="pane">
       <OInternetAnimationCard
+        title="School"
+        subtitle="Overview"
+        subtitleColor="black"
+        overlayBackgroundColor="white"
+        mainImageUrl="https://assets.codepen.io/4787486/trees.png"
+        insetImageUrl="https://assets.codepen.io/4787486/oak_1.jpg"
+        :textContent="[
+          'Trees are woody perennial plants that are a member of the kingdom Plantae. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.',
+          'Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.',
+          'When managed properly, trees are a good source of renewable energy and construction material.'
+        ]"
+        borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
+        dotColor="yellow"
+        dotBorderColor="indigo"
+        :dots="3"
+      />
+    </div>
+    <div class="pane">
+      <OInternetAnimationCard
         title="Trees"
         subtitle="Kingdom: Plantae"
         subtitleColor="white"
@@ -19,11 +38,82 @@
         :dots="3"
       />
     </div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
+    <div class="pane">
+      <OInternetAnimationCard
+        title="Trees"
+        subtitle="Kingdom: Plantae"
+        subtitleColor="white"
+        overlayBackgroundColor="#186218"
+        mainImageUrl="https://assets.codepen.io/4787486/trees.png"
+        insetImageUrl="https://assets.codepen.io/4787486/oak_1.jpg"
+        :textContent="[
+          'Trees are woody perennial plants that are a member of the kingdom Plantae. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.',
+          'Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.',
+          'When managed properly, trees are a good source of renewable energy and construction material.'
+        ]"
+        borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
+        dotColor="yellow"
+        dotBorderColor="indigo"
+        :dots="3"
+      />
+    </div>
+    <div class="pane">
+      <OInternetAnimationCard
+        title="Trees"
+        subtitle="Kingdom: Plantae"
+        subtitleColor="white"
+        overlayBackgroundColor="#186218"
+        mainImageUrl="https://assets.codepen.io/4787486/trees.png"
+        insetImageUrl="https://assets.codepen.io/4787486/oak_1.jpg"
+        :textContent="[
+          'Trees are woody perennial plants that are a member of the kingdom Plantae. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.',
+          'Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.',
+          'When managed properly, trees are a good source of renewable energy and construction material.'
+        ]"
+        borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
+        dotColor="yellow"
+        dotBorderColor="indigo"
+        :dots="3"
+      />
+    </div>
+    <div class="pane">
+      <OInternetAnimationCard
+        title="Trees"
+        subtitle="Kingdom: Plantae"
+        subtitleColor="white"
+        overlayBackgroundColor="#186216"
+        mainImageUrl="https://assets.codepen.io/4787486/trees.png"
+        insetImageUrl="https://assets.codepen.io/4787486/oak_1.jpg"
+        :textContent="[
+          'Trees are woody perennial plants that are a member of the kingdom Plantae. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.',
+          'Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.',
+          'When managed properly, trees are a good source of renewable energy and construction material.'
+        ]"
+        borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
+        dotColor="yellow"
+        dotBorderColor="indigo"
+        :dots="3"
+      />
+    </div>
+    <div class="pane">
+      <OInternetAnimationCard
+        title="Trees"
+        subtitle="Kingdom: Plantae"
+        subtitleColor="white"
+        overlayBackgroundColor="#186218"
+        mainImageUrl="https://assets.codepen.io/4787486/trees.png"
+        insetImageUrl="https://assets.codepen.io/4787486/oak_1.jpg"
+        :textContent="[
+          'Trees are woody perennial plants that are a member of the kingdom Plantae. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.',
+          'Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.',
+          'When managed properly, trees are a good source of renewable energy and construction material.'
+        ]"
+        borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
+        dotColor="yellow"
+        dotBorderColor="indigo"
+        :dots="3"
+      />
+    </div>
   </div>
 </template>
 
