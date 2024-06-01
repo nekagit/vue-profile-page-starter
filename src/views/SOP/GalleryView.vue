@@ -6,7 +6,7 @@ import MBaseGallerySlider from "@/components/molekules/img/MBaseGallerySlider.vu
 
 <template>
  <MBaseGallerySlider :slider-titles="['SOP', 'Sport', 'School']" class="mt-10" />
-  <ABaseHorizontalSection :content="'SOP | Gallery'" />
+  <ABaseHorizontalSection class="charmFont" :content="'SOP -  Gallery'" />
   <ABaseFooterSection />
 
 </template>

@@ -80,7 +80,7 @@
       </div>
     </section>
   </div>
-  <ABaseHorizontalSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection class="charmFont" :content="'SOP -  Contact'" />
 </template>
 
 <script setup lang="ts">

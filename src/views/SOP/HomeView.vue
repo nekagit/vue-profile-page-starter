@@ -6,7 +6,7 @@ import HomeIntroComponent from '@/components/home/HomeIntroComponent.vue';
 
 <template>
     <HomeIntroComponent />
-    <ABaseHorizontalSection :content="'SOP | Home'" />
+    <ABaseHorizontalSection class="charmFont" :content="'SOP -  Home'" />
   <ABaseFooterSection />
 
 </template>

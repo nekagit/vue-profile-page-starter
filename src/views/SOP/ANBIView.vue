@@ -41,7 +41,7 @@ const anbi = [
     />
     <ABaseContactCard :full-name="'Predrag Joldic'" :title="'Board member'" :img-src="Guest" />
   </div>
-  <ABaseHorizontalSection :content="'SOP | Contact'" />
+  <ABaseHorizontalSection class="charmFont" :content="'SOP -  Contact'" />
   <ABaseFooterSection />
 </template>
 

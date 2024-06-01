@@ -3,7 +3,7 @@
     <ABaseImageSection v-for="item in 3" :key="item" :button="false" :position="'left'" :sectionItem="weAreSection" />
   </div>
   <hr  />
-  <ABaseHorizontalSection :content="'Home | Services'" />
+  <ABaseHorizontalSection class="charmFont" :content="'Home | Services'" />
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
     <ABaseIconSection v-for="item in 6" :key="item" :button="false" :position="'left'" :sectionItem="weAreSection" />
   </div>
