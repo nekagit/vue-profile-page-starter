@@ -1,19 +1,34 @@
 <template>
-    <div class="card">
-      <img :src="Card1" alt="" />
-      <div class="card__content">
-        <p class="card__title">Card Title</p>
-        <p class="card__description text-wrap">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco.
-        </p>
-      </div>
+  <div class="card">
+    <img :src="imgSrc" alt="asdf" />
+    <div class="card__content">
+      <p class="card__title text-wrap">{{ title }}</p>
+      <p class="card__description text-wrap" v-html="formattedDescription"></p>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
+import { defineProps, computed } from 'vue'
+
+const props = defineProps({
+  imgSrc: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+})
+
+const formattedDescription = computed(() => {
+  return props.description.replace(/\n/g, '<br>')
+})
 </script>
 
 <style scoped>
@@ -48,6 +63,7 @@ import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
   padding: 20px;
   box-sizing: border-box;
   background-color: #f2f2f2;
+  overflow-y: auto;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -62,10 +78,6 @@ import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
   font-size: 24px;
   color: #333;
   font-weight: 700;
-}
-
-.card:hover svg {
-  scale: 0;
 }
 
 .card__description {

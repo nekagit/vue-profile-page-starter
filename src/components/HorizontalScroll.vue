@@ -2,7 +2,9 @@
   <div id="page" ref="page">
     <div class="pane">
       <div class="flex flex-col p-4 md:p-12">
-        <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">SOP Rotterdam School</h1>
+        <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">
+          SOP Rotterdam School
+        </h1>
         <OInternetAnimationCard
           title="Intro"
           subtitle="Overview"
@@ -23,23 +25,43 @@
     </div>
     <div class="pane">
       <div class="flex flex-col p-4 md:p-12 gap-4 xs:gap-16 h-screen">
-        <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">General Information</h1>
-        <AInternetUpFlipCard />
-        <AInternetUpFlipCard />
-        <AInternetUpFlipCard />
+        <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">
+          General Information
+        </h1>
+        <AInternetUpFlipCard
+          :imgSrc="SchoolLogo"
+          :title="'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО'"
+          :description="'Oдвија се под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије и Амбасаде Републике Србије у Краљевини Холандији, потпомогнута од стране удружења СОП Ротердам.'"
+        />
+        <AInternetUpFlipCard
+          :imgSrc="SchoolBuilding"
+          :title="'Nastava'"
+          :description="'Посебан програм основног образовања и васпитања у иностранству реализује се на три узрасна нивоa: млађем ( први, други и трећи разред), средњем ( четврти, пети и шести разред) и старијем ( седми и осми разред) из три предемта: Српски језик, Моја отаџбина Србија и Основи културе српског народа.'"
+        />
+        <AInternetUpFlipCard
+          :imgSrc="Card1"
+          :title="'Практичне информације'"
+          :description="'-Велику свеску А4 на линије\n-Оловку и гумицу/оштрач\n-Дрвене бојице\n-Мапу/ фациклу'"
+        />
       </div>
     </div>
     <div class="pane flex flex-col">
-        <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">Working Staff</h1>
-        <ABaseContactCard :full-name="'Biljana Krum'" :title="'Teacher'" :img-src="Rihana" />
-        <ABaseAnimationCard
-          class="max-w-full md:max-w-[400px]"
-          title="'School'"
-          :content="'Удружење Српско Омладинско Пријатељство Ротердам admin@stichtingsoprotterdam.nl Амбасада Републике Србије у Краљевини Холандији konzularno.hag@mfa.rs Биљана Крчум krcumb@gmail.com'"
-        />
+      <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">
+        Working Staff
+      </h1>
+      <ABaseContactCard :full-name="'Biljana Krum'" :title="'Teacher'" :img-src="Rihana" />
+      <ABaseAnimationCard
+        class="max-w-full md:max-w-[400px]"
+        title="'School'"
+        :content="'Удружење Српско Омладинско Пријатељство Ротердам admin@stichtingsoprotterdam.nl Амбасада Републике Србије у Краљевини Холандији konzularno.hag@mfa.rs Биљана Крчум krcumb@gmail.com'"
+      />
     </div>
     <div class="pane">
-      <AInternetContactCard />
+      <AInternetContactCard
+        :title="'Contact Teacher'"
+        subtitle="Wanna get in contact with me? Fill in the form and i will reply as fast as i can."
+        email="krcumb@gmail.com"
+      />
     </div>
   </div>
 </template>
@@ -49,6 +71,8 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import OInternetAnimationCard from '@/components/organisms/OInternetAnimationCard.vue'
 import AInternetUpFlipCard from '@/components/atoms/cards/internet/AInternetUpFlipCard.vue'
 import SchoolHeader from '@/assets/SOP/schoolPage/schoolHeader.jpg'
+import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
+import SchoolBuilding from '@/assets/SOP/schoolPage/schoolBuilding.jpg'
 import SchoolLogo from '@/assets/SOP/schoolPage/schoolLogo.jpg'
 import Rihana from '@/assets/SOP/schoolPage/rihana.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
