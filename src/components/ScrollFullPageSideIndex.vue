@@ -47,6 +47,7 @@ import InternetLines from "@/components/background/InternetLines.vue"
 import InternetRotateShine from "@/components/background/InternetMiddleRotateShine.vue"
 import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeRouteLeave } from 'vue-router'
 
 defineProps<{
   sideList: string[]
@@ -95,9 +96,19 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
 
+const resetBodyStyles = () => {
+  document.body.style.height = ''
+  window.scrollTo(0, 0)
+}
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
+    resetBodyStyles()
 })
+onBeforeRouteLeave((to, from, next) => {
+  resetBodyStyles()
+  next()
+})
+
 </script>
 
 <style lang="scss" scoped>

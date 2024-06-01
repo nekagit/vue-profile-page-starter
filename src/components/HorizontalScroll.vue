@@ -68,6 +68,7 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeRouteLeave } from 'vue-router'
 import OInternetAnimationCard from '@/components/organisms/OInternetAnimationCard.vue'
 import AInternetUpFlipCard from '@/components/atoms/cards/internet/AInternetUpFlipCard.vue'
 import SchoolHeader from '@/assets/SOP/schoolPage/schoolHeader.jpg'
@@ -79,8 +80,14 @@ import Rihana from '@/assets/SOP/schoolPage/rihana.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
 import ABaseAnimationCard from '@/components/atoms/cards/ABaseAnimationCard.vue'
 import AInternetContactCard from '@/components/atoms/cards/AInternetContactCard.vue'
+
 const page = ref<HTMLElement | null>(null)
 const initialScroll = ref(false)
+
+const resetBodyStyles = () => {
+  document.body.style.height = ''
+  window.scrollTo(0, 0)
+}
 
 const resize = () => {
   if (!page.value) return
@@ -118,7 +125,14 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
   window.removeEventListener('resize', resize)
+  resetBodyStyles()
 })
+
+onBeforeRouteLeave((to, from, next) => {
+  resetBodyStyles()
+  next()
+})
+
 </script>
 
 <style scoped>
