@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="card">
       <img :src="Card1" alt="" />
       <div class="card__content">
@@ -11,7 +10,6 @@
         </p>
       </div>
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -21,8 +19,10 @@ import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
 <style scoped>
 .card {
   position: relative;
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 300px;
   background-color: #f2f2f2;
   border-radius: 10px;
   display: flex;
