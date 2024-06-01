@@ -148,7 +148,6 @@ p {
   padding: 3vmin 4vmin;
   background: #fff;
   box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.4);
-//   overflow-y: scroll;
   overflow-x: auto;
 }
  ::-webkit-scrollbar-corner {background-color: #0e390e;}
