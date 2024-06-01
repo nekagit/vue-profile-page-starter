@@ -27,7 +27,7 @@
   background-image: linear-gradient(hsl(222, 84, 60, 100%), hsl(164, 79, 71));
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  z-index: -1;
+  z-index: 0;
 }
 
 @media (min-width: 720px) {

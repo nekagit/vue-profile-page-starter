@@ -20,7 +20,6 @@
     </ul>
   </nav>
   <InternetLines />
-  <InternetRotateShine class="ml-40 hidden xl:flex" />
 
   <section
     v-for="(sectionContent, index) in sectionContents"
@@ -28,6 +27,7 @@
     class="section xl:p-40 xl:m-40 h-screen flex justify-center items-center bg-gray-800 text-4xl font-light"
     :id="'section' + (index + 1)"
   >
+  <InternetRotateShine class="hidden xl:flex" />
   
   <div class="xs:mt-0 md:mx-8">
       <OBaseImgModal
