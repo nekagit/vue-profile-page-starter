@@ -1,14 +1,19 @@
 <template>
+  <InternetRotateShine class="ml-40 hidden xl:flex" />
   <div class="card">
-    <img :src="imgSrc" alt="" class="card-img rounded-3xl">
+
+    <img :src="imgSrc" alt="" class="card-img rounded-3xl shadow-2xl">
     <div class="card-content">
       <h2>{{ heading }}</h2>
       <p class="truncate">{{ text }}</p>
     </div>
   </div>
+  <InternetRotateShine class="ml-40 hidden xl:flex" />
+
 </template>
 
 <script setup lang="ts">
+import InternetRotateShine from "@/components/background/InternetMiddleRotateShine.vue"
 interface CardProps {
   heading?: string
   text?: string
