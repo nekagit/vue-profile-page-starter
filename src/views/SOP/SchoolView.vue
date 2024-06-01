@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AMenuButton from '@/components/atoms/nav/AMenuButton.vue'
 import HorizontalScroll from '@/components/HorizontalScroll.vue'
+
 </script>
 
 <template>

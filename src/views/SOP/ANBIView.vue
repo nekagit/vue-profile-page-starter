@@ -5,6 +5,7 @@ import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
 import ABaseFooterSection from '@/components/atoms/sections/ABaseFooterSection.vue'
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue'
 import ABaseCardAnBorder from '@/components/molekules/cards/MBaseCardAnBorder.vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 const anbi = [
   {
     title: 'Goal',
@@ -21,6 +22,13 @@ const anbi = [
     content: 'Serbian Youth Friendship Association Rotterdam. admin@stichtingsoprotterdam.nl'
   }
 ]
+onMounted(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
+
 </script>
 
 <template>

@@ -3,6 +3,13 @@ import FirmDetails from '@/components/atoms/cards/ABaseAnimationCard.vue';
 import AInternetContactCard from '@/components/atoms/cards/AInternetContactCard.vue';
 import ABaseFooterSection from '@/components/atoms/sections/ABaseFooterSection.vue';
 import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalSection.vue';
+import {  onMounted } from 'vue'
+onMounted(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
 </script>
 
 <template>

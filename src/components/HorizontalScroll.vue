@@ -109,10 +109,10 @@ onMounted(() => {
 
   resize()
 
-  // Start at the first pane
-  if (page.value) {
-    window.scrollTo(0, 0)
-  }
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
 })
 
 onBeforeUnmount(() => {
