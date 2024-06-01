@@ -1,18 +1,21 @@
 <template>
-    <div>
-<div class="card">
-    <img :src="Card1" alt="">
-  <div class="card__content">
-    <p class="card__title">Card Title</p>
-    <p class="card__description text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
-
+  <div>
+    <div class="card">
+      <img :src="Card1" alt="" />
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description text-wrap">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco.
+        </p>
+      </div>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Card1 from "@/assets/SOP/schoolPage/card1.jpg"
+import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
 </script>
 
 <style scoped>
@@ -30,7 +33,6 @@ import Card1 from "@/assets/SOP/schoolPage/card1.jpg"
   box-shadow: 0 0 0 5px #ffffff80;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 
 .card:hover {
   transform: scale(1.05);
@@ -72,5 +74,4 @@ import Card1 from "@/assets/SOP/schoolPage/card1.jpg"
   color: #777;
   line-height: 1.4;
 }
-
 </style>
