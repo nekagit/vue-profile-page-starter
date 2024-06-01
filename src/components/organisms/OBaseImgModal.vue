@@ -62,6 +62,8 @@ onMounted(() => {
 .image-card {
   z-index: 0; /* Ensure the image is at a lower z-index */
   position: relative;
+  width: 80%;
+  margin: auto;
 }
 
 .modal {

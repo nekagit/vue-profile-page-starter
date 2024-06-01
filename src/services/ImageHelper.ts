@@ -17,7 +17,7 @@ import BoxPic4 from '@/assets/SOP/img/imgs/boks/5.jpeg'
 import Sponsors from '@/assets/SOP/img/logoo.png'
 import Kros from '@/assets/SOP/sportPage/kros.png'
 import fudbal from '@/assets/SOP/sportPage/fudbalfirst.jpeg'
-import atletikfirst from '@/assets/SOP/sportPage/atletikfirst.jfif'
+import atletikfirst from '@/assets/SOP/sportPage/krosback.jpg'
 import plivanjefirst from '@/assets/SOP/sportPage/plivanjefirst.jfif'
 
 export default function ImageHelper() {

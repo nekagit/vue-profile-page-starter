@@ -25,7 +25,6 @@ $color-primary-white: rgb(0, 0, 0);
 .card {
   max-width: 100%; /* Ensure the card does not exceed the container's width */
   height:90vh; /* Allow the height to adjust based on content */
-  border-radius: 10px;
   overflow: auto;
   cursor: pointer;
   position: relative;

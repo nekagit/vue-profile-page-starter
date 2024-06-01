@@ -26,23 +26,22 @@
     class="section xl:p-40 xl:m-40 h-screen flex justify-center items-center bg-gray-800 text-4xl font-light"
     :id="'section' + (index + 1)"
   >
-  <div class=" xs:mt-0">
-
-    <OBaseImgModal
-    :key="index"
-    :title="sectionTitles[index]"
-    :content="sectionContent"
-    :sub-title="' '"
-    :images="sectionImages[index]"
-    :img-src="coverImages[index]"
-    />
-  </div>
+    <div class="xs:mt-0 md:mx-8">
+      <OBaseImgModal
+        :key="index"
+        :title="sectionTitles[index]"
+        :content="sectionContent"
+        :sub-title="' '"
+        :images="sectionImages[index]"
+        :img-src="coverImages[index]"
+      />
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue';
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 defineProps<{
   sideList: string[]
@@ -137,7 +136,7 @@ section {
   }
 
   & {
-    margin: 0 0 100px 30px;
+    margin: 0 0 50px 30px;
   }
 
   &__counter {
@@ -192,7 +191,7 @@ section {
       display: block;
       padding: 0;
       color: #00d0ff;
-      transition: all 0.30s ease;
+      transition: all 0.3s ease;
 
       &:hover {
         background-color: transparent;
