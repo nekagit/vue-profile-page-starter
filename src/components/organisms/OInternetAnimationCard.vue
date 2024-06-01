@@ -56,7 +56,7 @@ h1 {
   font-size: 5.25vmin;
   text-align: center;
   background-color: rgb(195, 255, 0);
-  padding: 0.3rem;
+  padding: 0.1rem;
   border-radius: 10px;
 }
 p {
@@ -115,15 +115,14 @@ p {
 	justify-content: space-between;
 	width: 15vmin;
 	height: 100%;
-	padding: 0.5rem 0 0 0.5rem;
-	border: 3px solid;
-	border-image: linear-gradient(
-			to bottom,
-			#aea724 5%,
-			forestgreen 35% 65%,
-			#aea724 95%
-		)
-		0 0 0 100%;
+	// border: 3px solid;
+	// border-image: linear-gradient(
+	// 		to bottom,
+	// 		#aea724 5%,
+	// 		forestgreen 35% 65%,
+	// 		#aea724 95%
+	// 	)
+	// 	0 0 0 100%;
 	transition: 0.3s ease-in-out 0.2s;
 	z-index: 1;
 }
