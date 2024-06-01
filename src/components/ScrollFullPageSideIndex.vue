@@ -29,9 +29,9 @@
   >
     <div class="xs:mt-0 md:mx-8">
       <InternetRotateShine
+        v-motion
         ref="rotateShine"
         class="hidden xl:flex ml-40"
-        v-motion
         :initial="{ opacity: 0, y: 100 }"
         :enter="enterAnimation"
         :variants="{ custom: { scale: 2 } }"
@@ -135,8 +135,6 @@ onBeforeRouteLeave((to, from, next) => {
   next()
 })
 </script>
-
-
 
 <style lang="scss" scoped>
 .wrapper {
