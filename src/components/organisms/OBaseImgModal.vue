@@ -4,6 +4,7 @@
     class="image-card z-max rounded"
     :text="content"
     :imgSrc="imgSrc"
+    :class="{ 'fade-in': isIntersecting }"
     @click="openModal"
   />
 
@@ -16,6 +17,7 @@
         :title="title"
         :sub-title="subTitle"
         :variant="3"
+        :class="{ 'animate-left': isIntersecting }"
       />
       <MBaseGallerySlider :slider-titles="['']" :images="images" />
     </div>
@@ -23,10 +25,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
 import ABaseImageCard from '@/components/atoms/img/ABaseImgCard.vue';
 import ABaseCardAnBorder from '@/components/molekules/cards/MBaseCardAnBorder.vue';
 import MBaseGallerySlider from '@/components/molekules/img/MBaseGallerySlider.vue';
-import { onMounted, ref } from 'vue';
 
 defineProps<{
   title: string
@@ -38,6 +40,7 @@ defineProps<{
 
 const uniqueId = ref(Math.random().toString(36).substr(2, 9))
 const modal = ref<HTMLElement | null>(null)
+const isIntersecting = ref(false)
 
 const openModal = () => {
   if (modal.value) {
@@ -55,6 +58,24 @@ const closeModal = () => {
 
 onMounted(() => {
   modal.value = document.getElementById('myModal' + uniqueId.value)
+  const observerOptions = {
+    threshold: 0.1
+  }
+
+  const observerCallback = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        isIntersecting.value = true
+      }
+    })
+  }
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions)
+  const target = document.getElementById('myImg' + uniqueId.value)
+
+  if (target) {
+    observer.observe(target)
+  }
 })
 </script>
 
@@ -64,6 +85,14 @@ onMounted(() => {
   position: relative;
   width: 80%;
   margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.image-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .modal {
@@ -88,21 +117,18 @@ onMounted(() => {
   display: block;
   padding: 1rem;
   width: 75%;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.modal-content.animate-left {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .modal-image {
   width: 100%;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0.4);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 .close {
