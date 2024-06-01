@@ -5,11 +5,10 @@
         <li v-for="(title, index) in filteredSliderTitles" :key="index">
           <a
             :class="{ active: activeTab === title.toLowerCase() }"
-            class="text-3xl"
             :href="'#/' + title.toLowerCase()"
             @click.prevent="changeTab(title)"
           >
-            {{ title }}
+            <h1>{{ title }}</h1>
           </a>
         </li>
       </ul>
@@ -27,9 +26,9 @@
 </template>
 
 <script setup lang="ts">
-import MBaseGallery from '@/components/molekules/img/MBaseGallery.vue';
-import ImageHelper from '@/services/ImageHelper';
-import { computed, defineProps, onMounted, ref } from 'vue';
+import MBaseGallery from '@/components/molekules/img/MBaseGallery.vue'
+import ImageHelper from '@/services/ImageHelper'
+import { computed, defineProps, onMounted, ref } from 'vue'
 interface Props {
   sliderTitles: string[]
   images?: string[]
