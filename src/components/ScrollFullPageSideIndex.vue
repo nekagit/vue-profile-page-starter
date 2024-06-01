@@ -29,6 +29,7 @@
   >
     <div class="xs:mt-0 md:mx-8">
       <InternetRotateShine
+        ref="rotateShine"
         class="hidden xl:flex ml-40"
         v-motion
         :initial="{ opacity: 0, y: 100 }"
@@ -37,7 +38,6 @@
         :hovered="{ scale: 1.2 }"
         :delay="100"
         :duration="1200"
-        v-intersect="onIntersect"
       />
       <OBaseImgModal
         :key="index"
@@ -50,14 +50,13 @@
     </div>
   </section>
 </template>
-
 <script setup lang="ts">
-import InternetLines from '@/components/background/InternetLines.vue'
-import InternetRotateShine from '@/components/background/InternetMiddleRotateShine.vue'
-import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
 import { useIntersectionObserver } from '@vueuse/core'
+import InternetLines from '@/components/background/InternetLines.vue'
+import InternetRotateShine from '@/components/background/InternetMiddleRotateShine.vue'
+import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
 
 defineProps<{
   sideList: string[]
@@ -69,6 +68,7 @@ defineProps<{
 }>()
 
 const activeIndex = ref(0)
+const rotateShine = ref(null)
 
 const scrollToSection = (index: number) => {
   const target = document.getElementById('section' + index)
@@ -100,22 +100,24 @@ const handleScroll = () => {
 
 const enterAnimation = ref({ opacity: 0, y: 100 })
 
-const onIntersect = (entries: IntersectionObserverEntry[]) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      enterAnimation.value = { opacity: 1, y: 0 }
-    } else {
-      enterAnimation.value = { opacity: 0, y: 100 }
-    }
-  })
-}
-
 onMounted(() => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   })
   window.addEventListener('scroll', handleScroll)
+
+  useIntersectionObserver(
+    rotateShine,
+    ([{ isIntersecting }]) => {
+      if (isIntersecting) {
+        enterAnimation.value = { opacity: 1, y: 0 }
+      } else {
+        enterAnimation.value = { opacity: 0, y: 100 }
+      }
+    },
+    { threshold: 0.1 }
+  )
 })
 
 const resetBodyStyles = () => {
@@ -133,6 +135,7 @@ onBeforeRouteLeave((to, from, next) => {
   next()
 })
 </script>
+
 
 
 <style lang="scss" scoped>
