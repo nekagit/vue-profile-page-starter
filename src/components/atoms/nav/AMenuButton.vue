@@ -43,8 +43,8 @@ $sm: 20rem;
 $med: 48rem;
 $lg: 64rem;
 
-
 button {
+  z-index: 99999;
   cursor: pointer;
 }
 
@@ -143,6 +143,7 @@ nav.menu {
   height: 100%;
   padding: 3.25rem 0.625rem 1.25rem;
   background-color: rgba($black, 0.8);
+  z-index: 99999;
   transition: 0.25s ease;
 
   &.open {
@@ -162,11 +163,13 @@ nav.menu {
     width: 100%;
     margin: 0;
     padding: 0;
+    z-index: 99999;
 
     li {
       position: relative;
       display: block;
       width: 100%;
+      z-index: 99999;
       text-align: right;
 
       a {

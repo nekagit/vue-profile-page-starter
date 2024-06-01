@@ -26,7 +26,7 @@
     class="section xl:p-40 xl:m-40 h-screen flex justify-center items-center bg-gray-800 text-4xl font-light"
     :id="'section' + (index + 1)"
   >
-  <div class="mt-96">
+  <div class=" xs:mt-0">
 
     <OBaseImgModal
     :key="index"
@@ -104,10 +104,9 @@ onBeforeUnmount(() => {
 }
 
 section {
-  height: 100vh;
   font-size: 40px;
   font-weight: 100;
-  background-color: rgb(31, 41, 55);
+  background-color: rgb(33, 42, 88);
   display: flex;
   justify-content: center;
   align-items: center;

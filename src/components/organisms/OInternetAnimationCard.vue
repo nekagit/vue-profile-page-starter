@@ -1,4 +1,4 @@
-<template>
+<<template>
   <div class="wrap animate pop" :style="{ borderImage: borderGradient }">
     <div class="overlay" :style="{ background: overlayBackgroundColor }">
       <div class="overlay-content animate slide-left delay-2">
@@ -23,7 +23,7 @@
 
 
 <script setup lang="ts">
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps({
   title: String,
@@ -86,7 +86,7 @@ p {
   border: 8px solid;
   transition: 0.3s ease-in-out;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 .overlay {
   position: relative;
@@ -150,7 +150,7 @@ p {
   background: #fff;
   box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.4);
 //   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
  ::-webkit-scrollbar-corner {background-color: #0e390e;}
 .wrap:hover .overlay {

@@ -1,7 +1,7 @@
 <template>
-  <img :src="imgSrc" @click="openModal" alt="Image"  />
+  <img :src="imgSrc" @click="openModal" alt="sdf"  />
 
-  <div :id="modalId" class="modal" ref="modal" @click="closeModal">
+  <div :id="modalId" class="modal h-screen" ref="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
       <ABaseImageCard :id="imgId" :imgSrc="imgSrc" />
@@ -54,7 +54,7 @@ img {
   left: 0;
   top: 0; /* Cover the entire viewport */
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 10000; /* Ensure the modal is above all other content */
@@ -62,8 +62,6 @@ img {
 
 .modal-content-wrapper {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;

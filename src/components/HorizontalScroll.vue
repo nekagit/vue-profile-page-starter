@@ -2,7 +2,7 @@
   <div id="page" ref="page">
     <div class="pane">
       <div class="flex flex-col p-4 md:p-12">
-        <h1 class="text-center text-xl md:text-2xl lg:text-4xl">SOP Rotterdam School</h1>
+        <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">SOP Rotterdam School</h1>
         <OInternetAnimationCard
           title="Intro"
           subtitle="Overview"
@@ -116,16 +116,16 @@ onBeforeUnmount(() => {
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: #005575;
+  background-color: rgb(33, 42, 88);
 }
 .pane:nth-child(4n + 2) {
-  background-color: #0a9000;
+  background-color: rgb(33, 42, 88);
 }
 .pane:nth-child(4n + 3) {
-  background-color: #edde05;
+  background-color: rgb(33, 42, 88);
 }
 .pane:nth-child(4n + 4) {
-  background-color: #ffffff;
+  background-color: rgb(33, 42, 88);
 }
 .pane:last-child {
   background-color: #7b1200;
