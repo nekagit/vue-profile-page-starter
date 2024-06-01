@@ -29,9 +29,9 @@
   >
     <div class="xs:mt-0 md:mx-8">
       <InternetRotateShine
-        v-motion
         ref="rotateShine"
-        class="hidden xl:flex ml-40"
+        :class="{ 'animate': isIntersecting[index] }"
+        class="hidden xl:flex ml-40 rotate-shine"
         :initial="{ opacity: 0, y: 100 }"
         :enter="enterAnimation"
         :variants="{ custom: { scale: 2 } }"
@@ -53,12 +53,11 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
-import { useIntersectionObserver } from '@vueuse/core'
 import InternetLines from '@/components/background/InternetLines.vue'
 import InternetRotateShine from '@/components/background/InternetMiddleRotateShine.vue'
 import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
 
-defineProps<{
+const props = defineProps<{
   sideList: string[]
   sectionContents: string[]
   sectionSubtitle: string[]
@@ -68,7 +67,8 @@ defineProps<{
 }>()
 
 const activeIndex = ref(0)
-const rotateShine = ref(null)
+const rotateShine = ref<HTMLElement[]>([])
+const isIntersecting = ref<boolean[]>(Array(props.sectionContents.length).fill(false))
 
 const scrollToSection = (index: number) => {
   const target = document.getElementById('section' + index)
@@ -107,17 +107,23 @@ onMounted(() => {
   })
   window.addEventListener('scroll', handleScroll)
 
-  useIntersectionObserver(
-    rotateShine,
-    ([{ isIntersecting }]) => {
-      if (isIntersecting) {
-        enterAnimation.value = { opacity: 1, y: 0 }
-      } else {
-        enterAnimation.value = { opacity: 0, y: 100 }
+  const observerOptions = {
+    threshold: 0.1
+  }
+
+  const observerCallback = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      const index = rotateShine.value.findIndex(el => el === entry.target)
+      if (index !== -1) {
+        isIntersecting.value[index] = entry.isIntersecting
       }
-    },
-    { threshold: 0.1 }
-  )
+    })
+  }
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+  rotateShine.value = Array.from(document.querySelectorAll('.rotate-shine'))
+  rotateShine.value.forEach((el) => observer.observe(el))
 })
 
 const resetBodyStyles = () => {
@@ -136,7 +142,18 @@ onBeforeRouteLeave((to, from, next) => {
 })
 </script>
 
+
 <style lang="scss" scoped>
+.rotate-shine {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 .wrapper {
   min-height: 100vh;
   font-weight: 300;
@@ -271,4 +288,5 @@ section {
     }
   }
 }
+
 </style>
