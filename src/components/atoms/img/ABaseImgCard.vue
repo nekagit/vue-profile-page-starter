@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img :src="imgSrc" alt="" class="card-img">
+    <img :src="imgSrc" alt="" class="card-img rounded-3xl">
     <div class="card-content">
       <h2>{{ heading }}</h2>
       <p class="truncate">{{ text }}</p>

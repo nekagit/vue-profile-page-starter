@@ -8,6 +8,7 @@ import SchoolPic1 from '@/assets/SOP/img/skola/2.jpeg'
 import SchoolPic2 from '@/assets/SOP/img/skola/3.jpeg'
 import SchoolPic3 from '@/assets/SOP/img/skola/4.jpeg'
 import SchoolPic4 from '@/assets/SOP/img/skola/5.jpeg'
+import BoxProf from '@/assets/SOP/sportPage/boxProf.jpg'
 import BoxPic from '@/assets/SOP/img/imgs/boks/1.jpeg'
 import BoxPic1 from '@/assets/SOP/img/imgs/boks/2.jpeg'
 import BoxPic2 from '@/assets/SOP/img/imgs/boks/3.jpeg'
@@ -16,7 +17,9 @@ import BoxPic4 from '@/assets/SOP/img/imgs/boks/5.jpeg'
 
 import Sponsors from '@/assets/SOP/img/logoo.png'
 import Kros from '@/assets/SOP/sportPage/kros.png'
+import fudbalProf from '@/assets/SOP/sportPage/fudbalProf.webp'
 import fudbal from '@/assets/SOP/sportPage/fudbalfirst.jpeg'
+import atletikProf from '@/assets/SOP/sportPage/atletikProf.jpg'
 import atletikfirst from '@/assets/SOP/sportPage/krosback.jpg'
 import plivanjefirst from '@/assets/SOP/sportPage/plivanjefirst.jfif'
 
@@ -24,7 +27,7 @@ export default function ImageHelper() {
   const sopGallery = [SOPPic, SOPPic1, SOPPic2, SOPPic3, SOPPic4]
   const sportGallery = [BoxPic, BoxPic1, BoxPic2, BoxPic3, BoxPic4]
   const schoolGallery = [SchoolPic, SchoolPic1, SchoolPic2, SchoolPic3, SchoolPic4]
-  const sportPage = [Sponsors, Kros, fudbal, BoxPic, atletikfirst, plivanjefirst]
+  const sportPage = [Sponsors, Kros, fudbalProf, BoxProf, atletikProf, plivanjefirst]
   const sportPageSectionImages = [
     [Sponsors, Sponsors, Sponsors, Sponsors, Sponsors, Sponsors, Sponsors, Sponsors],
     [Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros, Kros],
