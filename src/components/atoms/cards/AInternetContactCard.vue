@@ -1,10 +1,9 @@
 <template>
   <div
-    class="mb-8 md:h-auto grid sm:grid-cols-2 items-center gap-8 p-8 md:m-auto max-w-[800px] bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]"
+    class="grid sm:grid-cols-2 items-center gap-8 p-8 md:m-auto max-w-[800px] bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]"
   >
-  <div>
-
-       <h1 class="text-3xl font-extrabold">{{ title }}</h1>
+    <div>
+      <h1 class="text-3xl font-extrabold">{{ title }}</h1>
       <p class="text-sm text-gray-400 mt-3 text-wrap">{{ subtitle }}</p>
       <div class="mt-12">
         <h2 class="text-lg font-extrabold">Email</h2>
@@ -33,9 +32,9 @@
           </li>
         </ul>
       </div>
-  </div>
+    </div>
 
-       <form class=" space-y-4 flex flex-col">
+    <form class="space-y-4 flex flex-col">
       <input
         v-model="name"
         type="text"
