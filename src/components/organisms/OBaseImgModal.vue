@@ -1,7 +1,7 @@
 <template>
   <ABaseImageCard
     :id="'myImg' + uniqueId"
-    class="image-card"
+    class="image-card z-max"
     :text="content"
     :imgSrc="imgSrc"
     @click="openModal"

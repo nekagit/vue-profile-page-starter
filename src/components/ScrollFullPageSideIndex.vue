@@ -19,6 +19,7 @@
       </li>
     </ul>
   </nav>
+  <InternetLines />
 
   <section
     v-for="(sectionContent, index) in sectionContents"
@@ -26,7 +27,8 @@
     class="section xl:p-40 xl:m-40 h-screen flex justify-center items-center bg-gray-800 text-4xl font-light"
     :id="'section' + (index + 1)"
   >
-    <div class="xs:mt-0 md:mx-8">
+  
+  <div class="xs:mt-0 md:mx-8">
       <OBaseImgModal
         :key="index"
         :title="sectionTitles[index]"
@@ -40,6 +42,7 @@
 </template>
 
 <script setup lang="ts">
+import InternetLines from "@/components/background/InternetLines.vue"
 import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
@@ -100,6 +103,7 @@ onBeforeUnmount(() => {
   min-height: 100vh;
   font-weight: 300;
   position: relative;
+  z-index: 1;
 }
 
 section {
@@ -109,6 +113,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
   $colors: (
     rgb(33, 42, 88),
