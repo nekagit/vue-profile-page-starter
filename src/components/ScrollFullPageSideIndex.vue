@@ -144,6 +144,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 
 <style lang="scss" scoped>
+
 .rotate-shine {
   opacity: 0;
   transform: translateY(20px);
