@@ -1,7 +1,6 @@
 <template>
   <div class="card">
-
-    <img :src="imgSrc" alt="" class="card-img rounded-3xl shadow-2xl z-max">
+    <img :src="imgSrc" alt="" class="card-img rounded-3xl shadow-2xl z-max hover:opacity-50 ease-in-out duration-300">
     <div class="card-content">
       <h2>{{ heading }}</h2>
       <p class="truncate">{{ text }}</p>
@@ -39,6 +38,7 @@ $color-primary-white: rgb(0, 0, 0);
   height: auto; /* Allow the height to adjust based on the image's aspect ratio */
   object-fit: cover;
 }
+
 
 .card-content {
   opacity: 0;

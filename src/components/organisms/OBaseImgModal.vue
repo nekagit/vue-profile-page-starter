@@ -1,7 +1,7 @@
 <template>
   <ABaseImageCard
     :id="'myImg' + uniqueId"
-    class="image-card z-max rounded"
+    class="image-card"
     :text="content"
     :imgSrc="imgSrc"
     :class="{ 'fade-in': isIntersecting }"
@@ -86,9 +86,10 @@ onMounted(() => {
   width: 80%;
   margin: auto;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(20px) scale(1); /* Initial scale set to 1 */
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 
 .image-card.fade-in {
   opacity: 1;
