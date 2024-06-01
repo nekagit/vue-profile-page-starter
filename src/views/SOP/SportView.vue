@@ -7,6 +7,7 @@
     :cover-images="ImgHelper().sportPage"
     :section-images="ImgHelper().sportPageSectionImages"
   />
+
   <AMenuButton class="h-[30vh]" />
 </template>
 

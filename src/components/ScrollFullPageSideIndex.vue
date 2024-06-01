@@ -20,6 +20,7 @@
     </ul>
   </nav>
   <InternetLines />
+  <InternetRotateShine class="ml-40 hidden xl:flex" />
 
   <section
     v-for="(sectionContent, index) in sectionContents"
@@ -43,6 +44,7 @@
 
 <script setup lang="ts">
 import InternetLines from "@/components/background/InternetLines.vue"
+import InternetRotateShine from "@/components/background/InternetMiddleRotateShine.vue"
 import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 

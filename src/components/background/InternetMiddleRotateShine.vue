@@ -27,6 +27,7 @@
   background-image: linear-gradient(hsl(222, 84, 60, 100%), hsl(164, 79, 71));
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: -1;
 }
 
 @media (min-width: 720px) {
@@ -35,15 +36,6 @@
   }
 }
 
-body {
-  background-color: #071c39;
-  position: absolute;
-  inset: 0;
-  display: flex;
-  place-content: center;
-  align-items: center;
-  overflow: hidden;
-}
 
 /* This is just to transition when you change the viewport size. */
 * {
