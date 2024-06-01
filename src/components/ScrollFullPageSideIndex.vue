@@ -27,9 +27,18 @@
     class="section xl:p-40 xl:m-40 h-screen flex justify-center items-center bg-gray-800 text-4xl font-light"
     :id="'section' + (index + 1)"
   >
-  
-  <div class="xs:mt-0 md:mx-8">
-    <InternetRotateShine class="hidden xl:flex" />
+    <div class="xs:mt-0 md:mx-8">
+      <InternetRotateShine
+        class="hidden xl:flex ml-40"
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="enterAnimation"
+        :variants="{ custom: { scale: 2 } }"
+        :hovered="{ scale: 1.2 }"
+        :delay="100"
+        :duration="1200"
+        v-intersect="onIntersect"
+      />
       <OBaseImgModal
         :key="index"
         :title="sectionTitles[index]"
@@ -43,11 +52,12 @@
 </template>
 
 <script setup lang="ts">
-import InternetLines from "@/components/background/InternetLines.vue"
-import InternetRotateShine from "@/components/background/InternetMiddleRotateShine.vue"
+import InternetLines from '@/components/background/InternetLines.vue'
+import InternetRotateShine from '@/components/background/InternetMiddleRotateShine.vue'
 import OBaseImgModal from '@/components/organisms/OBaseImgModal.vue'
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
+import { useIntersectionObserver } from '@vueuse/core'
 
 defineProps<{
   sideList: string[]
@@ -88,6 +98,18 @@ const handleScroll = () => {
   }
 }
 
+const enterAnimation = ref({ opacity: 0, y: 100 })
+
+const onIntersect = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      enterAnimation.value = { opacity: 1, y: 0 }
+    } else {
+      enterAnimation.value = { opacity: 0, y: 100 }
+    }
+  })
+}
+
 onMounted(() => {
   window.scrollTo({
     top: 0,
@@ -100,16 +122,18 @@ const resetBodyStyles = () => {
   document.body.style.height = ''
   window.scrollTo(0, 0)
 }
+
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
-    resetBodyStyles()
+  resetBodyStyles()
 })
+
 onBeforeRouteLeave((to, from, next) => {
   resetBodyStyles()
   next()
 })
-
 </script>
+
 
 <style lang="scss" scoped>
 .wrapper {
