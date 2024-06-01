@@ -143,6 +143,7 @@ onMounted(() => {
   border: none;
   cursor: pointer;
   transition: color 0.3s;
+  z-index: 9999;
 }
 
 .close:hover,

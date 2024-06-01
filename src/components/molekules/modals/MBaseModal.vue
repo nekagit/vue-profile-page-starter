@@ -3,15 +3,13 @@
   <div :id="'myModal' + uniqueId" class="modal" @click="closeModal">
     <div class="modal-content-wrapper" @click.stop>
       <button class="close" @click="closeModal">&times;</button>
-      <ABaseImageCard :id="'myImg'" :imgSrc="imgSrc" />
+      <img :id="'myImg'" alt="asdf" :src="imgSrc" class="h-screen" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import ABaseImageCard from '@/components/atoms/img/ABaseImgCard.vue'
-import AInternetButtonFlick from '@/components/atoms/buttons/AInternetButtonFlick.vue';
 
 defineProps<{
   imgSrc: string
@@ -88,7 +86,7 @@ onMounted(() => {
   background: none;
   border: none;
   cursor: pointer;
-  z-index:999;
+  z-index: 9999;
   transition: color 0.3s;
 }
 
@@ -104,5 +102,4 @@ onMounted(() => {
     width: 100%;
   }
 }
-
 </style>
