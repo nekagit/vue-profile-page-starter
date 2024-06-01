@@ -8,7 +8,7 @@
       :key="img"
       class="sticky left-0 w-[min(50vw,350px)] inline-block text-center bg-[#16171f] text-[#9b9dad] pb-6 shadow-[0_-10px_30px_0_rgba(0,0,0,0.25)] ml-[-4px]"
     >
-        <img :src="img" @click="openModal(img)" alt="Image" />
+      <img :src="img" @click="openModal(img)" alt="sadf" />
     </li>
   </ul>
   <div v-if="modalBool" :id="modalId" class="modal" ref="modal" @click="closeModal">
@@ -31,7 +31,7 @@ defineProps<{
 const uniqueId = ref(Math.random().toString(36).substr(2, 9))
 const modal = ref<HTMLElement | null>(null)
 const modalBool = ref(false)
-const modalImg = ref("")
+const modalImg = ref('')
 const modalId = `myModal-${uniqueId.value}`
 const imgId = `myImg-${uniqueId.value}`
 
@@ -43,7 +43,7 @@ const openModal = (img: string) => {
 
 // Function to close the modal
 const closeModal = () => {
-  modalImg.value = ""
+  modalImg.value = ''
   modalBool.value = false
 }
 
