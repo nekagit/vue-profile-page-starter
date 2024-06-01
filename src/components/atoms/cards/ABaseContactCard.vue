@@ -37,7 +37,6 @@ defineProps(['fullName', 'title', 'imgSrc'])
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 40px 0;
 }
 .container .card {
   position: relative;

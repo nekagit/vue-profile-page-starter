@@ -29,8 +29,7 @@
         <AInternetUpFlipCard />
       </div>
     </div>
-    <div class="pane">
-      <div class="flex flex-col md:p-12 md:gap-16">
+    <div class="pane flex flex-col">
         <h1 class="text-center text-white underline text-3xl md:text-2xl lg:text-4xl">Working Staff</h1>
         <ABaseContactCard :full-name="'Biljana Krum'" :title="'Teacher'" :img-src="Rihana" />
         <ABaseAnimationCard
@@ -38,7 +37,6 @@
           title="'School'"
           :content="'Удружење Српско Омладинско Пријатељство Ротердам admin@stichtingsoprotterdam.nl Амбасада Републике Србије у Краљевини Холандији konzularno.hag@mfa.rs Биљана Крчум krcumb@gmail.com'"
         />
-      </div>
     </div>
     <div class="pane">
       <AInternetContactCard />
