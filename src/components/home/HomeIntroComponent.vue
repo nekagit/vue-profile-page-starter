@@ -4,10 +4,11 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 
 // Import the images statically
-import intro01 from '@/assets/SOP/fubalposter.jpg'
-import intro02 from '@/assets/SOP/konopceposter.jpg'
-import intro03 from '@/assets/SOP/starifudbalposter.jpg'
-import intro04 from '@/assets/SOP/WhatsApp Bild 2024-05-21 um 11.57.53_f109ab3a.jpg'
+import intro01 from '@/assets/SOP/sopGallery/fubalposter.jpg'
+import intro02 from '@/assets/SOP/sopGallery/konopceposter.jpg'
+import intro03 from '@/assets/SOP/sopGallery/starifudbalposter.jpg'
+import intro04 from '@/assets/SOP/sopGallery/WhatsApp Bild 2024-05-21 um 11.57.53_f109ab3a.jpg'
+
 
 import Intro01Component from './intro/Intro01Component.vue'
 import Intro02Component from './intro/Intro02Component.vue'
