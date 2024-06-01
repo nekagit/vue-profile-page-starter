@@ -6,7 +6,7 @@ import ABaseHorizontalSection from '@/components/atoms/sections/ABaseHorizontalS
 </script>
 
 <template>
-    <div class="flex flex-col md:gap-8 md:mt-8">
+    <div class="flex flex-col gap-4 md:gap-8 md:mt-8">
       <AInternetContactCard
         :title="'Let Talk'"
         subtitle="Wanna get in contact with us? No problem, just fill out the form or directly message through email or social media."
