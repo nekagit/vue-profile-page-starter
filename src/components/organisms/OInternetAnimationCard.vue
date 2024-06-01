@@ -86,7 +86,6 @@ p {
   border: 8px solid;
   transition: 0.3s ease-in-out;
   position: relative;
-  overflow: auto;
 }
 .overlay {
   position: relative;

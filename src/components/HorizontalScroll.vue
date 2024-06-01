@@ -29,7 +29,7 @@
           General Information
         </h1>
         <AInternetUpFlipCard
-          :imgSrc="SchoolLogo"
+          :imgSrc=" Card1"
           :title="'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО'"
           :description="'Oдвија се под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије и Амбасаде Републике Србије у Краљевини Холандији, потпомогнута од стране удружења СОП Ротердам.'"
         />
@@ -39,7 +39,7 @@
           :description="'Посебан програм основног образовања и васпитања у иностранству реализује се на три узрасна нивоa: млађем ( први, други и трећи разред), средњем ( четврти, пети и шести разред) и старијем ( седми и осми разред) из три предемта: Српски језик, Моја отаџбина Србија и Основи културе српског народа.'"
         />
         <AInternetUpFlipCard
-          :imgSrc="Card1"
+          :imgSrc="schoolBag"
           :title="'Практичне информације'"
           :description="'-Велику свеску А4 на линије\n-Оловку и гумицу/оштрач\n-Дрвене бојице\n-Мапу/ фациклу'"
         />
@@ -72,8 +72,9 @@ import OInternetAnimationCard from '@/components/organisms/OInternetAnimationCar
 import AInternetUpFlipCard from '@/components/atoms/cards/internet/AInternetUpFlipCard.vue'
 import SchoolHeader from '@/assets/SOP/schoolPage/schoolHeader.jpg'
 import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
-import SchoolBuilding from '@/assets/SOP/schoolPage/schoolBuilding.jpg'
-import SchoolLogo from '@/assets/SOP/schoolPage/schoolLogo.jpg'
+import SchoolBuilding from '@/assets/SOP/schoolPage/schoolBuilding-Photoroom.jpg'
+import schoolBag from '@/assets/SOP/schoolPage/schoolBag.jpg'
+import SchoolLogo from "@/assets/SOP/schoolPage/schoolLogo.jpg"
 import Rihana from '@/assets/SOP/schoolPage/rihana.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
 import ABaseAnimationCard from '@/components/atoms/cards/ABaseAnimationCard.vue'
