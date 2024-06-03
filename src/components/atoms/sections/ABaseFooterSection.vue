@@ -3,7 +3,7 @@
 
   <div class="flex justify-around flex-col md:flex-row">
     <img
-      class="background-image2 hidden xl:flex"
+      class="background-image2 hidden xl:flex rounded-xl shadow-xl"
       src="../../../assets/SOP/img/logoo.png"
       alt="sponsors"
     />

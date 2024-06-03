@@ -1,5 +1,5 @@
 <template>
-  <div class="card relative z-0 text-wrap p-4 bg-white shadow-lg mx-auto rounded-lg transition-all duration-600 ease-in hover:text-white">
+  <div class="card relative z-0 text-wrap p-4 bg-white shadow-xl mx-auto rounded-lg transition-all duration-600 ease-in hover:text-white">
     <h4>{{ title }}</h4>
     <p>{{ content }}</p>
   </div>

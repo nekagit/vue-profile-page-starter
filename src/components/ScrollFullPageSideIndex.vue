@@ -30,7 +30,7 @@
     <div class="xs:mt-0 md:mx-8">
       <InternetRotateShine
         ref="rotateShine"
-        :class="{ 'animate': isIntersecting[index] }"
+        :class="{ animate: isIntersecting[index] }"
         class="hidden xl:flex ml-40 rotate-shine"
         :initial="{ opacity: 0, y: 100 }"
         :enter="enterAnimation"
@@ -50,6 +50,7 @@
     </div>
   </section>
 </template>
+
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
@@ -113,7 +114,7 @@ onMounted(() => {
 
   const observerCallback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
-      const index = rotateShine.value.findIndex(el => el === entry.target)
+      const index = rotateShine.value.findIndex((el) => el === entry.target)
       if (index !== -1) {
         isIntersecting.value[index] = entry.isIntersecting
       }
@@ -142,18 +143,18 @@ onBeforeRouteLeave((to, from, next) => {
 })
 </script>
 
-
 <style lang="scss" scoped>
-
 .rotate-shine {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(200px) translateX(calc(var(--i) * 10px - 500px)); /* Scatter more to the sides */
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .animate {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateX(calc(var(--i) * 100px - 500px)); /* Scatter more to the sides */
 }
 .wrapper {
   min-height: 100vh;
@@ -289,5 +290,4 @@ section {
     }
   }
 }
-
 </style>
