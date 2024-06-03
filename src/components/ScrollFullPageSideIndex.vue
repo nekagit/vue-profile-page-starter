@@ -20,25 +20,24 @@
     </ul>
   </nav>
   <InternetLines />
-
   <section
     v-for="(sectionContent, index) in sectionContents"
     :key="index"
     class="section xl:p-40 xl:m-40 h-screen flex justify-center items-center bg-gray-800 text-4xl font-light"
     :id="'section' + (index + 1)"
   >
+    <InternetRotateShine
+      ref="rotateShine"
+      :class="{ animate: isIntersecting[index] }"
+      class="hidden xl:flex rotate-shine"
+      :initial="{ opacity: 0, y: 100 }"
+      :enter="enterAnimation"
+      :variants="{ custom: { scale: 2 } }"
+      :hovered="{ scale: 1.2 }"
+      :delay="100"
+      :duration="1200"
+    />
     <div class="xs:mt-0 md:mx-8">
-      <InternetRotateShine
-        ref="rotateShine"
-        :class="{ animate: isIntersecting[index] }"
-        class="hidden xl:flex ml-40 rotate-shine"
-        :initial="{ opacity: 0, y: 100 }"
-        :enter="enterAnimation"
-        :variants="{ custom: { scale: 2 } }"
-        :hovered="{ scale: 1.2 }"
-        :delay="100"
-        :duration="1200"
-      />
       <OBaseImgModal
         :key="index"
         :title="sectionTitles[index]"
