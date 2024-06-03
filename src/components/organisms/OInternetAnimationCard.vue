@@ -86,13 +86,13 @@ p {
 	border: 8px solid;
 	border-image: linear-gradient(
 			-50deg,
-			green,
+			rgb(33, 42, 88),
 			#00b300,
 			forestgreen,
-			green,
+			rgb(33, 42, 88),
 			lightgreen,
 			#00e600,
-			green
+			rgb(33, 42, 88)
 		)
 		1;
 	transition: 0.3s ease-in-out;
@@ -105,7 +105,7 @@ p {
 	width: 100%;
 	height: 100%;
 	padding: 1rem 0.75rem;
-	background: #186218;
+	background: rgb(33, 42, 88);
 	transition: 0.4s ease-in-out;
 	z-index: 1;
 }
@@ -132,7 +132,6 @@ p {
 	right: 0;
 	width: 60vmin;
 	height: 100%;
-	background-image: url("https://assets.codepen.io/4787486/trees.png");
 	background-size: cover;
 	transition: 0.3s ease-in-out;
 	/* border: 1px solid green; */

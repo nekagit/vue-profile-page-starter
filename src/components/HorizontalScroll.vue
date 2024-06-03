@@ -9,14 +9,14 @@
           title="Intro"
           subtitle="Overview"
           subtitleColor="black"
-          overlayBackgroundColor="#186218"
+          overlayBackgroundColor="rgb(33, 42, 88)"
           :mainImageUrl="SchoolHeader"
           :insetImageUrl="SchoolLogo"
           :textContent="[
             'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО',
             'Српски језик , културу и историју за ученике основних школа. Под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије. Часови су бесплатни.'
           ]"
-          borderGradient="linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1"
+          borderGradient="linear-gradient(-50deg, rgb(222, 213, 167), #ded5a7, #f1eac6, #ded5a7, #cfc28b, #e8dfb3, rgb(222, 213, 167)) 1"
           dotColor="yellow"
           dotBorderColor="indigo"
           :dots="3"
@@ -29,7 +29,7 @@
           General Information
         </h1>
         <AInternetUpFlipCard
-          :imgSrc=" Card1"
+          :imgSrc="Card1"
           :title="'ДОЂИТЕ ДА СЕ ДРУЖИМО И КРОЗ ИГРУ УЧИМО'"
           :description="'Oдвија се под покровитељством Министарства просвете, науке и технолошког развоја Републике Србије и Амбасаде Републике Србије у Краљевини Холандији, потпомогнута од стране удружења СОП Ротердам.'"
         />
@@ -75,7 +75,7 @@ import SchoolHeader from '@/assets/SOP/schoolPage/schoolHeader.jpg'
 import Card1 from '@/assets/SOP/schoolPage/card1.jpg'
 import SchoolBuilding from '@/assets/SOP/schoolPage/schoolBuilding-Photoroom.jpg'
 import schoolBag from '@/assets/SOP/schoolPage/schoolBag.jpg'
-import SchoolLogo from "@/assets/SOP/schoolPage/schoolLogo.jpg"
+import SchoolLogo from '@/assets/SOP/schoolPage/schoolLogo.jpg'
 import Rihana from '@/assets/SOP/schoolPage/rihana.jpg'
 import ABaseContactCard from '@/components/atoms/cards/ABaseContactCard.vue'
 import ABaseAnimationCard from '@/components/atoms/cards/ABaseAnimationCard.vue'
@@ -132,7 +132,6 @@ onBeforeRouteLeave((to, from, next) => {
   resetBodyStyles()
   next()
 })
-
 </script>
 
 <style scoped>
@@ -158,7 +157,7 @@ onBeforeRouteLeave((to, from, next) => {
   background-color: rgb(33, 42, 88);
 }
 .pane:nth-child(4n + 2) {
-  background-color: rgb(33, 42, 88);
+  background-color: rgb(222, 213, 167);
 }
 .pane:nth-child(4n + 3) {
   background-color: rgb(33, 42, 88);
@@ -167,6 +166,6 @@ onBeforeRouteLeave((to, from, next) => {
   background-color: rgb(33, 42, 88);
 }
 .pane:last-child {
-  background-color: #7b1200;
+  background-color: rgb(222, 213, 167);
 }
 </style>
