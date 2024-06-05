@@ -21,7 +21,7 @@
         <div class="book-font">
           <div class="book-cover ">
             <h2 class="title">Srpsko omladinsko drustov</h2>
-            <h3 class="author">Zajdeno da ucimo i igramo</h3>
+            <h3 class="author p-4">Zajdeno da ucimo i igramo</h3>
             <div class="publisher">Rotterdam, Netherlands</div>
           </div>
           <div class="book-cover-back"></div>
