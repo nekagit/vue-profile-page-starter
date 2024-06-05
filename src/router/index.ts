@@ -6,7 +6,8 @@ import GalleryView from '@/views/SOP/GalleryView.vue'
 import SportView from '@/views/SOP/SportView.vue'
 import ContactView from '@/views/SOP/ContactView.vue'
 import ANBIView from '@/views/SOP/ANBIView.vue'
-  
+import BiograpyhView from "@/views/SOP/BiographyView.vue"  
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -36,9 +37,9 @@ const router = createRouter({
       component: ANBIView
     },
     {
-      path: '/pricing',
-      name: 'pricing',
-      component: SportView
+      path: '/biography',
+      name: 'bio',
+      component: BiograpyhView
     },
     {
       path: '/contact',
