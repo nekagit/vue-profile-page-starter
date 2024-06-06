@@ -44,6 +44,6 @@ router.afterEach(() => {
 }
 
 .loading {
-  animation-delay: 1s; /* Delay the animation for the loading component */
+  animation-delay: 0.1s; /* Delay the animation for the loading component */
 }
 </style>

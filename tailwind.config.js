@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+        boxShadow: {
+        '2xl-green': '0 25px 50px -12px rgba(0, 128, 0, 0.5)', // Custom green shadow
+      },
       fontFamily: {
         libre: ['"Libre Baskerville"', ...defaultTheme.fontFamily.sans],
       },

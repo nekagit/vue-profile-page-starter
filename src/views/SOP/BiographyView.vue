@@ -133,6 +133,15 @@ const toggleBook = () => {
     transform: translateX(-50%);
   }
 }
+
+@keyframes bookAnimation {
+  from {
+     transform: rotate3d(0, 1, 0, 360deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
 #book {
   max-width: 420px;
   width: 100%;
@@ -148,6 +157,7 @@ const toggleBook = () => {
   -ms-perspective: 2000px;
   -o-perspective: 2000px;
   perspective: 2000px;
+  animation: bookAnimation 1s forwards;
 }
 .main {
   max-width: 420px;

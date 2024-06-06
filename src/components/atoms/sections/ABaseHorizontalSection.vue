@@ -2,7 +2,7 @@
     <div class="horizontalBody text-white">
         <div class="separator">
             <div class="line"></div>
-            <h2 >{{ props.content }}</h2>
+            <h2>{{ props.content }}</h2>
             <div class="line"></div>
         </div>
     </div>
@@ -13,22 +13,34 @@ const props = defineProps(['content'])
 </script>
 
 <style scoped>
-.horizontalBody{
+.horizontalBody {
   max-width: 1100px;
   margin: 2rem auto;
 }
-.separator{
-  display:flex;
+
+.separator {
+  display: flex;
   align-items: center;
+  animation: expandLine 1s forwards;
 }
 
-.separator .line{
+.separator .line {
   height: 3px;
   flex: 1;
   background-color: #ffffff;
+  animation: expandLine 1s forwards;
 }
 
-.separator h2{
+.separator h2 {
   padding: 0 2rem;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 </style>
